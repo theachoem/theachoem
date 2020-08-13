@@ -1,5 +1,6 @@
 ### Hi there 👋
-🔭 I’m currently learning and develeping mobile app using flutter
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=theacheng&layout=compact)](https://github.com/theacheng)
 
 [![alt text][1.1]][1]
 [![alt text][2.1]][2]
@@ -15,7 +16,4 @@
 [2]: http://www.facebook.com/theacheng.g6
 [5]: https://dribbble.com/theachoem
 [6]: http://www.github.com/theacheng
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=theacheng&layout=compact)](https://github.com/theacheng)
-<!-- Grab this social icons from https://github.com/carlsednaoui/gitsocial -->
 

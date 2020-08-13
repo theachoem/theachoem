@@ -1,5 +1,6 @@
 ### Hi there 👋
-
+[![HitCount](http://hits.dwyl.com/theacheng/theacheng.svg)](http://hits.dwyl.com/theacheng/theacheng)
+<br>
 🔭 I’m currently learning and develeping mobile app using flutter
 
 [![alt text][1.1]][1]

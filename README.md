@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=theacheng&layout=compact)](https://github.com/theacheng)
+![Thea Choem's github stats](https://github-readme-stats.vercel.app/api?username=theacheng&show_icons=true)
 
 [![alt text][1.1]][1]
 [![alt text][2.1]][2]

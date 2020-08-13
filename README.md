@@ -5,10 +5,10 @@
   
 <!-- display the social media buttons in your README -->
 
-[![alt text][1.1]][1]
-[![alt text][2.1]][2]
-[![alt text][5.1]][5]
-[![alt text][6.1]][6]
+[![alt text][1.2]][1]
+[![alt text][2.2]][2]
+[![alt text][5.2]][5]
+[![alt text][6.2]][6]
 
 
 <!-- links to social media icons -->

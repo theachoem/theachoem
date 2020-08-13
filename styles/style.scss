@@ -33,7 +33,7 @@ body {
 }
 
 nav {
-    margin: 21px 83px;
+    margin: calc(1vw + 10px) 2vw 1vw;
     display: flex;
     justify-content: space-between;
     .logo {
@@ -73,7 +73,7 @@ nav {
         border-radius: 10px 0px 0px 10px;
         padding: 24px 0px;
         text-align: center;
-
+        transition: all 10s ease-in-out;
         .profile {
             margin: 0 auto;
             display: block;
@@ -136,3 +136,23 @@ nav {
     bottom: 0;
     z-index: -1;
 }
+// @keyframes slideout {
+//     0% {
+//         transform: translateX(0%);
+//     }
+//     100% {
+//         transform: translateX(-10%);
+//         width: 0px;
+//     }
+// }
+// @media only screen and (max-width: 1000px) {
+//     .card {
+//         .left-side {
+//         }
+//         .right-side {
+//         }
+//     }
+
+//     .back {
+//     }
+// }

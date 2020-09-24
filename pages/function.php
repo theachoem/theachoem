@@ -10,6 +10,7 @@
     //git config --add --global alias.ph "echo ' ' > .gitignore && git add . && git commit -m '$1' && shift && git push heroku master && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m '$1' && git push origin master"
     //echo "" > .gitignore && git add . && git commit -m 'push to heroku' && git push heroku master && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m 'push to heroku' && git push origin master
 
+    
     //ALTER TABLE `works` ADD `date` DATE NOT NULL AFTER `description`; 
     //variable declaration
     $error = 0;

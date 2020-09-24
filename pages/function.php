@@ -7,9 +7,9 @@
     $db = mysqli_connect('us-cdbr-east-02.cleardb.com', $username, $password, 'heroku_0d22f250ec9246f');
 
     //C:/Users/theac/.gitconfig
-    //git config --add --global alias.ph "echo '' > .gitignore && git add . && git commit -m '$1' && shift && git push heroku master && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m '$1' && git push origin master"
-    //echo "" > .gitignore && git add . && git commit -m 'push to heroku' && git push heroku master && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m 'test' && git push origin master
-    
+    //git config --add --global alias.ph "echo ' ' > .gitignore && git add . && git commit -m '$1' && shift && git push heroku master && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m '$1' && git push origin master"
+    //echo "" > .gitignore && git add . && git commit -m 'push to heroku' && git push heroku master && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m 'push to heroku' && git push origin master
+
     //ALTER TABLE `works` ADD `date` DATE NOT NULL AFTER `description`; 
     //variable declaration
     $error = 0;

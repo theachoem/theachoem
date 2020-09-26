@@ -60,11 +60,11 @@ while ($row = mysqli_fetch_array($uiRes))
     array_push($uiDes, $row['description']);
     array_push($uiName, $row['name']);
     array_push($uiCate, $row['category']);
-    array_push($uiDate, $row['techs']);
+    array_push($uiDate, $row['date']);
 
-    array_push($uiGit, $row['dribble']);
+    array_push($uiGit, $row['github']);
     array_push($uiDribble, $row['dribble']);
-    array_push($uiLive, $row['dribble']);
+    array_push($uiLive, $row['live-review']);
 
     array_push($uiTech, $row['techs']);
 }

@@ -106,13 +106,11 @@
                         <h1 id="portfolio-title" style="display: block;">Empty</h1>
                         <div class="tech" id="tech-parent"></div>
                         <hr>
-                        <p>Built date: <span id="portfolio-date">Empty</span></p>
-                        <p id="portfolio-des">Empty</p><br>
-
-                        <a href="#" target="_blank" id="git" class="button">GitHub</a>
-                        <a href="#" target="_blank" id="dribble" class="button orange">Dribble</a>
-                        <a href="#" target="viewer" onclick="showViewer();" id="live" class="button green">Live
-                            Preview</a>
+                        <p>Finished date: <span id="portfolio-date">Empty</span></p>
+                        <p id="portfolio-des" style="margin: 5px 0;">Empty</p>
+                        <a href="#" target="_blank" id="git" class="button">🛠 GitHub</a>
+                        <a href="#" target="_blank" id="dribble" class="button orange">✒️ Dribble</a>
+                        <a href="#" target="viewer" onclick="showViewer();" id="live" class="button green">🔎 View more</a>
                     </div>
                     <div class="right-side">
                         <img src="../assets/graphics/Imacoustic.png" id="portfolio-img" alt="">
@@ -156,7 +154,7 @@
             if(count($webID) > 0){            
                 echo '<div class="web post" id="slide4">';
                 for($i = 0 ; $i < count($webID); $i++){
-                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$webID[$i].'\', \''.$webName[$i].'\', \''.$webDes[$i].'\', \''.$webDate[$i].'\', \''.$webTech[$i].'\')"><img src="../assets/portfolio/thumb/'.$webID[$i].'.png" alt="'.$webID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$webID[$i].'\', \''.$webName[$i].'\', \''.$webDes[$i].'\', \''.$webDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiLive[$i].'\', \''.$webTech[$i].'\')"><img src="../assets/portfolio/thumb/'.$webID[$i].'.png" alt="'.$webID[$i].'.png"></a>';
                 }
                 echo '</div>';
             }

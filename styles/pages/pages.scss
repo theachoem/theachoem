@@ -397,11 +397,11 @@ table td {
                     }
                     .button {
                         border-radius: 10px;
-                        padding: 10px 25px 10px 25px;
+                        padding: 10px 25px 10px 15px;
                         background: $primary;
                         transition: all 0.5s ease;
                         display: inline-block;
-                        margin: 5px 0 5px 5px;
+                        margin: 5px 5px 5px 0px;
                     }
                     .button.orange {
                         background: $orange;

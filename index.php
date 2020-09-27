@@ -87,7 +87,7 @@
         </div>
         <div class="right-side">
             <iframe class="page" id="page0" src="./pages/aboutme.php"></iframe>
-            <iframe class="page" id="page1" src="./pages/portfolio.php"></iframe>
+            <iframe loading="lazy" class="page" id="page1" src="./pages/portfolio.php"></iframe>
             <iframe class="page" id="page3" src="./pages/contact.php"></iframe>
             <iframe class="page" id="page2" src="./pages/testimonial.php"></iframe>
         </div>

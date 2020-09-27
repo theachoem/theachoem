@@ -134,27 +134,27 @@
             <?php
             echo '<div class="all post" id="slide1">';
                 for($i = 0 ; $i < count($allID); $i++){
-                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$allID[$i].'\', \''.$allName[$i].'\', \''.$allDes[$i].'\', \''.$allDate[$i].'\', \''.$allGit[$i].'\', \''.$allDribble[$i].'\', \''.$allLive[$i].'\', \''.$allTech[$i].'\')"><img src="../assets/portfolio/thumb/'.$allID[$i].'.png" alt="'.$allID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$allID[$i].'\', \''.$allName[$i].'\', \''.$allDes[$i].'\', \''.$allDate[$i].'\', \''.$allGit[$i].'\', \''.$allDribble[$i].'\', \''.$allLive[$i].'\', \''.$allTech[$i].'\')"><img loading="lazy" src="../assets/portfolio/thumb/'.$allID[$i].'.png" alt="'.$allID[$i].'.png"></a>';
                 }
             echo '</div>';
             if(count($mobileID) > 0){
                 echo '<div class="mobile post" id="slide2">';
                 for($i = 0 ; $i < count($mobileID); $i++){
-                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$mobileID[$i].'\', \''.$mobileName[$i].'\', \''.$mobileDes[$i].'\', \''.$mobileDate[$i].'\', \''.$mobileGit[$i].'\', \''.$mobileDribble[$i].'\', \''.$mobileLive[$i].'\', \''.$mobileTech[$i].'\')"><img src="../assets/portfolio/thumb/'.$mobileID[$i].'.png" alt="'.$mobileID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$mobileID[$i].'\', \''.$mobileName[$i].'\', \''.$mobileDes[$i].'\', \''.$mobileDate[$i].'\', \''.$mobileGit[$i].'\', \''.$mobileDribble[$i].'\', \''.$mobileLive[$i].'\', \''.$mobileTech[$i].'\')"><img loading="lazy" src="../assets/portfolio/thumb/'.$mobileID[$i].'.png" alt="'.$mobileID[$i].'.png"></a>';
                 }
                 echo '</div>';
             }
             if(count($uiID) > 0){
                 echo '<div class="ui post" id="slide3">';
                 for($i = 0 ; $i < count($uiID); $i++){
-                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$uiID[$i].'\', \''.$uiName[$i].'\', \''.$uiDes[$i].'\', \''.$uiDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiLive[$i].'\', \''.$uiTech[$i].'\')"><img src="../assets/portfolio/thumb/'.$uiID[$i].'.png" alt="'.$uiID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$uiID[$i].'\', \''.$uiName[$i].'\', \''.$uiDes[$i].'\', \''.$uiDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiLive[$i].'\', \''.$uiTech[$i].'\')"><img loading="lazy" src="../assets/portfolio/thumb/'.$uiID[$i].'.png" alt="'.$uiID[$i].'.png"></a>';
                 }
                 echo '</div>';
             }
             if(count($webID) > 0){            
                 echo '<div class="web post" id="slide4">';
                 for($i = 0 ; $i < count($webID); $i++){
-                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$webID[$i].'\', \''.$webName[$i].'\', \''.$webDes[$i].'\', \''.$webDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiLive[$i].'\', \''.$webTech[$i].'\')"><img src="../assets/portfolio/thumb/'.$webID[$i].'.png" alt="'.$webID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio" onclick="showPopUp(\''.$webID[$i].'\', \''.$webName[$i].'\', \''.$webDes[$i].'\', \''.$webDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiLive[$i].'\', \''.$webTech[$i].'\')"><img loading="lazy" src="../assets/portfolio/thumb/'.$webID[$i].'.png" alt="'.$webID[$i].'.png"></a>';
                 }
                 echo '</div>';
             }

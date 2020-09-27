@@ -130,6 +130,7 @@ table td {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
 }
 
 #admin-testimonial {
@@ -353,9 +354,11 @@ table td {
     .top {
         height: 50px;
         background: #052335;
-        margin: 0 0 0 0;
+        margin: 0 20px 0 0 !important;
         padding: 0 0 0 0;
         display: flex;
+        position: fixed;
+        width: 100%;
         justify-content: end;
         align-items: center;
         padding-right: 15px;
@@ -383,11 +386,12 @@ table td {
             width: 100%;
             height: 100%;
             background: #05304be1;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
             display: block;
             .bottom {
                 padding: 25px 40px 0px 40px;
-                margin: 0;
+                margin: 50px 0 0;
                 height: 100%;
                 color: white;
                 display: flex;
@@ -469,7 +473,7 @@ table td {
         display: block;
         iframe {
             padding: 0;
-            margin: 0;
+            margin: 50px 0 0;
             width: 100%;
             height: 100%;
         }

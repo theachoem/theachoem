@@ -63,7 +63,7 @@
             here</p>
         <p style="cursor: default !important; margin-top: 10px;">🤦‍♂️ No testimonial yet!</p>
         <div class="testi-slider">
-            <div class="testi-wrapper">
+            <div class="testi-wrapper" style="margin-bottom: 15px !important;">
                 <?php
                 $res = mysqli_query($db, "SELECT * FROM `testimonial`");
                 $names = array();

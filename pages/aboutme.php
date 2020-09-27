@@ -20,19 +20,19 @@
 
 <body>
     <h1 id="header">About Me</h1>
-    <a class="view-cv" href="../assets/pdf/curriculum-vitae.pdf" target="_blank">
-        <div class="triangle"></div>
+    <a class="view-cv2" href="../assets/pdf/curriculum-vitae.pdf" target="_blank">View CV</a>
+        <!-- <div class="triangle"></div>
         <div class="triangle sec"></div>
         <div class="cv-container">
             <p>View CV</p>
-        </div>
-    </a>
+        </div> -->
+    <!-- </a> -->
     <a style="display: none;" href="#header" id="refresh"></a>
     <div class="wrapper aboutme">
-        <h3>Profile</h3>
+        <h3>Who Am I</h3>
         <p>I am currently a second year student at NIPTICT and also a member of Erobot Team</p>
         <div height="10px"></div>
-        <h3>About me</h3>
+        <h3>Profile</h3>
         <table>
             <tr>
                 <td>Name: </td>
@@ -51,11 +51,11 @@
         <hr>
         <ul id="timeline">
             <li>2019 - Present
-                <h3>National Institute of Post, Telecom, and ICT</h3>
+                <h3><a href="https://niptict.edu.kh/"​ style="cursor:pointer" target="_blank">National Institute of Post, Telecom, and ICT</a></h3>
                 <p>Studies Computer Science since Oct 28th, 2019</p>
             </li>
             <li>2013
-                <h3>Hun Sen Sompoeupoun High School</h3>
+                <h3><a href="https://facebook.com/sompovpounhighschool/" style="cursor:pointer" target="_blank">Hun Sen Sompoeupoun High School</a></h3>
                 <p>Studied General Knowledge</p>
             </li>
             <li>2007

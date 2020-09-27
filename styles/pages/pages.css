@@ -92,6 +92,27 @@ table td {
   border-top-color: #005481;
 }
 
+.view-cv2 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: #005481;
+  padding-top: 10px;
+  width: 219px;
+  height: 35px;
+  text-align: center;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.view-cv2:hover {
+  background: #e4ecee;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
 .bg-red {
   background: #ff7f2a !important;
   color: white !important;
@@ -444,7 +465,7 @@ table td {
   width: 100%;
   height: 100%;
   background: #05304be1;
-  overflow: hidden;
+  overflow: scroll;
   display: block;
 }
 
@@ -466,12 +487,13 @@ table td {
 }
 
 .wrapper.portfolio .popup .container .bottom .left-side .tech {
-  display: inline;
+  display: inline-block;
+  width: 100%;
 }
 
 .wrapper.portfolio .popup .container .bottom .left-side .tech p {
-  margin: 10px 0;
-  display: inline;
+  margin: 2px 0;
+  display: inline-block;
   padding: 0px 7px;
   background: #ff7f2a;
   color: white;
@@ -528,6 +550,7 @@ table td {
 .wrapper.portfolio .popup .container .bottom .right-side img {
   width: 206px;
   height: 206px;
+  margin-bottom: 10px;
   border-radius: 10px;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
@@ -655,7 +678,7 @@ table td {
 .wrapper.contact table,
 .wrapper.contact tr,
 .wrapper.contact td {
-  padding: 0;
+  padding: 0 2px 0 0;
   margin: 0;
 }
 

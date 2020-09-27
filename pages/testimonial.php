@@ -58,9 +58,10 @@
     <?php endif ?>
     <div class="wrapper testimonial">
         <h1>What they said</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, vitae libero. Ullam expedita totam enim
-            perferendis doloribus assumenda minima, sequi soluta nisi minus cumque est cum illo. Hic, labore veniam?</p>
-
+        <p>Testimonials are gotten from Fiverr and Volunteer work that I have worked with and also ask for their
+            permission before putting
+            here</p>
+        <p style="cursor: default !important; margin-top: 10px;">🤦‍♂️ No testimonial yet!</p>
         <div class="testi-slider">
             <div class="testi-wrapper">
                 <?php
@@ -75,13 +76,29 @@
                     array_push($describe, $row['recommend']);
                 }
                 
-                for($x = 0 ; $x < count($names); $x++){
-                    echo '<div class="card-container">';
-                    echo '<div class="profile"><img id="img'.($x).'" src="../assets/testiminial/'.($images[$x]).'.png" alt=""></div>';
-                    echo '<h3>'.$names[$x].'</h3>';
-                    echo '<p>'.$describe[$x].'</p>';
+                if(count($names) == 0){
+                    echo '<div style="cursor: default !important;" class="card-container">';
+                    echo '<div style="cursor: default !important;" class="profile"><img id="img" src="../assets\graphics\fiver.svg" alt=""></div>';
+                    echo '<p style="cursor: default !important; margin-top: 10px; color: #4b4b4b;">Please give me a chance to get your works done<br>Currently, I have 2 active services such as Design website and<br>Design + Develop mobile app.</p>';
+                    echo '<a href="https://www.fiverr.com/theachoem" style="cursor: pointer !important; margin-bottom: 10px; font-weight: 700; color: #00B22D !important;">Get a quote</a>';
+                    echo '</div>';
+
+                    echo '<div style="cursor: default !important;" class="card-container">';
+                    echo '<div style="cursor: default !important;" class="profile"><img id="img" src="../assets\graphics\volunteer.svg" alt=""></div>';
+                    echo '<p style="cursor: default !important; margin-top: 10px; color: #4b4b4b;">For Open Source Projects:</p>';
+                    echo '<p style="cursor: default !important; margin-bottom: 10px; color: #4b4b4b;">If you are creating Open source or non-profit project and need web or mobile UI design, please DM or send a message to theacheng@gmail.com. Just use "Open Source" or "non-profit" in the subject.</p>';
                     echo '</div>';
                 }
+                else{
+                    for($x = 0 ; $x < count($names); $x++){
+                        echo '<div class="card-container">';
+                        echo '<div class="profile"><img id="img'.($x).'" src="../assets/testiminial/'.($images[$x]).'.png" alt=""></div>';
+                        echo '<h3>'.$names[$x].'</h3>';
+                        echo '<p>'.$describe[$x].'</p>';
+                        echo '</div>';
+                    }
+                }
+
                 ?>
             </div>
         </div>
@@ -123,7 +140,9 @@
                     }
                 }
             ]
-        })
+        }).on('setPosition', function(event, slick) {
+            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+        });
     }
 
     //ready function

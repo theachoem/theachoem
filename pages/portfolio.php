@@ -267,7 +267,7 @@
             while (parent.lastElementChild) {
                 parent.removeChild(parent.lastElementChild);
             }
-            document.getElementById('popup').scrollTo(0,0);
+            document.getElementById('windows').scrollTo(0,0);
         }, 100);
     }
 

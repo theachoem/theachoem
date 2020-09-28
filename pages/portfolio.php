@@ -119,15 +119,15 @@
             </div>
         </div>
         <div class="category">
-            <a class="cate active" id="all" onclick="addActiveClass('all', 1)">All</a>
+            <a class="cate hide-c active" id="all" onclick="addActiveClass('all', 1)">All</a>
             <?php
                 $categoryBtn = array('mobile', 'ui', 'web');
                 if(count($mobileID) > 0)
-                    echo '<a class="cate" id="mobile" onclick="addActiveClass(\''.$categoryBtn[0].'\', 2)">Mobile Application</a>';
+                    echo '<a class="cate hide-c" id="mobile" onclick="addActiveClass(\''.$categoryBtn[0].'\', 2)">Mobile Application</a>';
                 if(count($uiID) > 0)
-                    echo '<a class="cate" id="ui" onclick="addActiveClass(\''.$categoryBtn[1].'\', 3)">UI Design</a>';
+                    echo '<a class="cate hide-c" id="ui" onclick="addActiveClass(\''.$categoryBtn[1].'\', 3)">UI Design</a>';
                 if(count($webID) > 0)
-                    echo '<a class="cate" id="web" onclick="addActiveClass(\''.$categoryBtn[2].'\', 4)">Website</a>';
+                    echo '<a class="cate hide-c" id="web" onclick="addActiveClass(\''.$categoryBtn[2].'\', 4)">Website</a>';
             ?>
         </div>
         <div class="slider">

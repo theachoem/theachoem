@@ -761,10 +761,10 @@ table td {
   }
   .wrapper.portfolio .category a {
     display: block;
-    margin: -10px 0 15px -15px;
-    padding: 10px 0 0 15px;
-    height: 30px;
+    height: 20px;
+    padding-top: 5px;
     text-align: left;
+    margin-bottom: 10px;
   }
   .wrapper.portfolio .category .active {
     text-align: left;

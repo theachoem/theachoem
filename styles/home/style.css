@@ -573,11 +573,12 @@ body {
 .card .side-bar:hover a:hover::after {
   content: "";
   position: absolute;
-  margin: -5px 10px 0 10px;
+  margin: -5px 0px 0 0px;
   background-color: white;
   border-radius: 5px 5px 5px 0;
   padding: 10px 0;
   width: 100px;
+  left: 60px;
   color: #005481;
   text-align: center;
   -webkit-transition: all 0.5s ease;

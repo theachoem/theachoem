@@ -656,12 +656,33 @@ body {
   }
 }
 
+@-webkit-keyframes noise {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes noise {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   body {
-    background: #005481;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
     margin: 0;
+    background: #005481;
+    background-image: url(texture.png);
+    -webkit-animation: noise .5s linear infinite;
+            animation: noise .5s linear infinite;
   }
   #particles-js {
     display: none;
@@ -691,7 +712,7 @@ body {
     display: block;
     position: fixed;
     z-index: 1;
-    height: inherit !important;
+    height: 100% !important;
   }
   .card .right-side {
     margin-left: 60px;

@@ -118,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <div class="category">
+        <div class="category hide-c">
             <a class="cate hide-c active" id="all" onclick="addActiveClass('all', 1)">All</a>
             <?php
                 $categoryBtn = array('mobile', 'ui', 'web');

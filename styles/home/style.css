@@ -702,9 +702,7 @@ body {
   .card {
     width: 100%;
     border-radius: 0;
-    height: -webkit-max-content !important;
-    height: -moz-max-content !important;
-    height: max-content !important;
+    height: 100% !important;
     -webkit-box-shadow: none;
             box-shadow: none;
     overflow: hidden;
@@ -723,7 +721,9 @@ body {
     width: auto;
     border-radius: 0;
     overflow: hidden;
-    height: 100vh !important;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
     -webkit-box-shadow: none;
             box-shadow: none;
   }

@@ -504,7 +504,7 @@ body {
     .card {
         width: 100%;
         border-radius: 0;
-        height: max-content !important;
+        height: 100% !important;
         box-shadow: none;
         overflow: hidden;
         .left-side {
@@ -521,7 +521,7 @@ body {
             width: auto;
             border-radius: 0;
             overflow: hidden;
-            height: 100vh !important;
+            height: max-content !important;
             box-shadow: none;
         }
     }

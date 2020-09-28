@@ -705,6 +705,8 @@ body {
     height: calc(var(--vh, 1vh) * 100) !important;
     -webkit-box-shadow: none;
             box-shadow: none;
+    margin: 0;
+    padding: 0;
   }
   .card .left-side {
     display: none;

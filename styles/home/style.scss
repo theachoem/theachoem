@@ -506,6 +506,8 @@ body {
         border-radius: 0;
         height: calc(var(--vh, 1vh) * 100) !important;
         box-shadow: none;
+        margin: 0;
+        padding: 0;
         .left-side {
             display: none;
         }

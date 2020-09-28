@@ -98,7 +98,8 @@
                 }
                 ?>
         </div>
-        <div id="outerContainer">
+    </div>
+    <div id="outerContainer">
             <div id="ps-container">
                 <div class="item">
                     <p>👆</p>
@@ -109,7 +110,6 @@
                 <div class="circle" style="animation-delay: 0s"></div>
             </div>
         </div>
-    </div>
     <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../js/slick.min.js"></script>
     <script>

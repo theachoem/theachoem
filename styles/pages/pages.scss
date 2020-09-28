@@ -618,6 +618,9 @@ table td {
             display: block;
             a {
                 display: block;
+                margin: -10px 0 15px -15px;
+                padding: 10px 0 0 15px;
+                height: 30px;
                 text-align: left;
             }
             .active {

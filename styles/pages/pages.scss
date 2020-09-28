@@ -572,6 +572,9 @@ table td {
 }
 
 @media only screen and (max-width: 1000px) {
+    body{
+        overflow: hidden;
+    }
     .wrapper.portfolio {
         .slider {
             .post {

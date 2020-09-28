@@ -623,9 +623,10 @@ table td {
             border-color: $white-smoke;
         }
         .card-container.overflow::after{
-            content: '⮃';
+            content: '👋';
             position: absolute;
-            bottom: 15px;
+            bottom: 13px;
+            margin: 0 auto;
             color: rgba(0, 0, 0, 0.5);
             width: 15px;
             height: 15px;

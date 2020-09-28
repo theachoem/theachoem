@@ -205,7 +205,7 @@
             }
         }
     }
-
+    
     //show pop up windows
     function showPopUp(id, name, description, date, git, dribble, live, tech) {
         document.getElementById("portfolio-title").innerHTML = name;
@@ -242,6 +242,14 @@
         $("#popup").fadeIn("fast", function() {
             $(this).show();
         });
+
+        setTimeout(function() {
+            $("#popup").scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // $('.construction').addClass('top');
+        }, 200);
     }
 
     function showViewer() {

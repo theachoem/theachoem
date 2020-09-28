@@ -80,7 +80,7 @@
                     echo '<div style="cursor: default !important;" class="card-container">';
                     echo '<div style="cursor: default !important;" class="profile"><img id="img" src="../assets\graphics\fiver.svg" alt=""></div>';
                     echo '<p style="cursor: default !important; margin-top: 10px; color: #4b4b4b;">Please give me a chance to get your works done<br>Currently, I have 2 active services such as Design website and<br>Design + Develop mobile app.</p>';
-                    echo '<a href="https://www.fiverr.com/theachoem" style="cursor: pointer !important; margin-bottom: 10px; font-weight: 700; color: #00B22D !important;">Get a quote</a>';
+                    echo '<a href="https://www.fiverr.com/theachoem" target="_blank" style="cursor: pointer !important; margin-bottom: 10px; font-weight: 700; color: #00B22D !important;">Get a quote</a>';
                     echo '</div>';
 
                     echo '<div style="cursor: default !important;" class="card-container overflow">';

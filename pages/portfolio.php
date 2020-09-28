@@ -267,7 +267,7 @@
             while (parent.lastElementChild) {
                 parent.removeChild(parent.lastElementChild);
             }
-            document.getElementById('popup').scroll({top:0,behavior:'smooth'});
+            document.getElementById('popup').scrollTo(0,0);
         }, 100);
     }
 

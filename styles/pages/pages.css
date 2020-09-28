@@ -337,8 +337,8 @@ table td {
 .wrapper.portfolio .category a {
   padding-bottom: 10px;
   text-align: center;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .wrapper.portfolio .category a::after {
@@ -348,13 +348,14 @@ table td {
   width: 0;
   margin-top: 8px;
   -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .wrapper.portfolio .category .active {
   color: #ff7f2a;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
   text-align: center;
 }
 

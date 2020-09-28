@@ -517,9 +517,9 @@ body {
         .right-side {
             margin-left: 60px;
             width: auto;
-            overflow: hidden;
             border-radius: 0;
-            height: inherit !important;
+            overflow: hidden;
+            height: 100vh !important;
             box-shadow: none;
         }
     }

@@ -90,7 +90,22 @@ table td {
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .view-cv2 {
+    animation: 5s fadeIn;
+    animation-fill-mode: forwards;
+
     position: absolute;
     bottom: 10px;
     right: 10px;

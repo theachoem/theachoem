@@ -718,7 +718,7 @@ body {
     height: inherit !important;
   }
   .card .right-side {
-    margin-left: 0 60px 0 0;
+    margin: 0 0 0 60px;
     width: auto;
     border-radius: 0;
     overflow: hidden;

@@ -288,7 +288,7 @@ table td {
             width: 0;
             margin-top: 8px;
             -webkit-transition: 1s ease;
-            transition: .5s ease;
+            transition: 0.5s ease;
         }
         .active {
             color: $orange;
@@ -598,7 +598,6 @@ table td {
         transform: translateY(0%);
     }
 }
-
 
 @media only screen and (max-width: 624px) {
     .wrapper.wrapper.testimonial {

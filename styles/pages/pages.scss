@@ -610,15 +610,14 @@ table td {
             box-shadow: none !important;
         }
         .card-container.overflow::after {
-            padding-top: 5px;
             content: "👋";
             position: absolute;
-            bottom: 13px;
+            bottom: 4px;
             right: 0;
             text-align: center;
             margin: 0 auto;
             width: 50%;
-            height: 15px;
+            height: 25px;
         }
     }
 }

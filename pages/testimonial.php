@@ -58,9 +58,10 @@
     <?php endif ?>
     <div class="wrapper testimonial">
         <h1>What they said</h1>
-        <p>My testimonials will be given from my clients on Fiverr, and also working as a Volunteer. <br>Thier recommendation will be put here only if they allowed.</p>
+        <p>My testimonials will be given from my clients on Fiverr, and also working as a Volunteer. <br>Thier
+            recommendation will be put here only if they allowed.</p>
         <p style="cursor: default !important; margin-top: 10px;">No testimonial yet!</p>
-                <!-- 🤦‍♂️ -->
+        <!-- 🤦‍♂️ -->
         <div class="testi-wrapper">
             <?php
                 $res = mysqli_query($db, "SELECT * FROM `testimonial`");
@@ -96,6 +97,17 @@
                     }
                 }
                 ?>
+        </div>
+        <div id="outerContainer">
+            <div id="ps-container">
+                <div class="item">
+                    <p>👆</p>
+                </div>
+                <div class="circle" style="animation-delay: -3s"></div>
+                <div class="circle" style="animation-delay: -2s"></div>
+                <div class="circle" style="animation-delay: -1s"></div>
+                <div class="circle" style="animation-delay: 0s"></div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>

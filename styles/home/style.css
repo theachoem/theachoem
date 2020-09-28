@@ -717,7 +717,7 @@ body {
   }
   .card .right-side {
     margin-left: 60px;
-    width: auto;
+    width: 100vh;
     border-radius: 0;
     height: inherit !important;
     -webkit-box-shadow: none;

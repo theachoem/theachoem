@@ -76,13 +76,13 @@
             </div>
         </div>
         <div class="side-bar">
-            <a class="sidebar active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);" id="aboutme" onclick="addActiveClass('aboutme', 0)" href="#0"><i
+            <a class="sidebar active" id="aboutme" onclick="addActiveClass('aboutme', 0)" href="#0"><i
                     class="fas fa-user-graduate"></i></a>
-            <a class="sidebar" id="portfolio" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);" onclick="addActiveClass('portfolio', 1)" href="#1"><i
+            <a class="sidebar" id="portfolio" onclick="addActiveClass('portfolio', 1)" href="#1"><i
                     class="fas fa-clipboard-check"></i></a>
-            <a class="sidebar" id="testimonial" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);" onclick="addActiveClass('testimonial', 2)" href="#2"><i
+            <a class="sidebar" id="testimonial" onclick="addActiveClass('testimonial', 2)" href="#2"><i
                     class="fas fa-comment-alt"></i></a>
-            <a class="sidebar" id="contact" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);" onclick="addActiveClass('contact', 3)" href="#3"><i
+            <a class="sidebar" id="contact" onclick="addActiveClass('contact', 3)" href="#3"><i
                     class="fas fa-id-card-alt"></i></a>
         </div>
         <div class="right-side">

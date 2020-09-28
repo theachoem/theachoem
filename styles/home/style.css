@@ -269,14 +269,21 @@ body {
 }
 
 #log-in {
-  height: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   width: 88%;
-  margin: 10px auto;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin: 10px auto 0;
+  padding-right: 20px;
+  position: fixed;
+  z-index: 10000000;
 }
 
 #log-in #submit {
@@ -288,6 +295,8 @@ body {
   width: 120px;
   margin-left: 10px;
   text-align: center;
+  -webkit-box-shadow: 2px 2px 5px #0707074f;
+          box-shadow: 2px 2px 5px #0707074f;
 }
 
 #log-in #password,
@@ -298,6 +307,8 @@ body {
   color: #004367;
   width: 200px;
   margin-left: 10px;
+  -webkit-box-shadow: 2px 2px 5px #0707074f;
+          box-shadow: 2px 2px 5px #0707074f;
 }
 
 #log-in #email {

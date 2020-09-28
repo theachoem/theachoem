@@ -186,11 +186,16 @@ body {
 }
 
 #log-in {
-    height: 35px;
-    display: flex;
     transition: all 0.1s ease;
     width: 88%;
-    margin: 10px auto;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: right;
+    margin: 10px auto 0;
+    padding-right: 20px;
+    position: fixed;
+    z-index: 10000000;
     #submit {
         border: none;
         border-radius: 10px;
@@ -200,6 +205,7 @@ body {
         width: 120px;
         margin-left: 10px;
         text-align: center;
+        box-shadow: 2px 2px 5px #0707074f;
     }
     #password,
     #email {
@@ -209,6 +215,7 @@ body {
         color: #004367;
         width: 200px;
         margin-left: 10px;
+        box-shadow: 2px 2px 5px #0707074f;
     }
     #email {
         margin-left: 0;

@@ -607,6 +607,7 @@ table td {
         .card-container.overflow {
             overflow-y: scroll;
             border-color: $white-smoke;
+            box-shadow: none;
         }
         .card-container.overflow::after {
             content: "👋";

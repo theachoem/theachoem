@@ -58,9 +58,7 @@
     <?php endif ?>
     <div class="wrapper testimonial">
         <h1>What they said</h1>
-        <p>Testimonials are gotten from Fiverr and Volunteer work that I have worked with and also ask for their
-            permission before putting
-            here</p>
+        <p>My testimonials will be given from my clients on Fiverr, and also working as a Volunteer. <br>Thier recommendation will be put here only if they allowed.</p>
         <p style="cursor: default !important; margin-top: 10px;">🤦‍♂️ No testimonial yet!</p>
 
         <div class="testi-wrapper">
@@ -79,7 +77,7 @@
                 if(count($names) == 0){
                     echo '<div style="cursor: default !important;" class="card-container">';
                     echo '<div style="cursor: default !important;" class="profile"><img id="img" src="../assets\graphics\fiver.svg" alt=""></div>';
-                    echo '<p style="cursor: default !important; margin-top: 10px; color: #4b4b4b;">Please give me a chance to get your works done<br>Currently, I have 2 active services such as Design website and<br>Design + Develop mobile app.</p>';
+                    echo '<p style="cursor: default !important; margin-top: 10px; color: #4b4b4b;">Please give me a chance to get your works done<br>Currently, I have 2 active services such as Design modern website and<br>Design mobile app UI.</p>';
                     echo '<a href="https://www.fiverr.com/theachoem" target="_blank" style="cursor: pointer !important; margin-bottom: 10px; font-weight: 700; color: #00B22D !important;">Get a quote</a>';
                     echo '</div>';
 

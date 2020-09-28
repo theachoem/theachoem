@@ -22,7 +22,7 @@
     <h1 id="header">About Me</h1>
     <div class="wrapper aboutme">
         <h3>Who Am I</h3>
-        <p>I am currently a second year student at NIPTICT and also a member of Erobot Team</p>
+        <p>I am currently a second year student at NIPTICT and also a member of Erobot Team.</p>
         <div height="10px"></div>
         <h3>Profile</h3>
         <table>

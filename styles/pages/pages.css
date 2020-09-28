@@ -281,6 +281,10 @@ table td {
   color: #ff7f2a;
 }
 
+.wrapper {
+  overflow: hidden !important;
+}
+
 .wrapper.aboutme {
   margin-bottom: 40px;
 }
@@ -713,9 +717,6 @@ table td {
 }
 
 @media only screen and (max-width: 1000px) {
-  body, .wrapper {
-    overflow: hidden;
-  }
   .wrapper.portfolio .slider .post {
     -ms-grid-columns: auto auto auto auto auto auto;
         grid-template-columns: auto auto auto auto auto auto;
@@ -850,4 +851,7 @@ table td {
 
 @media only screen and (max-width: 300px) {
   .wrapper.wrapper.testimonial .card-container {
-    overflow-y: scroll
+    overflow-y: scroll;
+  }
+}
+/*# sourceMappingURL=pages.css.map */

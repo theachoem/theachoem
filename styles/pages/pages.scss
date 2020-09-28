@@ -225,6 +225,9 @@ table td {
     }
 }
 
+.wrapper{
+    overflow: hidden !important;
+}
 .wrapper.aboutme {
     * {
         cursor: default;
@@ -366,7 +369,6 @@ table td {
         display: flex;
         justify-content: center;
         align-items: center;
-
         .container {
             cursor: default;
             width: 100%;
@@ -572,9 +574,6 @@ table td {
 }
 
 @media only screen and (max-width: 1000px) {
-    body, .wrapper{
-        overflow: hidden;
-    }
     .wrapper.portfolio {
         .slider {
             .post {
@@ -709,4 +708,8 @@ table td {
 @media only screen and (max-width: 300px) {
     .wrapper.wrapper.testimonial {
         .card-container {
- 
+            overflow-y: scroll;
+        }
+    }
+}
+

@@ -600,8 +600,6 @@ body {
   display: flex;
   width: 100%;
   overflow: hidden;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
 }
 
 .card .right-side .page {

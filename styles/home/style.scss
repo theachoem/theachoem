@@ -358,6 +358,7 @@ body {
     .side-bar {
         width: 60px;
         display: none;
+        height: 100vh;
         background-color: $side-bar;
         text-align: center;
         transition: all 0.5s ease;
@@ -511,7 +512,7 @@ body {
             display: block;
             position: fixed;
             z-index: 1;
-            height: 100% !important;
+            height: 100vh !important;
         }
         .right-side {
             margin-left: 60px;

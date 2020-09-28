@@ -683,7 +683,6 @@ body {
     background-image: url(texture.png);
     -webkit-animation: noise .5s linear infinite;
             animation: noise .5s linear infinite;
-    width: 100%;
     padding: 0;
   }
   #particles-js {
@@ -703,9 +702,12 @@ body {
   .card {
     width: 100%;
     border-radius: 0;
-    height: 100% !important;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
     -webkit-box-shadow: none;
             box-shadow: none;
+    overflow: hidden;
   }
   .card .left-side {
     display: none;
@@ -721,7 +723,7 @@ body {
     width: auto;
     border-radius: 0;
     overflow: hidden;
-    height: inherit !important;
+    height: 100vh !important;
     -webkit-box-shadow: none;
             box-shadow: none;
   }

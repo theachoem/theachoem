@@ -486,7 +486,6 @@ body {
         background: $primary;
         background-image: url(texture.png);
         animation: noise .5s linear infinite;
-        width: 100%;
         padding: 0;
     }
     #particles-js {
@@ -505,8 +504,9 @@ body {
     .card {
         width: 100%;
         border-radius: 0;
-        height: 100% !important;
+        height: max-content !important;
         box-shadow: none;
+        overflow: hidden;
         .left-side {
             display: none;
         }
@@ -521,7 +521,7 @@ body {
             width: auto;
             border-radius: 0;
             overflow: hidden;
-            height: inherit !important;
+            height: 100vh !important;
             box-shadow: none;
         }
     }

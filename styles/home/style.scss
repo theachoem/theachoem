@@ -504,8 +504,9 @@ body {
     .card {
         width: 100%;
         border-radius: 0;
-        height: calc(var(--vh, 1vh) * 100) !important;
+        height: 100vh !important;
         box-shadow: none;
+        transition: min-height 500ms ease;
         margin: 0;
         padding: 0;
         .left-side {

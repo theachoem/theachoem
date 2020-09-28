@@ -279,7 +279,7 @@ table td {
         a {
             padding-bottom: 10px;
             text-align: center;
-            transition: 1s ease;
+            transition: 0.3s ease;
         }
         a::after {
             content: "";
@@ -292,7 +292,7 @@ table td {
         }
         .active {
             color: $orange;
-            transition: 1s ease;
+            transition: 0.3s ease;
             text-align: center;
         }
         .active::after {

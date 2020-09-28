@@ -117,6 +117,13 @@
         $('#' + name + 2).addClass('active').siblings().removeClass('active');
         hidewithout(index);
         current_page = index;
+        setTimeout(function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // $('.construction').addClass('top');
+        }, 200);
     };
 
     //on page is ready 

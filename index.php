@@ -141,6 +141,14 @@
                 $(this).remove();
             });
         }, 1000);
+        
+        setTimeout(function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // $('.construction').addClass('top');
+        }, 800);
     })
 
     function hidewithout(thispage) {
@@ -168,18 +176,9 @@
             });
         }, 500);
 
-        setTimeout(function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-            // $('.construction').addClass('top');
-        }, 800);
-
         // setTimeout(function() {
         //     $('.construction').removeClass('top');
         // }, 3000);
-
     }
 
     ////////////////////////

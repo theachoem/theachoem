@@ -504,9 +504,8 @@ body {
     .card {
         width: 100%;
         border-radius: 0;
-        height: 100% !important;
+        height: calc(var(--vh, 1vh) * 100) !important;
         box-shadow: none;
-        overflow: hidden;
         .left-side {
             display: none;
         }
@@ -514,14 +513,14 @@ body {
             display: block;
             position: fixed;
             z-index: 1;
-            height: 100% !important;
+            height: inherit !important;
         }
         .right-side {
             margin-left: 60px;
             width: auto;
             border-radius: 0;
             overflow: hidden;
-            height: max-content !important;
+            height: inherit !important;
             box-shadow: none;
         }
     }

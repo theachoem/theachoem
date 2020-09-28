@@ -26,58 +26,85 @@
     <?php if(isLoggedIn()) : ?>
     <a onclick="showAdmin();" style="position: absolute; top: 10px; right: 10px;"><img style="transform: rotate(45deg);"
             src="../assets/graphics/close.svg" alt=""></a>
-    <div id="admin-testimonial">
-        <div class="container-testimonial" id="popupWin">
-            <div class="top">
-                <p>thea@dev:~</p>
-                <a href="#" class="close" onclick="hideAdmin()">
-                    <img src="..\assets\graphics\close.svg" alt=""></a>
-            </div>
-
-            <form method="post" enctype="multipart/form-data" class="bottom">
-                <input type="text" class="input half" id="name" name="name" placeholder="name">
-                <input type="text" class="input half" id="idpath" name="idpath" placeholder="id">
-
-                <input type="text" class="input" id="techs" name="techs" placeholder="techs">
-                <textarea name="description" id="recommend" cols="20" rows="5" placeholder="description"></textarea>
-
-                <input type="text" class="input half" id="git" name="git" placeholder="github">
-                <input type="text" class="input half" id="dribble" name="dribble" placeholder="dribble">
-                <input type="text" class="input half" id="live" name="live" placeholder="live-preview">
-
-                <br>
-                <label
-                    style="font-family: 'Quicksand'; font-size: 14px; padding-left: 2px; margin-top: 10px; color: white;"
-                    for="image[]">Images</label>
-                <input type="file" name="images[]" id="image-input" multiple="multiple">
-                <label
-                    style="font-family: 'Quicksand'; font-size: 14px; padding-left: 2px; margin-top: 10px; color: white;"
-                    for="image[]">Thumbnail</label>
-                <input type="file" name="thumb" id="image-input">
-                <hr style="width: 70%;">
-                <input type="text" id="datepicker" name="builtdate" placeholder="Date"
-                    style=" border: none; padding-left: 8px; border-radius: 5px;">
-                <select id="category" name="category">
-                    <option value="mobile">mobile</option>
-                    <option value="web">web</option>
-                    <option value="ui">ui</option>
-                </select>
-                <hr style="width: 70%;">
-                <div style="display: inline;" class="btn">
-                    <input id="uploadtesti" class="bg-blue" type="submit" name="uploadtesti" value="Upload">
-                    <input id="uploadtesti" class="bg-red" type="submit" name="deletetesti" value="Delete">
-                    <input id="uploadtesti" class="bg-green" type="submit" name="updatetesti" value="Update">
-                </div>
-            </form>
-            <div class="right-side"
-                style="overflow-y: scroll; overflow-x: hidden; position: absolute; width: 200px; height: 250px; background: transparent; right: 0; bottom: 0;">
-                <p>ID: </p>
-                <?php
-                    for($i = 0; $i<count($allID); $i++){
-                        echo '<p>'.$allID[$i].' ('.$allCate[$i].')</p><br>';
+    <div id="admin-container">
+        <div class="top">
+            <p>thea@dev:~</p>
+            <a href="#" class="close" onclick="hideAdmin()">
+                <img src="..\assets\graphics\close.svg" alt=""></a>
+        </div>
+        <div class="admin-editor">
+            <div class="table-container">
+                <table id="data">
+                    <tr>
+                        <th>project_id</th>
+                        <th>category</th>
+                        <th>name</th>
+                        <th>date</th>
+                    </tr>
+                    <?php
+                    for($i=0; $i < count($allID) ; $i ++){               
+                        echo '<tr><td>'.$allID[$i].'</td>';
+                        echo '<td>'.$allCate[$i].'</td>';
+                        echo '<td>'.$allName[$i].'</td>';
+                        echo '<td>'.$allDate[$i].'.</td></tr>';
                     }
                 ?>
+                </table>
             </div>
+            <form>
+                <div class="row">
+                    <div class="col-50">
+                        <input type="text" id="project_id" name="project_id" placeholder="project_id">
+                    </div>
+                    <div class="col-50">
+                        <select id="category" name="category">
+                            <option value="web">web</option>
+                            <option value="mobile">mobile</option>
+                            <option value="ui">ui</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="name" name="name" placeholder="name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <textarea id="description" name="description" placeholder="description"
+                            style="height:150px"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-50">
+                        <input type="text" id="techs" name="techs" placeholder="techs">
+                    </div>
+                    <div class="col-50">
+                        <input type="text" id="date" name="date" placeholder="date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="live-preview" name="live-preview" placeholder="live-preview">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="git" name="git" placeholder="git">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="dribble" name="dribble" placeholder="dribble">
+                    </div>
+                </div>
+                <div class="row">
+                    <input class="button-admin bg-blue" class="button-admin bg-blue" type="submit" name="uploadtesti"
+                        value="Upload">
+                    <input class="button-admin bg-orange" type="submit" name="deletetesti" value="Delete">
+                    <input class="button-admin bg-red" type="submit" name="updatetesti" value="Update">
+                </div>
+            </form>
         </div>
     </div>
     <?php endif ?>
@@ -110,7 +137,8 @@
                         <p id="portfolio-des" style="margin: 5px 0;">Empty</p>
                         <a href="#" target="_blank" id="git" class="button">🛠 GitHub</a>
                         <a href="#" target="_blank" id="dribble" class="button orange">✒️ Dribble</a>
-                        <a href="#" target="viewer" onclick="showViewer();" id="live" class="button green">🔎 View more</a>
+                        <a href="#" target="viewer" onclick="showViewer();" id="live" class="button green">🔎 View
+                            more</a>
                     </div>
                     <div class="right-side">
                         <img src="../assets/graphics/Imacoustic.png" id="portfolio-img" alt="">
@@ -167,11 +195,16 @@
     <script>
     //hide admin
     function showAdmin() {
-        $('#admin-testimonial').show()
+        $('#admin-container').fadeIn("fast", function() {
+            $(this).show();
+        });
     }
     //show admin
     function hideAdmin() {
-        $('#admin-testimonial').hide()
+
+        $('#admin-container').fadeOut("fast", function() {
+            $(this).hide();
+        });
     }
 
     $(function() {
@@ -205,7 +238,7 @@
             }
         }
     }
-    
+
     //show pop up windows
     function showPopUp(id, name, description, date, git, dribble, live, tech) {
         document.getElementById("portfolio-title").innerHTML = name;
@@ -267,12 +300,12 @@
             while (parent.lastElementChild) {
                 parent.removeChild(parent.lastElementChild);
             }
-            document.getElementById('windows').scrollTo(0,0);
+            document.getElementById('windows').scrollTo(0, 0);
         }, 100);
     }
 
     $(document).ready(function() {
-        $('#admin-testimonial').hide()
+        $('#admin-container').hide()
         $("#popup").hide();
         $("#blocker").fadeOut("slow", function() {
             $(this).remove();

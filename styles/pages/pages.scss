@@ -5,6 +5,7 @@ $side-bar: #024264;
 $white-smoke: #f0f0f0;
 $orange: #ff7f2a;
 $green: #008542;
+$red: #c83737;
 
 h3 {
     margin-top: 10px;
@@ -42,7 +43,6 @@ table td {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
 }
 
-
 //please swap
 #outerContainer {
     position: fixed;
@@ -72,7 +72,7 @@ table td {
             padding: 5px;
             transition: all 0.5s ease;
         }
-        .item:hover::before{
+        .item:hover::before {
             transition: all 0.5s ease;
             position: absolute;
             content: "Please swap!";
@@ -152,7 +152,7 @@ table td {
 }
 
 .bg-red {
-    background: $orange !important;
+    background: $red !important;
     color: white !important;
 }
 
@@ -165,6 +165,10 @@ table td {
     background: $green !important;
     color: white !important;
 }
+.bg-orange {
+    background: $orange !important;
+    color: white !important;
+}
 
 .close {
     cursor: pointer;
@@ -175,113 +179,119 @@ table td {
     margin-right: 10px;
 }
 
-#admin-testimonial {
-    position: absolute;
-    z-index: 10000;
+.top {
+    height: 50px;
+    background: #052335;
+    margin: 0 20px 0 0 !important;
+    padding: 0 0 0 0;
+    display: flex;
+    position: fixed;
     width: 100%;
-    height: 100%;
+    justify-content: end;
+    align-items: center;
+    padding-right: 15px;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background-color: #0054815e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .container-testimonial {
-        cursor: default;
-        width: 100%;
+    p {
+        width: 95%;
+        text-align: center;
+    }
+}
+
+#admin-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $background;
+    z-index: 10000;
+    .admin-editor {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        padding: 0;
+        width: calc(100% - 100px);
         height: 100%;
-        background: #05304be1;
-        overflow: hidden;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        .top {
-            height: 60px;
-            background: #052335;
-            margin: 0 0 0 0;
-            padding: 0 0 0 0;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            padding-right: 15px;
-            p {
-                width: 95%;
-                text-align: center;
-            }
+        padding: 5px 50px;
+        * {
+            box-sizing: border-box;
+            color: rgb(80, 80, 80);
         }
-        .bottom {
-            padding: 25px 40px 0px 40px;
-            margin: 0;
-            height: 100%;
-            color: white;
-            display: block;
-            * {
-                color: black;
-            }
-            .input {
-                margin: 7px 0 0;
-                width: 92.8%;
-                height: 20px;
-                border: none;
+        .table-container {
+            height: 120px;
+            overflow-y: scroll;
+            margin-bottom: 3px;
+            border-radius: 10px;
+            margin: 3px;
+            #data {
+                width: calc(100%);
+                border-collapse: collapse;
+                background: white;
                 border-radius: 10px;
-                padding: 5px 10px;
-                display: inline-block;
-            }
-            .input.half {
-                width: 45%;
-            }
-            #recommend {
-                margin-top: 10px;
-                width: 92.8%;
-                height: auto;
-                border: none;
-                border-radius: 10px;
-                padding: 5px 10px;
-            }
-            #image-input {
-                margin: 7px 0;
-                color: white;
-                border: none;
-                display: block;
-                border-radius: 10px;
-            }
-            #category {
-                margin: 7px 0;
-                width: 100px;
-                padding: 1px 6px;
-                border: none;
-                border-radius: 7px;
-                display: block;
-            }
-            .btn {
-                display: block;
-                width: 100%;
-                #uploadtesti {
-                    border: none;
-                    background: $orange;
-                    padding: 10px 20px;
-                    font-size: 15px;
+                overflow: hidden;
+                th,
+                td {
+                    text-align: left;
+                    padding: 3px 5px 3px 10px;
+                    font-size: 13px;
+                }
+                tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+                th {
+                    background-color: $primary;
                     color: white;
-                    display: inline;
-                    border-radius: 10px;
                 }
             }
         }
-        .right-side {
-            padding: 0px 40px 20px 40px;
-            * {
-                display: inline;
-                padding: 0px 5px;
+
+        form {
+            input[type="text"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid rgba(255, 255, 255, 0);
+                border-radius: 5px;
+                resize: vertical;
+                font-family: "Quicksand";
+                font-size: 13px;
             }
-            span {
-                color: $orange;
+
+            input[type="submit"] {
+                color: white;
+                padding: 8px 15px;
+                border: none;
+                cursor: pointer;
+                float: right;
+                margin: 3px 0 3px 3px;
+                width: 162px;
+                height: 30;
+                border-radius: 5px;
+            }
+
+            .col-50 {
+                float: left;
+                width: calc(50% - 6px);
+                margin: 3px;
+            }
+            .col {
+                float: left;
+                width: calc(100% - 6px);
+                margin: 3px;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
             }
         }
     }
 }
-
 .wrapper {
     overflow: hidden !important;
 }
@@ -397,22 +407,6 @@ table td {
             }
         }
     }
-    .top {
-        height: 50px;
-        background: #052335;
-        margin: 0 20px 0 0 !important;
-        padding: 0 0 0 0;
-        display: flex;
-        position: fixed;
-        width: 100%;
-        justify-content: end;
-        align-items: center;
-        padding-right: 15px;
-        p {
-            width: 95%;
-            text-align: center;
-        }
-    }
     .popup {
         position: absolute;
         z-index: 10000;
@@ -444,15 +438,16 @@ table td {
                     flex: 0.8;
                     display: block;
                     .tech {
+                        margin-top: 3px;
                         display: inline-block;
                         width: 100%;
                         p {
                             margin: 2px 0;
                             display: inline-block;
-                            padding: 0px 7px;
+                            padding: 0px 14px;
                             background: $orange;
                             color: white;
-                            border-radius: 5px;
+                            border-radius: 14px;
                             margin-right: 5px;
                         }
                     }
@@ -682,7 +677,9 @@ table td {
 }
 
 @media only screen and (max-width: 524px) {
-    #outerContainer {display: block;}
+    #outerContainer {
+        display: block;
+    }
     .wrapper.portfolio {
         .category {
             display: block;
@@ -742,7 +739,9 @@ table td {
 }
 
 @media only screen and (max-width: 400px) {
-    #outerContainer {display: block;}
+    #outerContainer {
+        display: block;
+    }
     .wrapper.aboutme {
         ul:before {
             content: "";

@@ -29,7 +29,8 @@
         <img src="./assets/graphics/warning" alt="">
         <p>This site is under construction!</p>
     </div> -->
-    <div id="blocker"><img class="none" id="img" style="height: calc(50px + 10vw); display: inline;" src="./assets/profile/imacoustic-logo.svg" alt=""></div>
+    <div id="blocker"><img class="none" id="img" style="height: calc(50px + 10vw); display: inline;"
+            src="./assets/profile/imacoustic-logo.svg" alt=""></div>
     <?php
         if(isLoggedIn()) echo '<a href="#" style="position: absolute; right: 10px; top: 10px; z-index: 100000000;" onclick="openFileAdmin()"><img src="./assets/graphics/close.svg" alt=""></a>
             <iframe style="display:none; position: fixed; z-index: 10000; margin-top: -15px;" id="adminfile" width="100%" height="100%" src="./pages/ignore/admin.php"></iframe>'
@@ -113,17 +114,14 @@
     $('.construction').removeClass('top');
 
     function addActiveClass(name, index) {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
         $('#' + name).addClass('active').siblings().removeClass('active');
         $('#' + name + 2).addClass('active').siblings().removeClass('active');
         hidewithout(index);
         current_page = index;
-        setTimeout(function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-            // $('.construction').addClass('top');
-        }, 200);
     };
 
     //on page is ready 
@@ -148,7 +146,7 @@
                 $(this).remove();
             });
         }, 1000);
-        
+
         setTimeout(function() {
             window.scrollTo({
                 top: 0,

@@ -76,7 +76,7 @@ table td {
 .view-cv {
     animation: 5s fadeIn;
     animation-fill-mode: forwards;
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     right: 10px;
     border-radius: 10px;

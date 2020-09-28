@@ -626,9 +626,11 @@ table td {
             content: "👋";
             position: absolute;
             bottom: 13px;
-            margin: 0 0 0 0;
+            right: 0;
+            text-align: center;
+            margin: 0 auto;
             color: rgba(0, 0, 0, 0.5);
-            width: 15px;
+            width: 50%;
             height: 15px;
         }
     }

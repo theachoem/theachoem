@@ -10,7 +10,7 @@
     //rm -rf .git && git init && git add . && git commit -m "init" && git remote add origin https://github.com/theacheng/theacheng.git && git push --mirror --force
 
     //git config --add --global alias.ph "echo ' ' > .gitignore && git add . && git commit -m '$1' && shift && git push heroku master && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m '$1' && git push origin master"
-    //echo "" > .gitignore && git add . && git commit -m 'update portfolio' && git push heroku main && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m 'update portfolio' && git push origin main
+    //echo "" > .gitignore && git add . && git commit -m 'update testimonial' && git push heroku main && echo 'pages/ignore/' > .gitignore && git rm -r --cached . && git add . && git commit -m 'update testimonial' && git push origin main
    
     //ALTER TABLE `works` ADD `date` DATE NOT NULL AFTER `description`; 
     //variable declaration

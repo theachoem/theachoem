@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h3 {
   margin-top: 10px;
 }
@@ -374,6 +375,7 @@ table td {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
@@ -589,10 +591,6 @@ table td {
   display: none !important;
 }
 
-.wrapper.testimonial {
-  overflow: hidden;
-}
-
 .wrapper.testimonial h1 {
   margin: 0 auto 10px;
   width: 10em;
@@ -606,14 +604,11 @@ table td {
   text-align: center;
 }
 
-.wrapper.testimonial .testi-slider {
-  margin: 10px;
-}
-
-.wrapper.testimonial .testi-slider .testi-wrapper {
+.wrapper.testimonial .testi-wrapper {
   height: 100%;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px;
+  overflow: hidden;
   padding: 10px 0;
   position: relative;
   opacity: 0;
@@ -622,11 +617,11 @@ table td {
   -webkit-transition: opacity 1s ease;
 }
 
-.wrapper.testimonial .testi-slider .testi-wrapper * {
+.wrapper.testimonial .testi-wrapper * {
   cursor: pointer !important;
 }
 
-.wrapper.testimonial .testi-slider .testi-wrapper .card-container {
+.wrapper.testimonial .testi-wrapper .card-container {
   padding: 10px 20px 10px;
   margin: 0 10px;
   display: inline-block;
@@ -636,11 +631,12 @@ table td {
   background: white;
   border-radius: 10px;
   text-align: center;
+  overflow: hidden;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
 
-.wrapper.testimonial .testi-slider .testi-wrapper .card-container .profile {
+.wrapper.testimonial .testi-wrapper .card-container .profile {
   margin: 0 auto;
   width: 132px;
   height: 132px;
@@ -657,7 +653,7 @@ table td {
           align-items: center;
 }
 
-.wrapper.testimonial .testi-slider .testi-wrapper .card-container .profile img {
+.wrapper.testimonial .testi-wrapper .card-container .profile img {
   width: 132px;
   height: auto;
   -ms-flex-negative: 0;
@@ -666,12 +662,12 @@ table td {
   min-height: 100%;
 }
 
-.wrapper.testimonial .testi-slider .testi-wrapper .card-container h3,
-.wrapper.testimonial .testi-slider .testi-wrapper .card-container p {
+.wrapper.testimonial .testi-wrapper .card-container h3,
+.wrapper.testimonial .testi-wrapper .card-container p {
   color: #005481;
 }
 
-.wrapper.testimonial .testi-slider .testi-wrapper.slick-initialized {
+.wrapper.testimonial .testi-wrapper.slick-initialized {
   visibility: visible !important;
   opacity: 1;
   -webkit-transition: opacity 1s ease;
@@ -748,6 +744,25 @@ table td {
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+  }
+}
+
+@media only screen and (max-width: 624px) {
+  .wrapper.wrapper.testimonial .card-container {
+    border-bottom: 25px solid white;
+  }
+  .wrapper.wrapper.testimonial .card-container.overflow {
+    overflow-y: scroll;
+    border-color: #f0f0f0;
+  }
+  .wrapper.wrapper.testimonial .card-container.overflow::after {
+    content: '⮃';
+    position: absolute;
+    bottom: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    width: 15px;
+    height: 15px;
+    background-image: '../assets/graphics/arrow-down.svg';
   }
 }
 

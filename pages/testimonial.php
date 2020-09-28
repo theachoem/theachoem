@@ -62,9 +62,9 @@
             permission before putting
             here</p>
         <p style="cursor: default !important; margin-top: 10px;">🤦‍♂️ No testimonial yet!</p>
-        <div class="testi-slider">
-            <div class="testi-wrapper" style="margin-bottom: 15px !important;">
-                <?php
+
+        <div class="testi-wrapper">
+            <?php
                 $res = mysqli_query($db, "SELECT * FROM `testimonial`");
                 $names = array();
                 $images = array();
@@ -77,16 +77,15 @@
                 }
                 
                 if(count($names) == 0){
-                    echo '<div style="cursor: default !important; " class="card-container">';
+                    echo '<div style="cursor: default !important;" class="card-container">';
                     echo '<div style="cursor: default !important;" class="profile"><img id="img" src="../assets\graphics\fiver.svg" alt=""></div>';
                     echo '<p style="cursor: default !important; margin-top: 10px; color: #4b4b4b;">Please give me a chance to get your works done<br>Currently, I have 2 active services such as Design website and<br>Design + Develop mobile app.</p>';
                     echo '<a href="https://www.fiverr.com/theachoem" style="cursor: pointer !important; margin-bottom: 10px; font-weight: 700; color: #00B22D !important;">Get a quote</a>';
                     echo '</div>';
 
-                    echo '<div style="cursor: default !important;" class="card-container">';
+                    echo '<div style="cursor: default !important;" class="card-container overflow">';
                     echo '<div style="cursor: default !important;" class="profile"><img id="img" src="../assets\graphics\volunteer.svg" alt=""></div>';
-                    echo '<p style="cursor: default !important; margin-top: 10px; color: #4b4b4b;">For Open Source Projects:</p>';
-                    echo '<p style="cursor: default !important; margin-bottom: 10px; color: #4b4b4b;">If you are creating Open source or non-profit project and need web or mobile UI design, please DM or send a message to theacheng@gmail.com. Just use "Open Source" or "non-profit" in the subject.</p>';
+                    echo '<p style="cursor: default !important; margin-bottom: 10px; margin-top: 10px; color: #4b4b4b;">For Open Source Projects:<br>If you are creating Open source or non-profit project and need web or mobile UI design, please DM or send a message to theacheng@gmail.com. Just use "Open Source" or "non-profit" in the subject.</p>';
                     echo '</div>';
                 }
                 else{
@@ -100,7 +99,6 @@
                 }
 
                 ?>
-            </div>
         </div>
     </div>
     <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
@@ -125,7 +123,6 @@
             infinite: false,
             prevArrow: false,
             nextArrow: false,
-            adaptiveHeight: false,
             responsive: [{
                     breakpoint: 786,
                     settings: {

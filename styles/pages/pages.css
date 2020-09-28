@@ -713,7 +713,7 @@ table td {
 }
 
 @media only screen and (max-width: 1000px) {
-  body {
+  body, .wrapper {
     overflow: hidden;
   }
   .wrapper.portfolio .slider .post {

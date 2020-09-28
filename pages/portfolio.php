@@ -242,11 +242,6 @@
         $("#popup").fadeIn("fast", function() {
             $(this).show();
         });
-
-        setTimeout(function() {
-            document.getElementById('popup').scroll({top:0,behavior:'smooth'});
-            // $('.construction').addClass('top');
-        }, 200);
     }
 
     function showViewer() {
@@ -272,6 +267,7 @@
             while (parent.lastElementChild) {
                 parent.removeChild(parent.lastElementChild);
             }
+            document.getElementById('popup').scroll({top:0,behavior:'smooth'});
         }, 100);
     }
 

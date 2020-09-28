@@ -615,22 +615,21 @@ table td {
 
 @media only screen and (max-width: 624px) {
     .wrapper.wrapper.testimonial {
-        .card-container{
+        .card-container {
             border-bottom: 25px solid rgb(255, 255, 255);
         }
         .card-container.overflow {
             overflow-y: scroll;
             border-color: $white-smoke;
         }
-        .card-container.overflow::after{
-            content: '👋';
+        .card-container.overflow::after {
+            content: "👋";
             position: absolute;
             bottom: 13px;
-            margin: 0 auto;
+            margin: 0 0 0 0;
             color: rgba(0, 0, 0, 0.5);
             width: 15px;
             height: 15px;
-            background-image: '../assets/graphics/arrow-down.svg';
         }
     }
 }
@@ -709,6 +708,14 @@ table td {
             .post {
                 grid-template-columns: auto auto;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .wrapper.wrapper.testimonial {
+        .card-container {
+            overflow-y: scroll;
         }
     }
 }

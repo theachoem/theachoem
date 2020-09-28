@@ -244,10 +244,7 @@
         });
 
         setTimeout(function() {
-            $("#popup").scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            document.getElementById('popup').scroll({top:0,behavior:'smooth'});
             // $('.construction').addClass('top');
         }, 200);
     }

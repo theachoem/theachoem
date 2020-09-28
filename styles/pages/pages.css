@@ -52,47 +52,6 @@ table td {
   padding: 0;
 }
 
-.view-cv .triangle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-top: 100px solid #ff7f2a;
-  border-left: 100px solid transparent;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.view-cv .sec {
-  border-top: 48px solid #005481;
-  border-left: 48px solid transparent;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.view-cv .cv-container {
-  position: absolute;
-  top: 25px;
-  right: 7px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.view-cv .cv-container a {
-  color: white;
-}
-
-.view-cv:hover .triangle {
-  border-top-color: #f36e15;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.view-cv:hover .triangle.sec {
-  border-top-color: #005481;
-}
-
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -117,7 +76,7 @@ table td {
   }
 }
 
-.view-cv2 {
+.view-cv {
   -webkit-animation: 5s fadeIn;
           animation: 5s fadeIn;
   -webkit-animation-fill-mode: forwards;
@@ -136,7 +95,7 @@ table td {
   transition: 0.3s all ease;
 }
 
-.view-cv2:hover {
+.view-cv:hover {
   background: #e4ecee;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;

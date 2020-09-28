@@ -51,45 +51,6 @@ table td {
     }
 }
 
-.view-cv {
-    .triangle {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 0;
-        height: 0;
-        border-top: 100px solid $orange;
-        border-left: 100px solid transparent;
-        transition: all 0.2s ease;
-    }
-
-    .sec {
-        border-top: 48px solid $primary;
-        border-left: 48px solid transparent;
-        transition: all 0.2s ease;
-    }
-
-    .cv-container {
-        position: absolute;
-        top: 25px;
-        right: 7px;
-        transform: rotate(45deg);
-        a {
-            color: white;
-        }
-    }
-}
-
-.view-cv:hover {
-    .triangle {
-        border-top-color: #f36e15;
-        transition: all 0.2s ease;
-    }
-    .triangle.sec {
-        border-top-color: $primary;
-    }
-}
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -102,7 +63,7 @@ table td {
     }
 }
 
-.view-cv2 {
+.view-cv {
     animation: 5s fadeIn;
     animation-fill-mode: forwards;
 
@@ -119,7 +80,7 @@ table td {
     transition: 0.3s all ease;
 }
 
-.view-cv2:hover {
+.view-cv:hover {
     background: rgb(228, 236, 238);
     transition: 0.3s all ease;
 }

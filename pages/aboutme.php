@@ -20,13 +20,7 @@
 
 <body>
     <h1 id="header">About Me</h1>
-    <a class="view-cv2" href="../assets/pdf/curriculum-vitae.pdf" target="_blank">View CV</a>
-        <!-- <div class="triangle"></div>
-        <div class="triangle sec"></div>
-        <div class="cv-container">
-            <p>View CV</p>
-        </div> -->
-    <!-- </a> -->
+    <a class="view-cv" href="../assets/pdf/curriculum-vitae.pdf" target="_blank">View CV</a>
     <a style="display: none;" href="#header" id="refresh"></a>
     <div class="wrapper aboutme">
         <h3>Who Am I</h3>

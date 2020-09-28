@@ -132,6 +132,15 @@ body {
   margin: 15px 0 0;
 }
 
+.hide-c {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .construction {
   background: white;
   height: 60px;

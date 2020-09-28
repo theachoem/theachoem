@@ -59,8 +59,8 @@
     <div class="wrapper testimonial">
         <h1>What they said</h1>
         <p>My testimonials will be given from my clients on Fiverr, and also working as a Volunteer. <br>Thier recommendation will be put here only if they allowed.</p>
-        <p style="cursor: default !important; margin-top: 10px;">🤦‍♂️ No testimonial yet!</p>
-
+        <p style="cursor: default !important; margin-top: 10px;">No testimonial yet!</p>
+                <!-- 🤦‍♂️ -->
         <div class="testi-wrapper">
             <?php
                 $res = mysqli_query($db, "SELECT * FROM `testimonial`");

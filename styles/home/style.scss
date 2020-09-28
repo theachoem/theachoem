@@ -371,6 +371,7 @@ body {
         background-color: $side-bar;
         text-align: center;
         transition: all 0.5s ease;
+        cursor: default;
         a {
             display: block;
             margin: 60px 0;
@@ -381,6 +382,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: default;
             i {
                 text-align: center;
                 background-color: $side-bar;

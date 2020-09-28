@@ -20,8 +20,6 @@
 
 <body>
     <h1 id="header">About Me</h1>
-    <a class="view-cv" href="../assets/pdf/curriculum-vitae.pdf" target="_blank">View CV</a>
-    <a style="display: none;" href="#header" id="refresh"></a>
     <div class="wrapper aboutme">
         <h3>Who Am I</h3>
         <p>I am currently a second year student at NIPTICT and also a member of Erobot Team</p>
@@ -58,6 +56,7 @@
             </li>
         </ul>
     </div>
+    <a class="view-cv" href="../assets/pdf/curriculum-vitae.pdf" target="_blank">View CV</a>
 </body>
 
 </html>

@@ -281,6 +281,10 @@ table td {
   color: #ff7f2a;
 }
 
+.wrapper.aboutme {
+  margin-bottom: 40px;
+}
+
 .wrapper.aboutme * {
   cursor: default;
 }

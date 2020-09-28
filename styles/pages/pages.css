@@ -86,8 +86,8 @@ table td {
 }
 
 .view-cv {
-  -webkit-animation: 5s fadeIn;
-          animation: 5s fadeIn;
+  -webkit-animation: 3s fadeIn;
+          animation: 3s fadeIn;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   position: fixed;

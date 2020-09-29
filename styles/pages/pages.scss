@@ -7,6 +7,40 @@ $orange: #ff7f2a;
 $green: #008542;
 $red: #c83737;
 
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.5, 0.5);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(2.5, 2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 h3 {
     margin-top: 10px;
 }
@@ -90,15 +124,6 @@ table td {
     }
 }
 
-@keyframes slide-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 #blocker {
     position: fixed;
     width: 100%;
@@ -115,18 +140,6 @@ table td {
     img {
         margin: 0;
         padding: 0;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    80% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
 }
 
@@ -659,15 +672,6 @@ table td {
     }
 }
 
-@keyframes slidein {
-    0% {
-        transform: translateY(-40%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
 @media only screen and (max-width: 624px) {
     .wrapper.wrapper.testimonial {
         .card-container {
@@ -783,16 +787,5 @@ table td {
         .card-container {
             overflow-y: scroll;
         }
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        transform: scale(0.5, 0.5);
-        opacity: 0.5;
-    }
-    to {
-        transform: scale(2.5, 2.5);
-        opacity: 0;
     }
 }

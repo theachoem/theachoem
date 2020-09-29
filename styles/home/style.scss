@@ -6,6 +6,15 @@ $white-smoke: #f0f0f0;
 $orange: #ff7f2a;
 $green: #008542;
 
+@keyframes noise {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
 @keyframes slidein {
     0% {
         transform: translateX(10%);
@@ -18,15 +27,6 @@ $green: #008542;
 @keyframes slideup {
     0% {
         transform: translateY(50%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-@keyframes getin {
-    0% {
-        transform: translateY(10%);
     }
     100% {
         transform: translateY(0%);
@@ -74,7 +74,6 @@ html {
 body {
     background-color: $background;
     transition: all 0.5s ease;
-    margin: 15px 0 0;
 }
 
 .construction {
@@ -225,7 +224,12 @@ body {
     height: 38.5em !important;
     width: 88%;
     max-width: 75em;
-    margin: 0 auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     display: flex;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -238,7 +242,7 @@ body {
         text-align: center;
         transition: all 0.1s ease-in-out;
         z-index: 1;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.10);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
         .profile-container {
             position: relative;
             display: flex;
@@ -456,49 +460,21 @@ body {
     }
 }
 
-@keyframes popin {
-    0% {
-        transform: translateY(-200%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
-
-@keyframes noise {
-    0%{
-      background-position: 0 0;
-    }
-    100%{
-      background-position: 100% 100%;
-    }
-}
-
 @media only screen and (max-width: 1000px) {
     body {
-        transition: all 1s ease;
         margin: 0;
         background: $primary;
         background-image: url(texture.png);
-        animation: noise .5s linear infinite;
+        animation: noise 0.5s linear infinite;
         padding: 0;
     }
-    
-    html, body {
+
+    html,
+    body {
         scroll-behavior: smooth !important;
         min-height: 100% !important;
         height: 100%;
-    }
-
-    #particles-js {
-        display: none;
-    }
-    #back {
-        position: absolute;
-        height: 0; //115px;
+        transition: all 1s ease;
     }
     nav {
         transition: all 1s ease;
@@ -511,7 +487,8 @@ body {
         border-radius: 0;
         height: 100% !important;
         box-shadow: none;
-        transition: min-height 500ms ease;
+        position: relative;
+        transition: all 1s ease;
         margin: 0;
         padding: 0;
         .left-side {
@@ -531,13 +508,6 @@ body {
             height: inherit !important;
             box-shadow: none;
         }
-    }
-    #fix {
-        display: block;
-        animation: popin 1.8s ease;
-    }
-    #back {
-        display: none;
     }
     #copyright {
         display: none;
@@ -563,4 +533,3 @@ body {
         display: none;
     }
 }
-

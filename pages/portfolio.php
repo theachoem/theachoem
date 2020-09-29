@@ -272,6 +272,14 @@
         if (live.length < 2) $('#live').hide();
         else $("#live").show();
 
+        $(".category").fadeOut("fast", function() {
+            $(this).hide();
+        });
+
+        $(".slider").fadeOut("fast", function() {
+            $(this).hide();
+        });
+
         $("#popup").fadeIn("fast", function() {
             $(this).show();
         });
@@ -291,6 +299,14 @@
     }
 
     function hidePopUp() {
+        $(".category").fadeIn("fast", function() {
+            $(this).show();
+        });
+
+        $(".slider").fadeIn("fast", function() {
+            $(this).show();
+        });
+        
         $("#popup").fadeOut("fast", function() {
             $(this).hide();
         });

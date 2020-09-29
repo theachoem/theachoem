@@ -12,12 +12,6 @@ hr {
   transition: all 0.6s ease;
 }
 
-html, body {
-  min-height: 100% !important;
-  height: 100%;
-  scroll-behavior: smooth !important;
-}
-
 body {
   padding: calc(10px + 3vw) calc(5px + 4vw);
 }
@@ -360,6 +354,10 @@ table td {
   clear: both;
 }
 
+.wrapper {
+  overflow: hidden !important;
+}
+
 .wrapper.aboutme {
   margin-bottom: 40px;
 }
@@ -691,7 +689,6 @@ table td {
   background: white;
   border-radius: 10px;
   text-align: center;
-  overflow: hidden;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -823,16 +820,16 @@ table td {
 }
 
 @media only screen and (max-width: 624px) {
-  .wrapper.wrapper.testimonial .card-container {
+  .wrapper.testimonial .card-container {
     border-bottom: 25px solid white;
   }
-  .wrapper.wrapper.testimonial .card-container.overflow {
+  .wrapper.testimonial .card-container.overflow {
     overflow-y: scroll;
     border-color: #f0f0f0;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
   }
-  .wrapper.wrapper.testimonial .card-container.overflow::after {
+  .wrapper.testimonial .card-container.overflow::after {
     content: "👋";
     position: absolute;
     bottom: 4px;

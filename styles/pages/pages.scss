@@ -23,6 +23,12 @@ body {
     padding: calc(10px + 3vw) calc(5px + 4vw);
 }
 
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+    scroll-behavior: smooth !important;
+}
+
 table td {
     vertical-align: top;
     text-align: left;
@@ -559,6 +565,7 @@ table td {
             background: white;
             border-radius: 10px;
             text-align: center;
+            overflow: hidden;
             transition: all 1s ease;
             .profile {
                 margin: 0 auto;

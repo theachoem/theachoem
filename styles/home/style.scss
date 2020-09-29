@@ -67,15 +67,17 @@ $green: #008542;
     }
 }
 
-html {
-    scroll-behavior: smooth !important;
-}
-
 body {
     background-color: $background;
     height: 100%;
     transition: all 0.5s ease;
     margin: 15px 0 0;
+}
+
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+    scroll-behavior: smooth !important;
 }
 
 .construction {
@@ -431,7 +433,6 @@ body {
         background-color: $primary;
         display: flex;
         width: 100%;
-        overflow: hidden;
         .page {
             width: 100%;
             height: 100%;
@@ -504,7 +505,7 @@ body {
     .card {
         width: 100%;
         border-radius: 0;
-        height: 100vh !important;
+        height: 100% !important;
         box-shadow: none;
         transition: min-height 500ms ease;
         margin: 0;
@@ -522,8 +523,7 @@ body {
             margin: 0 0 0 60px;
             width: auto;
             border-radius: 0;
-            overflow: hidden;
-            height: inherit !important;
+            height: 100%;
             box-shadow: none;
         }
     }

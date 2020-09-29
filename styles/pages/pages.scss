@@ -19,7 +19,9 @@ hr {
     transition: all 0.6s ease;
 }
 
-html {
+html, body {
+    min-height: 100% !important;
+    height: 100%;
     scroll-behavior: smooth !important;
 }
 
@@ -295,9 +297,7 @@ table td {
         }
     }
 }
-.wrapper {
-    overflow: hidden !important;
-}
+
 .wrapper.aboutme {
     * {
         cursor: default;

@@ -120,16 +120,18 @@
           animation-delay: -0.15s;
 }
 
-html {
-  scroll-behavior: smooth !important;
-}
-
 body {
   background-color: #05304b;
   height: 100%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   margin: 15px 0 0;
+}
+
+html, body {
+  min-height: 100% !important;
+  height: 100%;
+  scroll-behavior: smooth !important;
 }
 
 .construction {
@@ -600,7 +602,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  overflow: hidden;
 }
 
 .card .right-side .page {
@@ -702,7 +703,7 @@ body {
   .card {
     width: 100%;
     border-radius: 0;
-    height: 100vh !important;
+    height: 100% !important;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-transition: min-height 500ms ease;
@@ -723,8 +724,7 @@ body {
     margin: 0 0 0 60px;
     width: auto;
     border-radius: 0;
-    overflow: hidden;
-    height: inherit !important;
+    height: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
   }

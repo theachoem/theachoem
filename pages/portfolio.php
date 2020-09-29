@@ -19,14 +19,26 @@
     * {
         color: white;
     }
+
+    .admin-btn {
+        transition: all .5s ease;
+    }
+
+    .admin-btn:hover {
+        transition: all .5s ease;
+        transform: rotate(360deg);
+    }
     </style>
 </head>
 
 <body>
     <?php if(isLoggedIn()) : ?>
-    <a onclick="showAdmin();" style="position: absolute; top: 10px; right: 10px;"><img style="transform: rotate(45deg);"
-            src="../assets/graphics/close.svg" alt=""></a>
-    <div id="admin-container">
+    <a onclick="showAdmin();" style="position: absolute; top: 10px; right: 10px;"><img class="admin-btn"
+            style="transform: rotate(45deg);" src="../assets/graphics/close.svg" alt=""></a>
+    <a onclick="window.location.href = window.location.href;"
+        style="z-index: 10000; position: absolute; top: 10px; right: 50px;"><img class="admin-btn"
+            src="../assets/graphics/refresh.svg" style="width: 25px; height: 25px" alt=""></a>
+    <div id="admin-container" style="display: none;">
         <div class="top">
             <p>thea@dev:~</p>
             <a href="#" class="close" onclick="hideAdmin()">
@@ -51,7 +63,7 @@
                 ?>
                 </table>
             </div>
-            <form>
+            <form method="post" enctype="multipart/form-data" class="bottom">
                 <div class="row">
                     <div class="col-50">
                         <input type="text" id="project_id" name="project_id" placeholder="project_id">
@@ -80,12 +92,9 @@
                         <input type="text" id="techs" name="techs" placeholder="techs">
                     </div>
                     <div class="col-50">
-                        <input type="text" id="date" name="date" placeholder="date">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" id="live-preview" name="live-preview" placeholder="live-preview">
+                        <input type="text" class="date" name="dd" placeholder="day">
+                        <input type="text" class="date" name="mm" placeholder="month">
+                        <input type="text" class="date" name="yy" placeholder="year">
                     </div>
                 </div>
                 <div class="row">
@@ -99,10 +108,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input class="button-admin bg-blue" class="button-admin bg-blue" type="submit" name="uploadtesti"
-                        value="Upload">
-                    <input class="button-admin bg-orange" type="submit" name="deletetesti" value="Delete">
-                    <input class="button-admin bg-red" type="submit" name="updatetesti" value="Update">
+                    <input class="button-admin bg-blue" class="button-admin bg-blue" type="submit"
+                        name="upload-portfolio" value="Upload">
+                    <input class="button-admin bg-orange" type="submit" name="delete-portfolio" value="Delete">
+                    <input class="button-admin bg-red" type="submit" name="update-portfolio" value="Update">
                 </div>
             </form>
         </div>
@@ -120,7 +129,7 @@
             <iframe src="" name="viewer" id="view-web" frameborder="0" class="portfolio-view" height="100%"
                 width="100%"></iframe>
         </div>
-        <div class="popup" id="popup">
+        <div class="popup" id="popup" style="display: none;">
             <div class="container" id="windows">
                 <div class="top">
                     <p>thea@dev:~</p>
@@ -141,7 +150,8 @@
                             more</a>
                     </div>
                     <div class="right-side">
-                        <img src="../assets/graphics/Imacoustic.png" id="portfolio-img" alt="">
+                        <img src="../assets/graphics/Imacoustic.png" id="portfolio-img" alt=""
+                            onerror="this.src='../assets/graphics/notfound.png'">
                     </div>
                 </div>
             </div>
@@ -160,29 +170,30 @@
         </div>
         <div class="slider">
             <?php
+            $notfound = "../assets/graphics/notfound.png";
             echo '<div class="all post" id="slide1">';
                 for($i = 0 ; $i < count($allID); $i++){
-                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$allID[$i].'\', \''.$allName[$i].'\', \''.$allDes[$i].'\', \''.$allDate[$i].'\', \''.$allGit[$i].'\', \''.$allDribble[$i].'\', \''.$allLive[$i].'\', \''.$allTech[$i].'\')"><img loading="lazy" src="../assets/portfolio/thumb/'.$allID[$i].'.png" alt="'.$allID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$allID[$i].'\', \''.$allName[$i].'\', \''.$allDes[$i].'\', \''.$allDate[$i].'\', \''.$allGit[$i].'\', \''.$allDribble[$i].'\', \''.$allTech[$i].'\')"><img loading="lazy" style="animation-duration: calc('.$i.'s * 0.2 + 0.3s);" src="../assets/portfolio/thumb/'.$allID[$i].'.png" alt="'.$allID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
                 }
             echo '</div>';
             if(count($mobileID) > 0){
                 echo '<div class="mobile post" id="slide2">';
                 for($i = 0 ; $i < count($mobileID); $i++){
-                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$mobileID[$i].'\', \''.$mobileName[$i].'\', \''.$mobileDes[$i].'\', \''.$mobileDate[$i].'\', \''.$mobileGit[$i].'\', \''.$mobileDribble[$i].'\', \''.$mobileLive[$i].'\', \''.$mobileTech[$i].'\')"><img loading="lazy" src="../assets/portfolio/thumb/'.$mobileID[$i].'.png" alt="'.$mobileID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$mobileID[$i].'\', \''.$mobileName[$i].'\', \''.$mobileDes[$i].'\', \''.$mobileDate[$i].'\', \''.$mobileGit[$i].'\', \''.$mobileDribble[$i].'\', \''.$mobileTech[$i].'\')"><img loading="lazy" style="animation-duration: calc('.$i.'s * 0.2 + 0.3s);" src="../assets/portfolio/thumb/'.$mobileID[$i].'.png" alt="'.$mobileID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
                 }
                 echo '</div>';
             }
             if(count($uiID) > 0){
                 echo '<div class="ui post" id="slide3">';
                 for($i = 0 ; $i < count($uiID); $i++){
-                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$uiID[$i].'\', \''.$uiName[$i].'\', \''.$uiDes[$i].'\', \''.$uiDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiLive[$i].'\', \''.$uiTech[$i].'\')"><img loading="lazy" src="../assets/portfolio/thumb/'.$uiID[$i].'.png" alt="'.$uiID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$uiID[$i].'\', \''.$uiName[$i].'\', \''.$uiDes[$i].'\', \''.$uiDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiTech[$i].'\')"><img style="animation-duration: calc('.$i.'s * 0.2 + 0.3s);" loading="lazy" src="../assets/portfolio/thumb/'.$uiID[$i].'.png" alt="'.$uiID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
                 }
                 echo '</div>';
             }
             if(count($webID) > 0){            
                 echo '<div class="web post" id="slide4">';
                 for($i = 0 ; $i < count($webID); $i++){
-                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$webID[$i].'\', \''.$webName[$i].'\', \''.$webDes[$i].'\', \''.$webDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiLive[$i].'\', \''.$webTech[$i].'\')"><img loading="lazy" src="../assets/portfolio/thumb/'.$webID[$i].'.png" alt="'.$webID[$i].'.png"></a>';
+                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$webID[$i].'\', \''.$webName[$i].'\', \''.$webDes[$i].'\', \''.$webDate[$i].'\', \''.$webGit[$i].'\', \''.$webDribble[$i].'\', \''.$webTech[$i].'\')"><img style="animation-duration: calc('.$i.'s * 0.2 + 0.3s);" loading="lazy" src="../assets/portfolio/thumb/'.$webID[$i].'.png" alt="'.$webID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
                 }
                 echo '</div>';
             }
@@ -240,7 +251,7 @@
     }
 
     //show pop up windows
-    function showPopUp(id, name, description, date, git, dribble, live, tech) {
+    function showPopUp(id, name, description, date, git, dribble, tech) {
         document.getElementById("portfolio-title").innerHTML = name;
         document.getElementById("portfolio-img").src = "../assets/portfolio/thumb/" + id + '.png';
         document.getElementById("portfolio-des").innerHTML = description;
@@ -261,7 +272,7 @@
 
         $("#git").attr("href", git);
         $("#dribble").attr("href", dribble);
-        $("#live").attr("href", live);
+        $("#live").attr("href", "https://theacheng.github.io/theacheng/docs/" + id);
 
         if (git.length < 2) $('#git').hide();
         else $("#git").show();
@@ -269,8 +280,7 @@
         if (dribble.length < 2) $('#dribble').hide();
         else $("#dribble").show();
 
-        if (live.length < 2) $('#live').hide();
-        else $("#live").show();
+        $("#live").show();
 
         $(".category").fadeOut("fast", function() {
             $(this).hide();
@@ -299,16 +309,11 @@
     }
 
     function hidePopUp() {
-        $(".category").fadeIn("fast", function() {
-            $(this).show();
-        });
+        $(".category").show();
+        $(".slider").show();
 
-        $(".slider").fadeIn("fast", function() {
-            $(this).show();
-        });
-        
         $("#popup").fadeOut("fast", function() {
-            $(this).hide();
+            $(this)
         });
 
         setTimeout(function() {
@@ -321,8 +326,6 @@
     }
 
     $(document).ready(function() {
-        $('#admin-container').hide()
-        $("#popup").hide();
         $("#blocker").fadeOut("slow", function() {
             $(this).remove();
         });

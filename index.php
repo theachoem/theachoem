@@ -158,10 +158,7 @@
 
 
     function hidewithout(thispage) {
-        $("#page" + thispage).fadeIn({
-            queue: false,
-            duration: 'fast'
-        }, function() {
+        $("#page" + thispage).fadeIn('fast', function() {
             $(this).show();
         });
         for (var i = 0; i < 4; i++) {

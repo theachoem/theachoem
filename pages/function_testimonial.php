@@ -1,7 +1,20 @@
 <?php
+        $res = mysqli_query($db, "SELECT * FROM `testimonial`");
+        $names = array();
+        $profile_id = array();
+        $recommend = array();
+        $from = array();
+                
+        while($row = mysqli_fetch_array($res)){
+            array_push($names, $row['name']);
+            array_push($profile_id, $row['profile_id']);
+            array_push($recommend, $row['recommend']);
+            array_push($from, $row['from']);
+        }
+    
         //CHECK IF NOT EMPTY
-        function isnonempty($name, $recommend, $id){
-            if(!empty($name) and !empty($recommend) and !empty($id)){
+        function isnonempty($profile_id, $name, $from, $recommend){
+            if(!empty($profile_id) and !empty($name) and !empty($from) and !empty($recommend)){
                 return true;
             }
             else{
@@ -11,67 +24,60 @@
         }
 
         //DELETE QUERY
-        if(isset($_POST['deletetesti'])){
-            $id = $_POST['idpath'];
-            $target = "../assets/testiminial/$id.png";
-            if(isnonempty($id, $target, 'com')){
-                $sql = "DELETE FROM `testimonial` WHERE `testimonial`.`image` = '$id'";
+        if(isset($_POST['delete-testimonial'])){
+            $profile_id = $_POST['profile_id'];
+            $from = $_POST['from'];
+            if (!empty($profile_id)){
+                $sql = "DELETE FROM `testimonial` WHERE `testimonial`.`profile_id` = '$profile_id' AND `testimonial`.`from` = '$from'";
                 try{
-                    unlink($target);
                     mysqli_query($db, $sql);
-                    echo '<script>alert("DELETE!");</script>';
                 } catch(Exception  $e){
                     echo '<script language="javascript">';
                     echo 'alert("Caught exception")';  
                     echo '</script>';
                 }
+
+                $result = mysqli_query($db, "SELECT * FROM `testimonial` WHERE `testimonial`.`profile_id` = '$profile_id'");
+                if (mysqli_num_rows($result) == 0) echo '<script>alert("Delete!");</script>';
+                else echo '<script>alert("wrong input!");</script>';
  
             }
         }
 
         //UPDATE QUERY
-        if(isset($_POST['updatetesti'])){
-            $id = $_POST['idpath'];
-            $target = "../assets/testiminial/$id.png";
+        if(isset($_POST['update-testimonial'])){
+            $profile_id = $_POST['profile_id'];
+            $from = $_POST['from'];
             $recommend = $_POST['recommend'];
             $name = $_POST['name'];
-            if (empty($_FILES['image']['size'])){
-                $sql = "UPDATE `testimonial` SET `name` = '$name', `recommend` = '$recommend' WHERE `testimonial`.`image` = '$id'";
-                try{
-                    mysqli_query($db, $sql);
-                    echo '<script>alert("UPDATED!");</script>';
-                } catch(Exception  $e){
-                    echo '<script language="javascript">';
-                    echo 'alert("Caught exception")';  
-                    echo '</script>';
-                }
+
+            if (!empty($profile_id)){
+                $sql = "UPDATE `testimonial` SET ";
+                if (!empty($recommend)) $sql = $sql . " `recommend` = '$recommend', ";
+                if (!empty($name)) $sql = $sql . "`name` = '$name'";
+                if (!empty($from)) $sql = $sql . " `from` = '$from' ";
+                $sql = $sql . " WHERE `testimonial`.`profile_id` = '$profile_id'";
             }
-            else{
-                $target = "../assets/testiminial/$id.png";
-                unlink($target);
-                $sql = "UPDATE `testimonial` SET `name` = '$name', `recommend` = '$recommend', `image` = '$id' WHERE `testimonial`.`image` = '$id'";
-                try{
-                    mysqli_query($db, $sql);
-                    move_uploaded_file($_FILES['image']['tmp_name'], $target);
-                    echo '<script>alert("UPDATED!");</script>';
-                }catch(Exception  $e){
-                    echo '<script language="javascript">';
-                    echo 'alert("Caught exception")';
-                    echo '</script>';
-                }
+            try{
+                mysqli_query($db, $sql);
+                echo '<script>alert("' . $sql . '");</script>';
+            }
+            catch(Exception $e){
+                echo '<script language="javascript">';
+                echo 'alert("Caught exception")';
+                echo '</script>';
             }
         }
 
         //UPLOAD TO QUERY
-        if(isset($_POST['uploadtesti'])){
-            $id = $_POST['idpath'];
-            $target = "../assets/testiminial/$id.png";
-            // $image = $_FILES['image']['name'];
+        if(isset($_POST['upload-testimonial'])){
+            $profile_id = $_POST['profile_id'];
+            $from = $_POST['from'];
             $recommend = $_POST['recommend'];
             $name = $_POST['name'];
 
-            if(isnonempty($name, $recommend, $id)){
-                $sql = "INSERT INTO `testimonial` (`name`, `recommend`, `image`) VALUES ('$name', '$recommend', '$id')";
+            if(isnonempty($profile_id, $name, $from, $recommend)){
+                $sql = "INSERT INTO `testimonial` (`from`, `name`, `recommend`, `profile_id`) VALUES ('$from', '$name','$recommend', '$profile_id')";
                 try{
                     mysqli_query($db, $sql);
                 }catch(Exception  $e){
@@ -79,18 +85,10 @@
                     echo 'alert("Caught exception")';  
                     echo '</script>';
                 }
-                try{
-                    mysqli_query($db, $sql);
-                    //MOVE IMAGE
-                    move_uploaded_file($_FILES['image']['tmp_name'], $target);
-                    echo '<script>alert("UPLOADED!");</script>';
-                }catch(Exception  $e){
-                    echo '<script language="javascript">';
-                    echo 'alert("Caught exception")';  
-                    echo '</script>';
-                }
-            }
-        }        
 
-        $res = mysqli_query($db, "SELECT * FROM `testimonial`");
+                $result = mysqli_query($db, "SELECT * FROM `testimonial` WHERE `testimonial`.`profile_id` = '$profile_id' AND `testimonial`.`from` = '$from'");
+                if (mysqli_num_rows($result) != 0) echo '<script>alert("Uploaded!");</script>';
+                else echo '<script>alert("wrong input!");</script>';
+            }
+        }
 ?>

@@ -342,6 +342,10 @@ table td {
   margin: 3px;
 }
 
+#admin-container .admin-editor form .col-50 .date {
+  width: calc(100% / 3 - 3px);
+}
+
 #admin-container .admin-editor form .col {
   float: left;
   width: calc(100% - 6px);
@@ -477,14 +481,17 @@ table td {
 .wrapper.portfolio .slider .post .portfolio img {
   width: 100%;
   max-width: 10em;
-  opacity: 0.5;
-  -webkit-filter: grayscale(50%);
-          filter: grayscale(50%);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   border-radius: 8px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
 }
 
 .wrapper.portfolio .slider .post .portfolio img:hover {
@@ -668,8 +675,9 @@ table td {
   position: relative;
   opacity: 0;
   visibility: hidden !important;
-  transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  -webkit-transition: all 1s ease;
 }
 
 .wrapper.testimonial .testi-wrapper * {
@@ -687,8 +695,8 @@ table td {
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .wrapper.testimonial .testi-wrapper .card-container .profile {
@@ -720,6 +728,21 @@ table td {
 .wrapper.testimonial .testi-wrapper .card-container h3,
 .wrapper.testimonial .testi-wrapper .card-container p {
   color: #005481;
+}
+
+.wrapper.testimonial .testi-wrapper a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #00b22d;
+  margin-bottom: 10px;
+  font-weight: 700;
+  cursor: pointer !important;
+}
+
+.wrapper.testimonial .testi-wrapper a:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #009b27;
 }
 
 .wrapper.testimonial .testi-wrapper.slick-initialized {

@@ -276,6 +276,9 @@ table td {
                 float: left;
                 width: calc(50% - 6px);
                 margin: 3px;
+                .date {
+                    width: calc(100% / 3 - 3px);
+                }
             }
             .col {
                 float: left;
@@ -392,11 +395,12 @@ table td {
                 img {
                     width: 100%;
                     max-width: 10em;
-                    opacity: 0.5;
-                    filter: grayscale(50%);
                     transition: all 0.5s ease;
                     border-radius: 8px;
                     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+                    animation-name: fadeIn;
+                    animation-fill-mode: forwards;
+                    filter: grayscale(50%);
                 }
                 img:hover {
                     filter: grayscale(0);
@@ -546,7 +550,7 @@ table td {
         opacity: 0;
         visibility: hidden !important;
         transition: opacity 1s ease;
-        -webkit-transition: opacity 1s ease;
+        -webkit-transition: all 1s ease;
         * {
             cursor: pointer !important;
         }
@@ -561,7 +565,7 @@ table td {
             border-radius: 10px;
             text-align: center;
             overflow: hidden;
-            transition: opacity 1s ease;
+            transition: all 1s ease;
             .profile {
                 margin: 0 auto;
                 width: 132px;
@@ -583,6 +587,17 @@ table td {
             p {
                 color: $primary;
             }
+        }
+        a {
+            transition: all 0.3s ease;
+            color: #00b22d;
+            margin-bottom: 10px;
+            font-weight: 700;
+            cursor: pointer !important;
+        }
+        a:hover {
+            transition: all 0.3s ease;
+            color: #009b27;
         }
     }
     .testi-wrapper.slick-initialized {

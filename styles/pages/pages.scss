@@ -19,14 +19,12 @@ hr {
     transition: all 0.6s ease;
 }
 
-body {
-    padding: calc(10px + 3vw) calc(5px + 4vw);
+html {
+    scroll-behavior: smooth !important;
 }
 
-html, body {
-    min-height: 100% !important;
-    height: 100%;
-    scroll-behavior: smooth !important;
+body {
+    padding: calc(10px + 3vw) calc(5px + 4vw);
 }
 
 table td {
@@ -545,6 +543,7 @@ table td {
     .testi-wrapper {
         height: 100%;
         width: 100%;
+        overflow: hidden;
         margin: 10px auto;
         padding: 10px 0;
         position: relative;
@@ -670,7 +669,7 @@ table td {
 }
 
 @media only screen and (max-width: 624px) {
-    .wrapper.testimonial {
+    .wrapper.wrapper.testimonial {
         .card-container {
             border-bottom: 25px solid rgb(255, 255, 255);
         }

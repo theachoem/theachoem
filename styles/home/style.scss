@@ -67,17 +67,14 @@ $green: #008542;
     }
 }
 
-body {
-    background-color: $background;
-    height: 100%;
-    transition: all 0.5s ease;
-    margin: 15px 0 0;
+html {
+    scroll-behavior: smooth !important;
 }
 
-html, body {
-    min-height: 100% !important;
-    height: 100%;
-    scroll-behavior: smooth !important;
+body {
+    background-color: $background;
+    transition: all 0.5s ease;
+    margin: 15px 0 0;
 }
 
 .construction {
@@ -489,6 +486,13 @@ html, body {
         animation: noise .5s linear infinite;
         padding: 0;
     }
+    
+    html, body {
+        scroll-behavior: smooth !important;
+        min-height: 100% !important;
+        height: 100%;
+    }
+
     #particles-js {
         display: none;
     }

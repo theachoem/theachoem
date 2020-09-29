@@ -556,13 +556,12 @@ table td {
     .testi-wrapper {
         height: 100%;
         width: 100%;
-        overflow: hidden;
         margin: 10px auto;
         padding: 10px 0;
         position: relative;
         opacity: 0;
         visibility: hidden !important;
-        transition: opacity 1s ease;
+        transition: all 1s ease;
         -webkit-transition: all 1s ease;
         * {
             cursor: pointer !important;
@@ -616,7 +615,7 @@ table td {
     .testi-wrapper.slick-initialized {
         visibility: visible !important;
         opacity: 1;
-        transition: opacity 1s ease;
+        transition: all 1s ease;
     }
 }
 
@@ -673,7 +672,7 @@ table td {
 }
 
 @media only screen and (max-width: 624px) {
-    .wrapper.wrapper.testimonial {
+    .wrapper.testimonial {
         .card-container {
             border-bottom: 25px solid rgb(255, 255, 255);
         }
@@ -783,7 +782,7 @@ table td {
 }
 
 @media only screen and (max-width: 300px) {
-    .wrapper.wrapper.testimonial {
+    .wrapper.testimonial {
         .card-container {
             overflow-y: scroll;
         }

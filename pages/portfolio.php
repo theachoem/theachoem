@@ -13,7 +13,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href="../styles/jquery-ui.css" rel="stylesheet" />
 
     <style>
     * {
@@ -33,7 +32,7 @@
 
 <body>
     <?php if(isLoggedIn()) : ?>
-    <a onclick="showAdmin();" style="position: absolute; top: 10px; right: 10px;"><img class="admin-btn"
+    <a onclick="toggleAdmin(true);" style="position: absolute; top: 10px; right: 10px;"><img class="admin-btn"
             style="transform: rotate(45deg);" src="../assets/graphics/close.svg" alt=""></a>
     <a onclick="window.location.href = window.location.href;"
         style="z-index: 10000; position: absolute; top: 10px; right: 50px;"><img class="admin-btn"
@@ -41,7 +40,7 @@
     <div id="admin-container" style="display: none;">
         <div class="top">
             <p>thea@dev:~</p>
-            <a href="#" class="close" onclick="hideAdmin()">
+            <a href="#" class="close" onclick="toggleAdmin(false)">
                 <img src="..\assets\graphics\close.svg" alt=""></a>
         </div>
         <div class="admin-editor">
@@ -122,7 +121,7 @@
         <div class="viewer-container" style="display: none;">
             <div class="top">
                 <p>thea@dev:~</p>
-                <a href="#" class="close" onclick="closeViewer()">
+                <a href="#" class="close" onclick="toggleViewer(false)">
                     <img src="../assets/graphics/close.svg" alt="">
                 </a>
             </div>
@@ -146,7 +145,7 @@
                         <p id="portfolio-des" style="margin: 5px 0;">Empty</p>
                         <a href="#" target="_blank" id="git" class="button">🛠 GitHub</a>
                         <a href="#" target="_blank" id="dribble" class="button orange">✒️ Dribble</a>
-                        <a href="#" target="viewer" onclick="showViewer();" id="live" class="button green">🔎 View
+                        <a href="#" target="viewer" onclick="toggleViewer(true);" id="live" class="button green">🔎 View
                             more</a>
                     </div>
                     <div class="right-side">
@@ -201,53 +200,23 @@
         </div>
     </div>
     <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
-
     <script>
-    //hide admin
-    function showAdmin() {
-        $('#admin-container').fadeIn("fast", function() {
+    function toggleAdmin(isShow) {
+        //show admin
+        if (isShow) $('#admin-container').fadeIn("fast", function() {
             $(this).show();
-        });
-    }
-    //show admin
-    function hideAdmin() {
-
-        $('#admin-container').fadeOut("fast", function() {
+        })
+        //hide admin
+        else $('#admin-container').fadeOut("fast", function() {
             $(this).hide();
         });
     }
 
-    $(function() {
-        $("#datepicker").datepicker();
-    });
 
-    $('#datepicker').datepicker({
-        dateFormat: 'dd-mm-yy',
-        altField: '#datepicker',
-        altFormat: 'yy-mm-dd'
-    });
     //add active class
     function addActiveClass(name, thispage) {
         $('#' + name).addClass('active').siblings().removeClass('active');
         hidewithout(thispage);
-    }
-
-    //hide pages
-    function hidewithout(thispage) {
-        $("#slide" + thispage).fadeIn({
-            queue: false,
-            duration: 'fast'
-        }, function() {
-            $(this).show();
-        });
-        for (var i = 1; i < 5; i++) {
-            if (i != thispage) {
-                $("#slide" + i).fadeOut("fast", function() {
-                    $(this).hide();
-                });
-            }
-        }
     }
 
     //show pop up windows
@@ -269,7 +238,6 @@
             parent.appendChild(newElement);
         }
 
-
         $("#git").attr("href", git);
         $("#dribble").attr("href", dribble);
         $("#live").attr("href", "https://theacheng.github.io/theacheng/docs/" + id);
@@ -282,27 +250,19 @@
 
         $("#live").show();
 
-        $(".category").fadeOut("fast", function() {
-            $(this).hide();
-        });
-
-        $(".slider").fadeOut("fast", function() {
-            $(this).hide();
-        });
+        $(".category").hide();
+        $(".slider").hide();
 
         $("#popup").fadeIn("fast", function() {
             $(this).show();
         });
     }
 
-    function showViewer() {
-        $(".viewer-container").fadeIn("slow", function() {
+    function toggleViewer(isShow) {
+        if (isShow) $(".viewer-container").fadeIn("slow", function() {
             $(this).show();
-        });
-    }
-
-    function closeViewer() {
-        $(".viewer-container").fadeIn("slow", function() {
+        })
+        else $(".viewer-container").fadeOut("slow", function() {
             $(this).hide();
         });
         document.getElementById("view-web").src = "#"
@@ -313,7 +273,7 @@
         $(".slider").show();
 
         $("#popup").fadeOut("fast", function() {
-            $(this)
+            $(this).hide();
         });
 
         setTimeout(function() {
@@ -322,7 +282,22 @@
                 parent.removeChild(parent.lastElementChild);
             }
             document.getElementById('windows').scrollTo(0, 0);
-        }, 100);
+        }, 50);
+    }
+
+
+    //hide pages
+    function hidewithout(thispage) {
+        $("#slide" + thispage).fadeIn('fast', function() {
+            $(this).show();
+        });
+        for (var i = 1; i < 5; i++) {
+            if (i != thispage) {
+                $("#slide" + i).fadeOut("fast", function() {
+                    $(this).hide();
+                });
+            }
+        }
     }
 
     $(document).ready(function() {

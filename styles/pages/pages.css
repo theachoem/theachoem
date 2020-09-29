@@ -694,14 +694,12 @@ table td {
 .wrapper.testimonial .testi-wrapper {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   margin: 10px auto;
   padding: 10px 0;
   position: relative;
   opacity: 0;
   visibility: hidden !important;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
 
@@ -773,8 +771,8 @@ table td {
 .wrapper.testimonial .testi-wrapper.slick-initialized {
   visibility: visible !important;
   opacity: 1;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .wrapper.contact {
@@ -829,16 +827,16 @@ table td {
 }
 
 @media only screen and (max-width: 624px) {
-  .wrapper.wrapper.testimonial .card-container {
+  .wrapper.testimonial .card-container {
     border-bottom: 25px solid white;
   }
-  .wrapper.wrapper.testimonial .card-container.overflow {
+  .wrapper.testimonial .card-container.overflow {
     overflow-y: scroll;
     border-color: #f0f0f0;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
   }
-  .wrapper.wrapper.testimonial .card-container.overflow::after {
+  .wrapper.testimonial .card-container.overflow::after {
     content: "👋";
     position: absolute;
     bottom: 4px;
@@ -932,7 +930,7 @@ table td {
 }
 
 @media only screen and (max-width: 300px) {
-  .wrapper.wrapper.testimonial .card-container {
+  .wrapper.testimonial .card-container {
     overflow-y: scroll;
   }
 }

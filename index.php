@@ -145,15 +145,11 @@
             $("#blocker").fadeOut("slow", function() {
                 $(this).remove();
             });
-        }, 1000);
-
-        setTimeout(function() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
-            // $('.construction').addClass('top');
-        }, 800);
+        }, 1000);
     })
 
 
@@ -178,10 +174,6 @@
                 $(this).remove();
             });
         }, 500);
-
-        // setTimeout(function() {
-        //     $('.construction').removeClass('top');
-        // }, 3000);
     }
 
     ////////////////////////

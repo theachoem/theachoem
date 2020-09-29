@@ -408,7 +408,7 @@ table td {
         }
     }
     .popup {
-        position: absolute;
+        position: fixed;
         z-index: 10000;
         width: 100%;
         height: 100%;
@@ -425,13 +425,12 @@ table td {
             width: 100%;
             height: 100%;
             background: #05304be1;
-            overflow-y: scroll;
-            overflow-x: hidden;
+            overflow-y: auto;
             display: block;
             .bottom {
                 padding: 25px 40px 0px 40px;
                 margin: 50px 0 0;
-                height: 100%;
+                height: calc(100% - 100px);
                 color: white;
                 display: flex;
                 .left-side {

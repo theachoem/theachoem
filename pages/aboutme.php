@@ -23,7 +23,7 @@
     <div class="wrapper aboutme">
         <h3>Who Am I</h3>
         <p>I am currently a second year student at NIPTICT and also a member of Erobot Team.</p>
-        <div height="10px"></div>
+        <div style="height: 10px"><!----></div>
         <h3>Profile</h3>
         <table>
             <tr>
@@ -43,11 +43,11 @@
         <hr>
         <ul id="timeline">
             <li>2019 - Present
-                <h3><a href="https://niptict.edu.kh/"​ style="cursor:pointer" target="_blank">National Institute of Post, Telecom, and ICT</a></h3>
+                <h3><a href="https://niptict.edu.kh/" style="cursor:pointer;" target="_blank">National Institute of Post, Telecom, and ICT</a></h3>
                 <p>Studies Computer Science since Oct 28th, 2019</p>
             </li>
             <li>2013
-                <h3><a href="https://facebook.com/sompovpounhighschool/" style="cursor:pointer" target="_blank">Hun Sen Sompoeupoun High School</a></h3>
+                <h3><a href="https://facebook.com/sompovpounhighschool/" style="cursor:pointer;" target="_blank">Hun Sen Sompoeupoun High School</a></h3>
                 <p>Studied General Knowledge</p>
             </li>
             <li>2007

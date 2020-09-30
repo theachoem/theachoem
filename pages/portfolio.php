@@ -125,7 +125,7 @@
                     <img src="../assets/graphics/close.svg" alt="">
                 </a>
             </div>
-            <iframe src="" name="viewer" id="view-web" frameborder="0" class="portfolio-view" height="100%"
+            <iframe src="#" name="view-web" id="view-web" frameborder="0" class="portfolio-view" height="100%"
                 width="100%"></iframe>
         </div>
         <div class="popup" id="popup" style="display: none;">
@@ -145,7 +145,7 @@
                         <p id="portfolio-des" style="margin: 5px 0;">Empty</p>
                         <a href="#" target="_blank" id="git" class="button">🛠 GitHub</a>
                         <a href="#" target="_blank" id="dribble" class="button orange">✒️ Dribble</a>
-                        <a href="#" target="viewer" onclick="toggleViewer(true);" id="live" class="button green">🔎 View
+                        <a href="#" target="view-web" onclick="toggleViewer(true);" id="live" class="button green">🔎 View
                             more</a>
                     </div>
                     <div class="right-side">

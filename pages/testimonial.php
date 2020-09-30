@@ -38,7 +38,7 @@
         <div class="top">
             <p>thea@dev:~</p>
             <a href="#" class="close" onclick="hideAdmin()">
-                <img src="..\assets\graphics\close.svg" alt=""></a>
+                <img src="../assets/graphics/close.svg" alt=""></a>
         </div>
         <div class="admin-editor">
             <div class="table-container">
@@ -102,13 +102,13 @@
         <div class="testi-wrapper">
             <?php
                     echo '<div class="card-container hide-c">';
-                    echo '<div class="profile"><img id="img" src="../assets\graphics\fiver.svg" alt=""></div>';
+                    echo '<div class="profile"><img src="../assets/graphics/fiver.svg" alt=""></div>';
                     echo '<p style="margin-top: 10px; color: #4b4b4b;">Please give me a chance to get your works done<br>Currently, I have 2 active services such as Design modern website and<br>Design mobile app UI.</p>';
                     echo '<a href="https://www.fiverr.com/theachoem" target="_blank">Get a quote</a>';
                     echo '</div>';
 
                     echo '<div class="card-container overflow hide-c">';
-                    echo '<div class="profile"><img id="img" src="../assets\graphics\volunteer.svg" alt=""></div>';
+                    echo '<div class="profile"><img src="../assets/graphics/volunteer.svg" alt=""></div>';
                     echo '<p style="margin-bottom: 10px; margin-top: 10px; color: #4b4b4b;">For Open Source Projects:<br>If you are creating Open source or non-profit project and need web or mobile UI design, please DM or send a message to theacheng@gmail.com. Just use "Open Source" or "non-profit" in the subject.</p>';
                     echo '</div>';
 

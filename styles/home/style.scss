@@ -376,21 +376,13 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            i {
-                text-align: center;
-                background-color: $side-bar;
-            }
         }
         .active {
-            i {
-                color: $canvas;
-            }
+            color: $canvas;
         }
         .active:hover {
-            i {
-                color: #33a4fa;
-                transition: all 0.2s ease;
-            }
+            color: #33a4fa;
+            transition: all 0.2s ease;
         }
         a:hover {
             color: #e4e4e4;

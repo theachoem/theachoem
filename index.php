@@ -25,10 +25,6 @@
 </head>
 
 <body onload="afterload()">
-    <!-- <div class="construction top">
-        <img src="./assets/graphics/warning" alt="">
-        <p>This site is under construction!</p>
-    </div> -->
     <div id="blocker"><img class="none" id="img" style="height: calc(50px + 10vw); display: inline;"
             src="./assets/profile/imacoustic-logo.svg" alt=""></div>
     <?php
@@ -50,12 +46,12 @@
                 <a class="view" <?php  
                     if(isLoggedIn()) echo 'onclick="openFileAdmin()" href="#"';
                     else echo 'href="https://github.com/theacheng" target="_blank"';
-                ?>><i id="thank-message"></i></a>
-                <img class="profile blur" id="profile" src="./assets/beforeload/profile/myprofile.png" alt="profile">
+                ?> aria-label="view"><i id="thank-message"></i></a>
+                <img class="profile blur" id="profile" src="./assets/beforeload/profile/myprofile.png" alt="./assets/beforeload/profile/myprofile.png">
                 <div class="lds-ring absolute" id="image-loding">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div><!----></div>
+                    <div><!----></div>
+                    <div><!----></div>
                 </div>
             </div>
             <h1>CHOEM THEA</h1>
@@ -77,20 +73,16 @@
             </div>
         </div>
         <div class="side-bar">
-            <a class="sidebar active" id="aboutme" onclick="addActiveClass('aboutme', 0)" href="#0"><i
-                    class="fas fa-user-graduate"></i></a>
-            <a class="sidebar" id="portfolio" onclick="addActiveClass('portfolio', 1)" href="#1"><i
-                    class="fas fa-clipboard-check"></i></a>
-            <a class="sidebar" id="testimonial" onclick="addActiveClass('testimonial', 2)" href="#2"><i
-                    class="fas fa-comment-alt"></i></a>
-            <a class="sidebar" id="contact" onclick="addActiveClass('contact', 3)" href="#3"><i
-                    class="fas fa-id-card-alt"></i></a>
+            <a class="sidebar fas fa-user-graduate active" id="aboutme" onclick="addActiveClass('aboutme', 0)" href="#0" aria-label="link"></a>
+            <a class="sidebar fas fa-clipboard-check" id="portfolio" onclick="addActiveClass('portfolio', 1)" href="#1" aria-label="link"></a>
+            <a class="sidebar fas fa-comment-alt" id="testimonial" onclick="addActiveClass('testimonial', 2)" href="#2" aria-label="link"></a>
+            <a class="sidebar fas fa-id-card-alt" id="contact" onclick="addActiveClass('contact', 3)" href="#3" aria-label="link"></a>
         </div>
         <div class="right-side">
-            <iframe class="page" id="page0" src="./pages/aboutme.php"></iframe>
-            <iframe class="page" id="page1" src="./pages/portfolio.php"></iframe>
-            <iframe class="page" id="page3" src="./pages/contact.php"></iframe>
-            <iframe class="page" id="page2" src="./pages/testimonial.php"></iframe>
+            <iframe class="page" id="page0" src="./pages/aboutme.php"><!----></iframe>
+            <iframe class="page" id="page1" src="./pages/portfolio.php"><!----></iframe>
+            <iframe class="page" id="page3" src="./pages/contact.php"><!----></iframe>
+            <iframe class="page" id="page2" src="./pages/testimonial.php"><!----></iframe>
         </div>
     </div>
     <div id="copyright">
@@ -99,9 +91,9 @@
     <div class="blocker-loading">
         <div class="loading-download none" id="loading-downloading">
             <div class="lds-ring">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div><!----></div>
+                <div><!----></div>
+                <div><!----></div>
                 <p id="downloading-p">Loading contents . . .</p>
             </div>
         </div>

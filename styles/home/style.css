@@ -527,16 +527,11 @@ body {
           align-items: center;
 }
 
-.card .side-bar a i {
-  text-align: center;
-  background-color: #024264;
-}
-
-.card .side-bar .active i {
+.card .side-bar .active {
   color: #64b7f7;
 }
 
-.card .side-bar .active:hover i {
+.card .side-bar .active:hover {
   color: #33a4fa;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;

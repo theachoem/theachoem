@@ -28,7 +28,6 @@
     <div id="blocker"><img class="none" id="img" style="height: calc(50px + 10vw); display: inline;"
             src="./assets/profile/imacoustic-logo.svg" alt=""></div>
     <?php
-        echo $vistitors;
         if(isLoggedIn()) echo '<a href="#" style="position: absolute; right: 10px; top: 10px; z-index: 100000000;" onclick="openFileAdmin()"><img src="./assets/graphics/close.svg" alt=""></a>
             <iframe style="display:none; position: fixed; z-index: 10000; margin-top: -15px;" id="adminfile" width="100%" height="100%" src="./pages/ignore/admin.php"></iframe>'
     ?>

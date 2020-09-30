@@ -172,27 +172,27 @@
             $notfound = "../assets/graphics/notfound.png";
             echo '<div class="all post" id="slide1">';
                 for($i = 0 ; $i < count($allID); $i++){
-                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$allID[$i].'\', \''.$allName[$i].'\', \''.$allDes[$i].'\', \''.$allDate[$i].'\', \''.$allGit[$i].'\', \''.$allDribble[$i].'\', \''.$allTech[$i].'\')"><img loading="lazy" style="animation-duration: calc('.$i.'s * 0.2 + 0.3s);" src="../assets/portfolio/thumb/'.$allID[$i].'.png" alt="'.$allID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
+                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$allID[$i].'\', \''.$allName[$i].'\', \''.$allDes[$i].'\', \''.$allDate[$i].'\', \''.$allGit[$i].'\', \''.$allDribble[$i].'\', \''.$allTech[$i].'\')"><img loading="lazy" style="animation-duration: calc('.$i.'s * 0.2);" src="../assets/portfolio/thumb/'.$allID[$i].'.png" alt="'.$allID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
                 }
             echo '</div>';
             if(count($mobileID) > 0){
                 echo '<div class="mobile post" id="slide2">';
                 for($i = 0 ; $i < count($mobileID); $i++){
-                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$mobileID[$i].'\', \''.$mobileName[$i].'\', \''.$mobileDes[$i].'\', \''.$mobileDate[$i].'\', \''.$mobileGit[$i].'\', \''.$mobileDribble[$i].'\', \''.$mobileTech[$i].'\')"><img loading="lazy" style="animation-duration: calc('.$i.'s * 0.2 + 0.3s);" src="../assets/portfolio/thumb/'.$mobileID[$i].'.png" alt="'.$mobileID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
+                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$mobileID[$i].'\', \''.$mobileName[$i].'\', \''.$mobileDes[$i].'\', \''.$mobileDate[$i].'\', \''.$mobileGit[$i].'\', \''.$mobileDribble[$i].'\', \''.$mobileTech[$i].'\')"><img loading="lazy" style="animation-duration: calc('.$i.'s * 0.2);" src="../assets/portfolio/thumb/'.$mobileID[$i].'.png" alt="'.$mobileID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
                 }
                 echo '</div>';
             }
             if(count($uiID) > 0){
                 echo '<div class="ui post" id="slide3">';
                 for($i = 0 ; $i < count($uiID); $i++){
-                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$uiID[$i].'\', \''.$uiName[$i].'\', \''.$uiDes[$i].'\', \''.$uiDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiTech[$i].'\')"><img style="animation-duration: calc('.$i.'s * 0.2 + 0.3s);" loading="lazy" src="../assets/portfolio/thumb/'.$uiID[$i].'.png" alt="'.$uiID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
+                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$uiID[$i].'\', \''.$uiName[$i].'\', \''.$uiDes[$i].'\', \''.$uiDate[$i].'\', \''.$uiGit[$i].'\', \''.$uiDribble[$i].'\', \''.$uiTech[$i].'\')"><img style="animation-duration: calc('.$i.'s * 0.2);" loading="lazy" src="../assets/portfolio/thumb/'.$uiID[$i].'.png" alt="'.$uiID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
                 }
                 echo '</div>';
             }
             if(count($webID) > 0){            
                 echo '<div class="web post" id="slide4">';
                 for($i = 0 ; $i < count($webID); $i++){
-                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$webID[$i].'\', \''.$webName[$i].'\', \''.$webDes[$i].'\', \''.$webDate[$i].'\', \''.$webGit[$i].'\', \''.$webDribble[$i].'\', \''.$webTech[$i].'\')"><img style="animation-duration: calc('.$i.'s * 0.2 + 0.3s);" loading="lazy" src="../assets/portfolio/thumb/'.$webID[$i].'.png" alt="'.$webID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
+                    echo '<a href="#" class="portfolio hide-c" onclick="showPopUp(\''.$webID[$i].'\', \''.$webName[$i].'\', \''.$webDes[$i].'\', \''.$webDate[$i].'\', \''.$webGit[$i].'\', \''.$webDribble[$i].'\', \''.$webTech[$i].'\')"><img style="animation-duration: calc('.$i.'s * 0.2);" loading="lazy" src="../assets/portfolio/thumb/'.$webID[$i].'.png" alt="'.$webID[$i].'.png" onerror="this.src=\''.$notfound.'\'"></a>';
                 }
                 echo '</div>';
             }

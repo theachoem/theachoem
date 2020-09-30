@@ -73,4 +73,37 @@
             unlink( $target );  
         }
     }
+
+    //counter
+    $counter_res = mysqli_query($db, "SELECT * FROM `counter`");    
+
+    if(!$counter_res){
+        die("Retriving Query Error");
+    }
+
+    function getIPAddress() {  
+        //whether ip is from the share internet  
+        if(!empty($_SERVER['HTTP_CLIENT_IP'])) {  
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        }
+        //whether ip is from the proxy  
+        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];  
+        }
+        //whether ip is from the remote address  
+        else{  
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
+    }
+    //add new visitor
+    $vistitor_ip = getIPAddress();
+
+    //check unique
+    $check_res = mysqli_query($db, "SELECT * FROM `counter` WHERE `ip_address` = '$vistitor_ip'");
+    if(mysqli_num_rows($check_res) < 1){
+        mysqli_query($db, "INSERT INTO counter(ip_address) VALUES('$vistitor_ip')");
+    }
+
+    $vistitors = mysqli_num_rows($counter_res);
 ?>

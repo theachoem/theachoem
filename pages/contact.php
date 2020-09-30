@@ -37,7 +37,7 @@
                 <img class="logo" src="../assets/graphics/github.svg" alt="">
                 <div class="detail">
                     <a href="https://github.com/theacheng" target="_blank"><h3>GitHub</h3></a>
-                    <p>All my works are at there includes application, web, contribute with open source project and more!</p>
+                    <p>All my works are at there includes application, web, contribute with open source project, and even this project!</p>
                 </div>
             </div>
             <div class="social">

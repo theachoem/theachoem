@@ -23,7 +23,6 @@
     <div class="wrapper aboutme">
         <h3>Who Am I</h3>
         <p>I am currently a second year student at NIPTICT and also a member of Erobot Team.</p>
-        <div style="height: 10px"><!----></div>
         <h3>Profile</h3>
         <table>
             <tr>

@@ -522,11 +522,11 @@ table td {
 .wrapper.portfolio .slider .post .portfolio img:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
-  opacity: 1;
+  opacity: 1 !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
 }
 
 .wrapper.portfolio .popup {

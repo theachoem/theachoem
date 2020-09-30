@@ -29,7 +29,7 @@
             src="./assets/profile/imacoustic-logo.svg" alt=""></div>
     <?php
         if(isLoggedIn()) echo '<a href="#" style="position: absolute; right: 10px; top: 10px; z-index: 100000000;" onclick="openFileAdmin()"><img src="./assets/graphics/close.svg" alt=""></a>
-            <iframe style="display:none; position: fixed; z-index: 10000; margin-top: -15px;" id="adminfile" width="100%" height="100%" src="./pages/ignore/admin.php"></iframe>'
+            <iframe style="display:none; position: fixed; z-index: 100000; margin-top: -15px;" id="adminfile" width="100%" height="100%" src="./pages/ignore/admin.php"></iframe>'
     ?>
     <form action="index.php" method="post" id="log-in" style="display: none;">
         <input type="email" name="email" id="email" placeholder="Email">

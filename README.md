@@ -1,5 +1,5 @@
-# Hi there 👋
-I'm Thea, I'm Computer Science student. I love coding and designing.<br>
+## Hi there 👋
+I'm Thea, I'm computer science student. I love coding and designing.<br>
 Check out my portfolio: https://theacheng.herokuapp.com/
 <br><br>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=theacheng&layout=compact)](https://github.com/theacheng)

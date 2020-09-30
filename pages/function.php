@@ -75,11 +75,7 @@
     }
 
     //counter
-    $counter_res = mysqli_query($db, "SELECT * FROM `counter`");    
-
-    if(!$counter_res){
-        die("Retriving Query Error");
-    }
+    $counter_res = mysqli_query($db, "SELECT * FROM `counter`");
 
     function getIPAddress() {  
         //whether ip is from the share internet  

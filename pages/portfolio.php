@@ -41,7 +41,7 @@
         <div class="top">
             <p>thea@dev:~</p>
             <a href="#" class="close" onclick="toggleAdmin(false)">
-                <img src="..\assets\graphics\close.svg" alt=""></a>
+                <img src="../assets/graphics/close.svg" alt=""></a>
         </div>
         <div class="admin-editor">
             <div class="table-container">

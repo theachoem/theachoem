@@ -539,10 +539,10 @@ table td {
             transition: all 0.3s ease;
             color: #009b27;
         }
-        .opensource{
+        .opensource {
             color: #0049709d !important;
         }
-        .opensource:hover{
+        .opensource:hover {
             transition: all 0.3s ease;
             color: #004970;
         }
@@ -563,7 +563,7 @@ table td {
         padding: 0 2px 0 0;
         margin: 0;
     }
-    .getintouch{
+    .getintouch {
         padding: 5px 15px;
         background: white;
         color: $primary;
@@ -571,11 +571,11 @@ table td {
         display: block;
         width: max-content;
         margin: 3px 0 0;
-        transition: .5s all ease;
+        transition: 0.5s all ease;
     }
-    .getintouch:hover{
+    .getintouch:hover {
         background: rgba(255, 255, 255, 0.938);
-        transition: .3s all ease;
+        transition: 0.3s all ease;
     }
     .find-me {
         h3 {
@@ -589,7 +589,7 @@ table td {
                 min-width: 15px;
                 min-height: 15px;
                 margin: 10px 10px 0px 0px;
-                transition: all .5s ease;
+                transition: all 0.5s ease;
             }
             img {
                 width: 100%;

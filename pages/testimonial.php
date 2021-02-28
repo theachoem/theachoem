@@ -1,5 +1,5 @@
-<?php include('function/function.php') ?>
-<?php include('function/testimonial.php') ?>
+<?php include('../functions/base.php') ?>
+<?php include('../functions/testimonial.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,26 +14,32 @@
     <link rel="stylesheet" href="../styles/pages/pages.css">
 
     <style>
-    * {
-        color: white;
-    }
-    .admin-btn{
-        transition: all .5s ease;
-    }
-    .admin-btn:hover{
-        transition: all .5s ease;
-        transform: rotate(360deg);
-    }
+        * {
+            color: white;
+        }
+
+        .admin-btn {
+            transition: all .5s ease;
+        }
+
+        .admin-btn:hover {
+            transition: all .5s ease;
+            transform: rotate(360deg);
+        }
     </style>
 </head>
 
 <body>
-    <?php if(isLoggedIn()) : ?>
+<?php if (isLoggedIn()) : ?>
     <a onclick="showAdmin();" style="position: absolute; top: 10px; right: 10px;"><img class="admin-btn"
-            style="transform: rotate(45deg);" src="../assets/graphics/close.svg" alt=""></a>
+                                                                                       style="transform: rotate(45deg);"
+                                                                                       src="../assets/graphics/close.svg"
+                                                                                       alt=""></a>
     <a onclick="window.location.href = window.location.href;"
-        style="z-index: 10000; position: absolute; top: 10px; right: 50px;"><img class="admin-btn"
-            src="../assets/graphics/refresh.svg" style="width: 25px; height: 25px" alt=""></a>
+       style="z-index: 10000; position: absolute; top: 10px; right: 50px;"><img class="admin-btn"
+                                                                                src="../assets/graphics/refresh.svg"
+                                                                                style="width: 25px; height: 25px"
+                                                                                alt=""></a>
     <div id="admin-container" style="display: none;">
         <div class="top">
             <p>thea@dev:~</p>
@@ -50,13 +56,13 @@
                         <th>recommend</th>
                     </tr>
                     <?php
-                    for($i=0; $i < count($names) ; $i++){               
-                        echo '<tr><td>'.$names[$i].'</td>';
-                        echo '<td>'.$profile_id[$i].'</td>';
-                        echo '<td>'.$from[$i].'</td>';
-                        echo '<td>'.$recommend[$i].'</td>';
+                    for ($i = 0; $i < count($names); $i++) {
+                        echo '<tr><td>' . $names[$i] . '</td>';
+                        echo '<td>' . $profile_id[$i] . '</td>';
+                        echo '<td>' . $from[$i] . '</td>';
+                        echo '<td>' . $recommend[$i] . '</td>';
                     }
-                ?>
+                    ?>
                 </table>
             </div>
             <form method="post" enctype="multipart/form-data" class="bottom">
@@ -79,61 +85,62 @@
                 <div class="row">
                     <div class="col">
                         <textarea id="recommend" name="recommend" placeholder="recommend"
-                            style="height:150px"></textarea>
+                                  style="height:150px"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <input class="button-admin bg-blue" class="button-admin bg-blue" type="submit"
-                        name="upload-testimonial" value="Upload">
+                           name="upload-testimonial" value="Upload">
                     <input class="button-admin bg-orange" type="submit" name="delete-testimonial" value="Delete">
                     <input class="button-admin bg-red" type="submit" name="update-testimonial" value="Update">
                 </div>
             </form>
         </div>
     </div>
-    <?php endif ?>
-    <p style="font-size: 12px !important; position: fixed; display: block; bottom: 5px; right: 20px; color: white;">&copy; 2020 Thea Choem</p>
-    <div class="wrapper testimonial hide-c">
-        <h1>What they said</h1>
-        <p>My testimonials will be given from my clients on Fiverr, and also working as a Volunteer. <br>Thier
-            recommendation will be put here only if they allowed.</p>
-        
-        <?php if(count($names) == 0) echo '<p style="cursor: default !important; margin-top: 10px;">No testimonial yet!</p>';?>
-        <!-- 🤦‍♂️ -->
-        <div class="testi-wrapper">
-            <?php
-                if(count($names) != 0){
-                    $notfound = "../assets/graphics/notfound_round.png";
-                    for($x = 0 ; $x < count($names); $x++){
-                        echo '<div class="card-container overflow hide-c">';
-                        echo '<div class="profile"><img id="img'.($x).'" src="../assets/testiminial/'.($profile_id[$x]).'.png" alt="" onerror="this.src=\''.$notfound.'\'"></div>';
-                        echo '<h3>'.$names[$x].'</h3>';
-                        echo '<p>'.$recommend[$x].'</p>';
-                        echo '</div>';
-                    }
-                }            
-                    $us = "'";
-                    echo '<div class="card-container hide-c">';
-                    echo '<div class="profile"><img src="../assets/graphics/fiver.svg" alt=""></div>';
-                    echo '<p style="margin-top: 10px; color: #4b4b4b;">Please give me a chance to get your works done<br>Currently, I have 2 active services such as Design modern website and<br>Design mobile app UI.</p>';
-                    echo '<a href="https://www.fiverr.com/theachoem" target="_blank">Get a quote</a>';
-                    echo '</div>';
+<?php endif ?>
+<p style="font-size: 12px !important; position: fixed; display: block; bottom: 5px; right: 20px; color: white;">&copy;
+    2020 Thea Choem</p>
+<div class="wrapper testimonial hide-c">
+    <h1>What they said</h1>
+    <p>My testimonials will be given from my clients on Fiverr, and also working as a Volunteer. <br>Thier
+        recommendation will be put here only if they allowed.</p>
 
-                    echo '<div class="card-container overflow hide-c">';
-                    echo '<div class="profile"><img src="../assets/graphics/volunteer.svg" alt=""></div>';
-                    echo '<p style="margin-top: 10px; color: #4b4b4b;">If you are creating Open source or non-profit project and need web or mobile UI design, please DM or send a message to theacheng@gmail.com. Just use "Open Source" or "non-profit" in the subject.</p>';
-                    echo '<a class="opensource" href="mailto:theacheng.g6@gmail.com?subject=Open source or non-profit project" target="_blank">Let'.$us.'s work</a>';
-                    echo '</div>';
+    <?php if (count($names) == 0) echo '<p style="cursor: default !important; margin-top: 10px;">No testimonial yet!</p>'; ?>
+    <!-- 🤦‍♂️ -->
+    <div class="testi-wrapper">
+        <?php
+        if (count($names) != 0) {
+            $notfound = "../assets/graphics/notfound_round.png";
+            for ($x = 0; $x < count($names); $x++) {
+                echo '<div class="card-container overflow hide-c">';
+                echo '<div class="profile"><img id="img' . ($x) . '" src="../assets/testiminial/' . ($profile_id[$x]) . '.png" alt="" onerror="this.src=\'' . $notfound . '\'"></div>';
+                echo '<h3>' . $names[$x] . '</h3>';
+                echo '<p>' . $recommend[$x] . '</p>';
+                echo '</div>';
+            }
+        }
+        $us = "'";
+        echo '<div class="card-container hide-c">';
+        echo '<div class="profile"><img src="../assets/graphics/fiver.svg" alt=""></div>';
+        echo '<p style="margin-top: 10px; color: #4b4b4b;">Please give me a chance to get your works done<br>Currently, I have 2 active services such as Design modern website and<br>Design mobile app UI.</p>';
+        echo '<a href="https://www.fiverr.com/theachoem" target="_blank">Get a quote</a>';
+        echo '</div>';
+
+        echo '<div class="card-container overflow hide-c">';
+        echo '<div class="profile"><img src="../assets/graphics/volunteer.svg" alt=""></div>';
+        echo '<p style="margin-top: 10px; color: #4b4b4b;">If you are creating Open source or non-profit project and need web or mobile UI design, please DM or send a message to theacheng@gmail.com. Just use "Open Source" or "non-profit" in the subject.</p>';
+        echo '<a class="opensource" href="mailto:theacheng.g6@gmail.com?subject=Open source or non-profit project" target="_blank">Let' . $us . 's work</a>';
+        echo '</div>';
 
 
-            ?>
-        </div>
+        ?>
     </div>
-    <!-- <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script> -->
-    <!-- <script type="text/javascript" src="../js/slick.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
+</div>
+<!-- <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="../js/slick.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
     //show admin
     function showAdmin() {
         $('#admin-container').show()
@@ -154,12 +161,12 @@
             prevArrow: false,
             nextArrow: false,
             responsive: [{
-                    breakpoint: 786,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                    }
-                },
+                breakpoint: 786,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
                 {
                     breakpoint: 480,
                     settings: {
@@ -168,16 +175,16 @@
                     }
                 }
             ]
-        }).on('setPosition', function(event, slick) {
+        }).on('setPosition', function (event, slick) {
             slick.$slides.css('height', slick.$slideTrack.height() + 'px');
         });
     }
 
     //ready function
-    $(document).ready(function() {
+    $(document).ready(function () {
         slickCarousel();
     });
-    </script>
+</script>
 
 </body>
 

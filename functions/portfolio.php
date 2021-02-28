@@ -35,8 +35,7 @@ $webRes = mysqli_query($db, "SELECT * FROM `works` WHERE category = 'web'");
 $uiRes = mysqli_query($db, "SELECT * FROM `works` WHERE category = 'ui'");
 $mobileRes = mysqli_query($db, "SELECT * FROM `works` WHERE category = 'mobile'");
 
-while ($row = mysqli_fetch_array($mobileRes))
-{
+while ($row = mysqli_fetch_array($mobileRes)) {
     array_push($mobileID, $row['project_id']);
     array_push($mobileDes, $row['description']);
     array_push($mobileName, $row['name']);
@@ -48,8 +47,7 @@ while ($row = mysqli_fetch_array($mobileRes))
     array_push($mobileTech, $row['techs']);
 }
 
-while ($row = mysqli_fetch_array($uiRes))
-{
+while ($row = mysqli_fetch_array($uiRes)) {
     array_push($uiID, $row['project_id']);
     array_push($uiDes, $row['description']);
     array_push($uiName, $row['name']);
@@ -61,8 +59,7 @@ while ($row = mysqli_fetch_array($uiRes))
     array_push($uiTech, $row['techs']);
 }
 
-while ($row = mysqli_fetch_array($webRes))
-{
+while ($row = mysqli_fetch_array($webRes)) {
     array_push($webID, $row['project_id']);
     array_push($webDes, $row['description']);
     array_push($webName, $row['name']);
@@ -84,26 +81,25 @@ $allDribble = array_merge($mobileDribble, array_merge($webDribble, $uiDribble));
 $allTech = array_merge($mobileTech, array_merge($webTech, $uiTech));
 
 //CHECK IF NOT EMPTY
-function isnonempty($project_id, $name, $description, $techs){
-    if (!empty($project_id) and !empty($name) and !empty($description) and !empty($techs)){
+function isnonempty($project_id, $name, $description, $techs)
+{
+    if (!empty($project_id) and !empty($name) and !empty($description) and !empty($techs)) {
         return true;
-    }
-    else{
+    } else {
         echo '<script>alert("Has empty Input!");</script>';
         return false;
     }
 }
 
 //DELETE QUERY
-if (isset($_POST['delete-portfolio'])){
+if (isset($_POST['delete-portfolio'])) {
     $project_id = $_POST['project_id'];
     $category = $_POST['category'];
-    if (!empty($project_id)){
+    if (!empty($project_id)) {
         $sql = "DELETE FROM `works` WHERE `works`.`project_id` = '$project_id' AND `works`.`category` = '$category'";
         try {
             mysqli_query($db, $sql);
-        }
-        catch(Exception $e){
+        } catch (Exception $e) {
             echo '<script language="javascript">';
             echo 'alert("Caught exception")';
             echo '</script>';
@@ -115,8 +111,7 @@ if (isset($_POST['delete-portfolio'])){
 }
 
 //UPDATE QUERY
-if (isset($_POST['update-portfolio']))
-{
+if (isset($_POST['update-portfolio'])) {
     $project_id = $_POST['project_id'];
     $category = $_POST['category'];
     $name = $_POST['name'];
@@ -129,8 +124,7 @@ if (isset($_POST['update-portfolio']))
     $yy = $_POST['yy'];
 
     $sql = "";
-    if (!empty($project_id))
-    {
+    if (!empty($project_id)) {
         $sql = "UPDATE `works` SET ";
         if (!empty($name)) $sql = $sql . " `name` = '$name', ";
         if (!empty($description)) $sql = $sql . "`description` = '$description', ";
@@ -141,11 +135,10 @@ if (isset($_POST['update-portfolio']))
         if (!empty($category)) $sql = $sql . " `category` = '$category' ";
         $sql = $sql . " WHERE `works`.`project_id` = '$project_id'";
     }
-    try{
+    try {
         mysqli_query($db, $sql);
         echo '<script>alert("' . $sql . '");</script>';
-    }
-    catch(Exception $e){
+    } catch (Exception $e) {
         echo '<script language="javascript">';
         echo 'alert("Caught exception")';
         echo '</script>';
@@ -153,7 +146,7 @@ if (isset($_POST['update-portfolio']))
 }
 //name, description, image, category
 //UPLOAD TO QUERY
-if (isset($_POST['upload-portfolio'])){
+if (isset($_POST['upload-portfolio'])) {
     $project_id = $_POST['project_id'];
     $category = $_POST['category'];
     $name = $_POST['name'];
@@ -165,16 +158,15 @@ if (isset($_POST['upload-portfolio'])){
     $mm = $_POST['mm'];
     $yy = $_POST['yy'];
 
-    if (isnonempty($project_id, $name, $description, $techs) and !empty($dd) and !empty($mm) and !empty($yy)){
+    if (isnonempty($project_id, $name, $description, $techs) and !empty($dd) and !empty($mm) and !empty($yy)) {
         $sql = "INSERT INTO `works` (`techs`, `project_id`, `category`, `name`, `description`, `date`, `github`, `dribble`) VALUES ('$techs', '$project_id', '$category', '$name', '$description', '$yy-$mm-$dd', '$git', '$dribble')";
-        try{
+        try {
             mysqli_query($db, $sql);
 
             $result = mysqli_query($db, "SELECT * FROM `works` WHERE category = '$category' AND `project_id` = '$project_id'");
             if (mysqli_num_rows($result) != 0) echo '<script>alert("Upload!");</script>';
             else echo '<script>alert("Upload fail!");</script>';
-        }
-        catch(Exception $e){
+        } catch (Exception $e) {
             echo '<script language="javascript">';
             echo 'alert("Caught exception")';
             echo '</script>';

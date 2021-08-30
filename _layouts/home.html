@@ -4,9 +4,8 @@ layout: default
 
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 <!-- {%- assign works = site.timelines | where:"type", "work" -%} -->
-<!-- {%- assign educations = site.timelines | where:"type", "education" -%} -->
-{%- assign educations = site.timelines -%}
-
+<!-- {%- assign timelines = site.timelines | where:"type", "timeline" -%} -->
+{%- assign timelines = site.timelines | sort: "start" | reverse -%}
 
 <div class="home">
   {%- if page.title -%}
@@ -33,24 +32,26 @@ layout: default
     {%- endfor -%}
   </ul>
   {%- endif -%}
-  <section class="timelines-wrapper">
-    {% for education in educations %}
-    <div class="timeline-container">
-      <div class="timeline-dot">
-      </div>
+
+  <!-- Timelines -->
+  <!-- <div class="timeline-divider"></div> -->
+  <ul class="timelines-wrapper">
+    {% for timeline in timelines %}
+    <li class="timeline-container {{ timeline.type }}">
+      <div class="timeline-arrow"></div>
       <div class="timeline-row">
-        <img class="timeline-profile" src={{ education.profile }} alt="{{ education.profile }}">
+        <img class="timeline-profile" src={{ timeline.profile }} alt="{{ timeline.profile }}">
         <div class="timeline-body">
           <span class="timeline-date">
-            {{ education.start | date: date_format }} - {{ education.end | date:
+            {{ timeline.start | date: date_format }} - {{ timeline.end | date:
             date_format}}
           </span>
-          <h3 class="timeline-title">{{ education.title }}</h2>
-            <p class="timeline-name">at {{ education.name }}</p>
-            <span class="timeline-content">{{ education.content | markdownify }}</span>
+          <h3 class="timeline-title">{{ timeline.title }}</h2>
+            <p class="timeline-name">at <a href="{{ timeline.website  | absolute_url }}" target="_blank">{{ timeline.name }}</a></p>
+            <span class="timeline-content">{{ timeline.content | markdownify }}</span>
         </div>
       </div>
-    </div>
+    </li>
     {% endfor %}
-  </section>
+  </ul>
 </div>

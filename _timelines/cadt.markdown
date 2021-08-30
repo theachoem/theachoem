@@ -1,9 +1,9 @@
 ---
 type: education
-name: National Institute of Posts, Telecoms & ICT (NIPTICT)
+name: Cambodia Academy of Digital Technology
 title: Computer Science
 profile: https://i.stack.imgur.com/wAc7v.png
-url: https://www.niptict.edu.kh
+url: https://www.cadt.edu.kh
 start: 2021-08-27
 end: 2021-08-27
 ---

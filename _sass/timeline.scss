@@ -1,5 +1,41 @@
 @import "minima";
 
-.timeline-item {
-  color:brown;
+.timelines-wrapper {
+  .timeline-container {
+    background-color: $background-color;
+    border: 1px solid $black-075;
+    padding: 24px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    .timeline-row {
+      display: flex;
+      .timeline-profile {
+        width: 56px;
+        height: 56px;
+        max-width: 56px;
+        max-height: 56px;
+        margin-right: 16px;
+      }
+      .timeline-body {
+        .timeline-date {
+          font-size: 12px;
+          color: $grey-color;
+        }
+        .timeline-title {
+          font-size: 15px;
+          font-weight: bold;
+          margin: 8px 0 0 0;
+        }
+        .timeline-name {
+          font-size: 15px;
+          color: $grey-color;
+        }
+        .timeline-content {
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
 }

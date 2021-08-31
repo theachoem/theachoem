@@ -4,6 +4,7 @@ title:  "Portfolio History"
 date: 2021-08-31
 categories: portfolio
 author: Thea Choem
+comments: true
 ---
 <hr>
 

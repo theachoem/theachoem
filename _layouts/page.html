@@ -11,4 +11,8 @@ layout: default
     {{ content }}
   </div>
 
+  {%- if page.pdf -%}
+    <embed src="{{ page.pdf | relative_url }}" type="application/pdf" width=100%
+      style="aspect-ratio:595 / 910" />
+  {%- endif -%}
 </article>

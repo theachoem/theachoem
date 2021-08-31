@@ -31,8 +31,16 @@
   margin-top: 8px;
 }
 
+.mt2 {
+  margin-top: 16px;
+}
+
 .mb {
   margin-bottom: 8px;
+}
+
+.mb2 {
+  margin-bottom: 16px;
 }
 
 .topic {
@@ -58,5 +66,25 @@ hr {
 
   &::before {
     content: "Contents:";
+  }
+}
+
+.main-section {
+  min-height: 400px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: -$spacing-unit 0 0 0;
+  h1 {
+    font-size: 48px;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    max-width: 400px;
+  }
+  b {
+    margin: 8px 0 0 0;
+    display: block;
   }
 }

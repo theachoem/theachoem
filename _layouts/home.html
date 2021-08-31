@@ -8,9 +8,15 @@ layout: default
 {%- assign timelines = site.timelines | sort: "start" | reverse -%}
 
 <div class="home">
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  <div class="main-section">
+    <div>
+      <p>Hi there <a href="https://www.gautamkrishnar.com/"><img
+            src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"></a> I'm a</p>
+      <h1>{{ page.role }}</h1>
+      <p>{{ page.summary }}</p>
+      <a href="/cv" class="primary-button mt2">View CV</a>
+    </div>
+  </div>
 
   {{ content }}
 

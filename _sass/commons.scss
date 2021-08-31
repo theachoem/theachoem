@@ -1,0 +1,40 @@
+@import "theme";
+
+.primary-button {
+  color: $background-color !important;
+  background-color: $brand-color !important;
+  padding: 8px 16px;
+  box-shadow: inset 0 1px 0 0 hsla(0, 0%, 100%, 0.4);
+  position: relative;
+  display: inline-block;
+  padding: 0.8em;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.15384615;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background-color: $brand-color-variant !important;
+    text-decoration: none;
+  }
+}
+
+.mt {
+  margin-top: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: $grey-color-light;
+  margin: 16px 0 16px 0 !important;
+  padding: 0 !important;
+}

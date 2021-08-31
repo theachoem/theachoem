@@ -14,25 +14,6 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
-
   <!-- Timelines -->
   <!-- <div class="timeline-divider"></div> -->
   <ul class="timelines-wrapper">
@@ -47,11 +28,33 @@ layout: default
             date_format}}
           </span>
           <h3 class="timeline-title">{{ timeline.title }}</h2>
-            <p class="timeline-name">at <a href="{{ timeline.website  | absolute_url }}" target="_blank">{{ timeline.name }}</a></p>
+            <p class="timeline-name">at <a href="{{ timeline.website  | absolute_url }}" target="_blank">{{
+                timeline.name }}</a></p>
             <span class="timeline-content">{{ timeline.content | markdownify }}</span>
         </div>
       </div>
     </li>
     {% endfor %}
   </ul>
+
+
+  <br>
+  {%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">{{ page.list_title | default: "Blogs" }}</h2>
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    <li style="margin: 0;">
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+      {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
 </div>

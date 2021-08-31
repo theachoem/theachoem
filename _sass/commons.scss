@@ -31,10 +31,32 @@
   margin-top: 8px;
 }
 
+.mb {
+  margin-bottom: 8px;
+}
+
+.topic {
+  img {
+    margin: 2px 0;
+  }
+}
+
 hr {
   border: 0;
   height: 1px;
   background: $grey-color-light;
   margin: 16px 0 16px 0 !important;
   padding: 0 !important;
+}
+
+
+#markdown-toc {
+  border: 1px solid $grey-color-light;
+  border-radius: 4px;
+  padding: 16px 32px;
+  margin: 0 0 16px 0;
+
+  &::before {
+    content: "Contents:";
+  }
 }

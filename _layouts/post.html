@@ -11,8 +11,10 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+          itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -27,12 +29,7 @@ layout: default
 </article>
 
 {% if page.comments == true %}
-  <script src="https://utteranc.es/client.js"
-          repo="theachoem/theachoem"
-          issue-term="title"
-          theme="github-light"
-          crossorigin="anonymous"
-          async>
+<script src="https://utteranc.es/client.js" repo="theachoem/theachoem" issue-term="title" theme="github-light"
+  crossorigin="anonymous" async>
   </script>
 {% endif %}
-

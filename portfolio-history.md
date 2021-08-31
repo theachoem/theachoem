@@ -11,7 +11,7 @@ permalink: /portfolio-history/
 * TOC
 {:toc}
 
-<div style="width: 100%; text-align: center">·ㅤ · ㅤ·</div>
+<div class="dot3">·ㅤ · ㅤ·</div>
 
 # Pure Style version
 

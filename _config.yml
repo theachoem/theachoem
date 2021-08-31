@@ -23,7 +23,7 @@ timezone: Asia/Phnom_Penh
 email: theacheng.g6@gmail.com
 description: Phnom Penh, Cambodia
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://v3.theachoem.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.theachoem.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: theachoem
 github_username:  theachoem
 markdown: kramdown
@@ -33,6 +33,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 collections:
   - timelines

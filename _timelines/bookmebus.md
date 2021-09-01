@@ -1,7 +1,7 @@
 ---
 type: work
 name: BookMeBus
-title: Computer Science
+title: Mobile Developer
 profile: https://i.stack.imgur.com/fk6c1.png
 website: https://bookmebus.com
 start: 2020-11-17

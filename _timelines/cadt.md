@@ -7,5 +7,4 @@ website: https://www.cadt.edu.kh
 start: 2021-04-01
 end: Current
 ---
-
-We become CADT student instead after our school changed their name from NIPTICT
+After the school is renamed from NIPTICT, We became CADT students instead.

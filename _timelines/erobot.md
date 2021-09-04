@@ -1,0 +1,10 @@
+---
+type: work
+name: ERobot
+title: Member
+profile: https://user-images.githubusercontent.com/29684683/132103791-c7203c11-2638-4a14-a6d3-17e90e2afcd4.png
+website: https://web.facebook.com/ERobotKH
+start: 2020-01-01
+end: Current
+---
+I joined as a volunteer in early 2020 then become a member & assigned to be the mobile team leader.

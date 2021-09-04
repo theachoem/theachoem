@@ -2,7 +2,6 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -12,12 +11,32 @@ layout: default
       </time>
       {%- if page.author -%}
       • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
-          itemprop="name">{{ page.author }}</span></span>
+          itemprop="name">{{ page.author }} </span></span>
       {%- endif -%}
+
+      <!-- minute read counter -->
+      • {% capture words %}
+      {{ page.content | number_of_words | minus: 180 }}
+      {% endcapture %}
+      {% unless words contains "-" %}
+      {% assign minutes = words | plus: 180 | divided_by: 180 %}
+      {{ minutes }}
+      {% if minutes == 1 %}
+      {{ " minute to read" }}
+      {% else %}
+      {{ " minutes to read" }}
+      {% endif %}
+      {% endunless %}
+
     </p>
     {% include share-buttons.html %}
   </header>
 
+
+  {%- if page.cover -%}
+  <img src="{{ page.cover }}" alt="image-cover" class="image-cover">
+  {%- endif -%}
+  
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>

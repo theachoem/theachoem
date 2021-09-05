@@ -29,6 +29,9 @@ $black-750: #2f3337;
 $black-800: #242729;
 $black-900: #0c0d0e;
 
+$quote-color: #c76c0c !default;
+$quote-text-color: $black-500 !default;
+
 $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;

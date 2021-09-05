@@ -13,7 +13,7 @@ a { color: black !important; text-decoration: underline; }
 
 <div class="dot3 mb">·ㅤ · ㅤ·</div>
 
-**Erobot** is where I started learning to build mobile applications. I used to develop <a href="https://drive.google.com/file/d/1g3ps459pDDuwFchqUAUsAur1j-NbGiJy/view?usp=sharing" target="_blank">Erobot app</a> once in early 2020 but with zero lines of code using <a href="https://www.kodular.io/" target="_blank">Kodular.io</a>. The app was work very well with Arduino at that time, but to be more control on the app and to improve my programming skill, it's time to make a change.
+Erobot is where I started learning to build mobile applications. I used to develop <a href="https://drive.google.com/file/d/1g3ps459pDDuwFchqUAUsAur1j-NbGiJy/view?usp=sharing" target="_blank">Erobot app</a> once in early 2020 but with zero lines of code using <a href="https://www.kodular.io/" target="_blank">Kodular.io</a>. The app was work very well with Arduino at that time, but to be more control on the app and to improve my programming skill, it's time to make a change.
 
 It is a hard decision to me to choose between Native app and Cross platforms application.
 At first, I started with Flutter about 3 days, then a week with Kotlin. Lastly, I went back to Flutter because I think It is easier to get started and has a greater community.

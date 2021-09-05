@@ -112,6 +112,9 @@ hr {
 .dot3 {
   width: 100%;
   text-align: center;
+  &::before {
+    content: '·ㅤ · ㅤ·';
+  }
 }
 
 .cv {

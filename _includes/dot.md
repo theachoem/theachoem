@@ -1,1 +1,1 @@
-<div class="dot3 mb">·ㅤ · ㅤ·</div>
+<div class="dot3 mb"></div>

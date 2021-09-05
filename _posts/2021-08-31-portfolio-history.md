@@ -9,7 +9,7 @@ permalink: /portfolio-history/
 ---
 
 {% include dot.md %}
-# Pure Style version
+### Pure Style version
 <p class="post-meta">Aug 12, 2020 • Initialized v1</p>
 <a href="http://v1.theachoem.com" target="_blank">
   <img src="https://user-images.githubusercontent.com/29684683/132114417-71510344-fb47-4e0d-9b49-c35bd22e0155.png" alt="theachoem.com v1" />
@@ -28,7 +28,7 @@ This is the best website I have ever made for myself. Anyways, back then, since 
 
 {% include dot.md %}
 
-# Google Sites version
+### Google Sites version
 <p class="post-meta">Aug 13, 2021 • Initialized v2</p>
 <a href="https://v2.theachoem.com" target="_blank">
   <img src="https://user-images.githubusercontent.com/29684683/132114414-072ab825-6656-4503-992e-a15604fd76f5.png" alt="v2.theachoem.com" />
@@ -43,7 +43,7 @@ After a year of the v1 site, I planned to build a new portfolio website to showc
 
 {% include dot.md %}
 
-# Minima + Jekyll version
+### Minima + Jekyll version
 <p class="post-meta">Aug 30, 2020 • Initialized v3</p>
 Jekyll with minima theme is my best choice so far. It is fast & additionally, It also gives me advantages to custom my own CSS style such as timeline, button with Markdown support by default.
 <br>

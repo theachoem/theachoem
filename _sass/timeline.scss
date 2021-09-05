@@ -113,7 +113,7 @@
 
   @mixin move-dot-to-left {
     display: block;
-    margin-left: 16px;
+    margin-left: 31px;
     margin-right: 0;
     position: absolute;
     left: 0;
@@ -121,7 +121,7 @@
 
   @mixin timeline-container-to-left {
     margin-right: 0px;
-    margin-left: 48px;
+    margin-left: 44px;
   }
 
   @mixin arrow-basic-style {

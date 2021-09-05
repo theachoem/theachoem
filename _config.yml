@@ -49,6 +49,7 @@ collections:
 #
 exclude:
   - about.md
+  - docs/README.md
   # - blogs.md
 #   - .sass-cache/
 #   - .jekyll-cache/

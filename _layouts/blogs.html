@@ -3,9 +3,6 @@ layout: default
 ---
 
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-<!-- {%- assign works = site.timelines | where:"type", "work" -%} -->
-<!-- {%- assign timelines = site.timelines | where:"type", "timeline" -%} -->
-{%- assign timelines = site.timelines | sort: "start" | reverse -%}
 
 <div class="blogs">
   {%- if page.title -%}

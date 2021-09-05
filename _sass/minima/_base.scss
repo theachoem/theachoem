@@ -146,17 +146,10 @@ blockquote {
   padding: 16px 24px;
   margin: 0 0 20px;
   position: relative;
-
-  /* Font */
   color: $quote-text-color;
   text-align: justify;
-
-  /* Borders - (Optional) */
-  // border-left: 4px solid $quote-color;
-
-  /* Box Shadow - (Optional) */
-  box-shadow: $grey-color-light 0px 1px 3px 0px, $grey-color-light 0px 0px 0px 1px;
   border-radius: 0 4px 4px 0;
+  box-shadow: $box-shadow;
 
   > :last-child {
     margin-bottom: 0;
@@ -176,7 +169,7 @@ blockquote {
   &::after {
     content: "";
   }
-  
+
   a {
     text-decoration: none;
     background: $background-color;
@@ -199,7 +192,7 @@ pre,
 code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
-  border-radius: 3px;
+  border-radius: $radius;
   background-color: #eef;
 }
 

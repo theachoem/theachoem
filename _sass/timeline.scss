@@ -30,7 +30,7 @@
     border: 1px solid $grey-color-light;
     padding: 24px;
     margin-bottom: 16px;
-    border-radius: 4px;
+    border-radius: $radius;
 
     // dot
     &::before {

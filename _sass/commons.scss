@@ -9,7 +9,7 @@
   display: inline-block;
   padding: 0.8em;
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-radius: $radius;
   background-color: transparent;
   outline: none;
   font-family: inherit;
@@ -59,7 +59,7 @@ hr {
 
 #markdown-toc {
   border: 1px solid $grey-color-light;
-  border-radius: 4px;
+  border-radius: $radius;
   padding: 16px 32px;
   margin: 0 0 16px 0;
 }
@@ -97,5 +97,5 @@ hr {
 
 .image-cover {
   margin-bottom: 16px;
-  border-radius: 4px;
+  border-radius: $radius;
 }

@@ -7,6 +7,8 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit: 30px !default;
 
+$radius: 4px;
+
 $text-color: #111 !default;
 $background-color: #fdfdfd !default;
 $brand-color: #2a7ae2 !default;
@@ -35,6 +37,8 @@ $quote-text-color: $black-500 !default;
 $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
+
+$box-shadow: $grey-color-light 0px 1px 3px 0px, $grey-color-light 0px 0px 0px 1px;
 
 $table-text-align: left !default;
 

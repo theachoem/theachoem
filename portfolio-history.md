@@ -13,7 +13,7 @@ permalink: /portfolio-history/
 
 <p class="post-meta">Aug 12, 2020 • Initialized v1</p>
 
-![theachoem.com v1](https://user-images.githubusercontent.com/29684683/131478022-82daad13-93ac-46b1-ac3c-e03a6a791e1f.png)
+![theachoem.com v1](https://user-images.githubusercontent.com/29684683/132114417-71510344-fb47-4e0d-9b49-c35bd22e0155.png)
 <br><br>
 This is the best website I have ever made for myself. Anyways, back then, since I have no experience in programming skills, it is very difficult for me to continue to maintain this project. This website took me around two month+ to display its complete form. It may be a bit long since I have to learn things from scratch include design & development.
 <br>
@@ -34,7 +34,7 @@ This is the best website I have ever made for myself. Anyways, back then, since 
 
 <p class="post-meta">Aug 13, 2021 • Initialized v2</p>
 
-![theachoem.com v2](https://user-images.githubusercontent.com/29684683/131478013-468b09a3-9e14-4456-a322-e0b2d52aa98e.png)
+![theachoem.com v2](https://user-images.githubusercontent.com/29684683/132114414-072ab825-6656-4503-992e-a15604fd76f5.png)
 <br><br>
 After a year of the v1 site, I planned to build a new portfolio website to showcase the works of 2021. Google site is a good choice since it is faster to build the website. It took me around two days to design on Figma & implement it on Google Site.
 <br>

@@ -49,7 +49,7 @@ collections:
 #
 exclude:
   - about.md
-  - blogs.md
+  # - blogs.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

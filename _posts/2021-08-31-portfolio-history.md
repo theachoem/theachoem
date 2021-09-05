@@ -7,7 +7,6 @@ author: Thea Choem
 comments: true
 permalink: /portfolio-history/
 ---
-{% include toc.md %}
 {% include dot.md %}
 # Pure Style version
 

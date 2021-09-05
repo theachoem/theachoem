@@ -7,7 +7,7 @@ author: Thea Choem
 comments: true
 cover: https://user-images.githubusercontent.com/29684683/132103194-12e58fd3-30c9-4042-87b6-e7751a7a5dce.png
 ---
-<div class="dot3 mb">·ㅤ · ㅤ·</div>
+{% include dot.md %}
 
 Erobot is where I started learning to build mobile applications. I used to develop <a href="https://drive.google.com/file/d/1g3ps459pDDuwFchqUAUsAur1j-NbGiJy/view?usp=sharing" target="_blank">Erobot app</a> once in early 2020 but with zero lines of code using <a href="https://www.kodular.io/" target="_blank">Kodular.io</a>. The app was work very well with Arduino at that time, but to be more control on the app and to improve my programming skill, it's time to make a change.
 

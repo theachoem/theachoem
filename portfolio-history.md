@@ -7,12 +7,8 @@ author: Thea Choem
 comments: true
 permalink: /portfolio-history/
 ---
-
-* TOC
-{:toc}
-
-<div class="dot3">·ㅤ · ㅤ·</div>
-
+{% include toc.md %}
+{% include dot.md %}
 # Pure Style version
 
 <p class="post-meta">Aug 12, 2020 • Initialized v1</p>
@@ -31,7 +27,8 @@ This is the best website I have ever made for myself. Anyways, back then, since 
   <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
 </div>
 <a href="http://v1.theachoem.com" target="_blank" class="primary-button mt">Demo</a>
-<hr>
+
+{% include dot.md %}
 
 # Google Sites version
 
@@ -47,7 +44,8 @@ After a year of the v1 site, I planned to build a new portfolio website to showc
   <img height="36px" src="https://www.epidemic-marketing.com/wp-content/uploads/2020/03/google-sites-1024x322.jpg" />
 </div>
 <a href="https://v2.theachoem.com" target="_blank" class="primary-button mt">Demo</a>
-<hr>
+
+{% include dot.md %}
 
 # Minima + Jekyll version
 

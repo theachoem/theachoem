@@ -73,24 +73,8 @@ layout: default
   </div>
 
   <br>
-  {%- if site.posts.size > 0 -%}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Blogs" }}</h2>
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
+  {% include blogs.html %}
+  
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>

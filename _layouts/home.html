@@ -49,12 +49,13 @@ layout: default
         {% for testimonial in testimonials %}
         <li class="splide__slide">
           <div class="testimonial-sign"></div>
+          <p>{{ forloop.index }} / {{ testimonials.size }}</p>
           <span class="splide-message">{{ testimonial.content | markdownify }}</span>
-          <a class="testimonial-author" href="{{ testimonial.source_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="testimonial-author">
             <img src={{ testimonial.profile }} alt="{{ timeline.profile }}" />
             <b>{{ testimonial.name }}</b>
-            <p>{{ testimonial.source }}</p>
-          </a>
+            <a href="{{ testimonial.source_url }}" class="{{ testimonial.source }}" target="_blank" rel="noopener noreferrer">{{ testimonial.source }}</a>
+          </div>
         </li>
         {% endfor %}
       </ul>

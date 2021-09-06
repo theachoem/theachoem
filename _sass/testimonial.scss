@@ -1,0 +1,37 @@
+@import "theme";
+
+.splide {
+  border: 1px $grey-color-light solid;
+  border-radius: $radius;
+  text-align: center;
+  margin: 0 auto;
+  li {
+    padding: 24px 32px 8px 32px;
+    .testimonial-sign {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto 24px;
+      background: url("https://ndrewtl.github.io/airspace-jekyll/img/cotation.png") no-repeat center;
+    }
+    .testimonial-author {
+      margin-top: 24px;
+      text-align: center;
+      img {
+        width: 48px !important;
+        border-radius: 48px;
+        margin-bottom: 8px;
+        border: 1px $grey-color-light solid;
+      }
+      b,
+      p {
+        display: block;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .splide__arrows {
+    display: none !important;
+  }
+}

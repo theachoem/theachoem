@@ -4,11 +4,13 @@ layout: default
 
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 {%- assign timelines = site.timelines | reverse -%}
+{%- assign testimonials = site.testimonials -%}
 
 <div class="home">
   <div class="main-section">
     <div>
-      <p>Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px" alt="giphy.gif"> I'm a</p>
+      <p>Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px" alt="giphy.gif">
+        I'm a</p>
       <h1>{{ page.role }}</h1>
       <p>{{ page.summary }}</p>
       <a href="/cv" class="primary-button mt2">View CV</a>
@@ -24,7 +26,7 @@ layout: default
     <li class="timeline-container {{ timeline.type }}">
       <div class="timeline-arrow"></div>
       <div class="timeline-row">
-        <img class="timeline-profile" src={{ timeline.profile }} alt="{{ timeline.profile }}">
+        <img class="timeline-profile" src={{ timeline.profile }} alt="{{ timeline.profile }}" />
         <div class="timeline-body">
           <span class="timeline-date">
             {{ timeline.start | date: date_format }} - {{ timeline.end | date:
@@ -40,6 +42,24 @@ layout: default
     {% endfor %}
   </ul>
 
+  <h2 class="post-list-heading">Testimonials</h2>
+  <div class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for testimonial in testimonials %}
+        <li class="splide__slide">
+          <div class="testimonial-sign"></div>
+          <span class="splide-message">{{ testimonial.content | markdownify }}</span>
+          <a class="testimonial-author" href="{{ testimonial.source_url }}" target="_blank" rel="noopener noreferrer">
+            <img src={{ testimonial.profile }} alt="{{ timeline.profile }}" />
+            <b>{{ testimonial.name }}</b>
+            <p>{{ testimonial.source }}</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 
   <br>
   {%- if site.posts.size > 0 -%}
@@ -61,3 +81,17 @@ layout: default
   </ul>
   {%- endif -%}
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script>
+  const primarySlider = new Splide('.splide', {
+    type: 'fade',
+    pagination: false,
+    arrows: true,
+    cover: false,
+    drag: true,
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    primarySlider.mount();
+  });
+</script>

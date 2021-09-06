@@ -42,6 +42,8 @@ layout: default
     {% endfor %}
   </ul>
 
+  {% include dot.md %}
+
   <h2 class="post-list-heading">Testimonials</h2>
   <div class="splide">
     <div class="splide__track">
@@ -54,7 +56,8 @@ layout: default
           <div class="testimonial-author">
             <img src={{ testimonial.profile }} alt="{{ timeline.profile }}" />
             <b>{{ testimonial.name }}</b>
-            <a href="{{ testimonial.source_url }}" class="{{ testimonial.source }}" target="_blank" rel="noopener noreferrer">{{ testimonial.source }}</a>
+            <a href="{{ testimonial.source_url }}" class="{{ testimonial.source }}" target="_blank"
+              rel="noopener noreferrer">{{ testimonial.source }}</a>
           </div>
         </li>
         {% endfor %}

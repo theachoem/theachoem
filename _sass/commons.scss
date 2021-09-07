@@ -27,7 +27,6 @@
   }
 }
 
-
 .mt0 {
   margin-top: 0px;
 }
@@ -114,7 +113,7 @@ hr {
   width: 100%;
   text-align: center;
   &::before {
-    content: '·ㅤ · ㅤ·';
+    content: "·ㅤ · ㅤ·";
   }
 }
 
@@ -127,4 +126,32 @@ hr {
 .image-cover {
   margin-bottom: 16px;
   border-radius: $radius;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $background-color;
+    min-width: 160px;
+    border: 1px solid $grey-color-light;
+    border-radius: $radius;
+    z-index: 1;
+    overflow: hidden;
+    a {
+      color: $text-color !important;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      &:hover {
+        background-color: $black-050;
+      }
+    }
+  }
+
+  &:hover .dropdown-content {
+    display: block;
+  }
 }

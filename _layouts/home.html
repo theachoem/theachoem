@@ -32,10 +32,36 @@ layout: default
             {{ timeline.start | date: date_format }} - {{ timeline.end | date:
             date_format}}
           </span>
-          <h3 class="timeline-title">{{ timeline.title }}</h2>
-            <p class="timeline-name"><a href="{{ timeline.website  | absolute_url }}" target="_blank">{{
-                timeline.name }}</a></p>
-            <span class="timeline-content">{{ timeline.content | markdownify }}</span>
+          <h3 class="timeline-title">{{ timeline.title }}</h3>
+          <div class="dropdown timeline-name mb">
+            <a href="#" class="dropdown-label">{{ timeline.name }}</a>
+            <div class="dropdown-content">
+              {%- if timeline.play_store -%}
+              <a href="{{ timeline.play_store  | absolute_url }}" target="_blank">Play Store</a>
+              {%- endif -%}
+
+              {%- if timeline.app_store -%}
+              <a href="{{ timeline.app_store  | absolute_url }}" target="_blank">App Store</a>
+              {%- endif -%}
+
+              {%- if timeline.github -%}
+              <a href="{{ timeline.github  | absolute_url }}" target="_blank">GitHub</a>
+              {%- endif -%}
+
+              {%- if timeline.figma -%}
+              <a href="{{ timeline.figma  | absolute_url }}" target="_blank">Figma</a>
+              {%- endif -%}
+
+              {%- if timeline.facebook -%}
+              <a href="{{ timeline.facebook  | absolute_url }}" target="_blank">Facebook</a>
+              {%- endif -%}
+
+              {%- if timeline.website -%}
+              <a href="{{ timeline.website  | absolute_url }}" target="_blank">Website</a>
+              {%- endif -%}
+            </div>
+          </div>
+          <span class="timeline-content">{{ timeline.content | markdownify }}</span>
         </div>
       </div>
     </li>
@@ -74,7 +100,7 @@ layout: default
 
   <br>
   {% include blogs.html %}
-  
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>

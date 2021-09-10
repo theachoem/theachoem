@@ -32,6 +32,9 @@ layout: default
         <img class="ss3" src="{{ site.url }}/{{portfolio.ss3}}" alt="{{portfolio.ss3}}">
         {%- endif -%}
       </div>
+      <div class="overlay">
+        <a class="primary-button mt2"  href="{{ portfolio.permalink | relative_url }}">{{portfolio.title}}</a>
+      </div>
     </div>
     {% endfor %}
   </div>

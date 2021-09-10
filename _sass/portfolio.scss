@@ -39,6 +39,12 @@ $gap: min(0.8vw, 10px);
       grid-auto-flow: row;
     }
 
+    .overlay {
+      position: absolute;
+      opacity: 0;
+      transition: 0.5s ease;
+    }
+
     img {
       width: 100px;
       border: solid $background-color 1px;
@@ -53,6 +59,11 @@ $gap: min(0.8vw, 10px);
       border-radius: 4px 4px 0px 0px;
       transform: translate(0, 32px);
     }
+  }
+
+  .portfolio:hover .overlay {
+    opacity: 1;
+    transform: translate(0px, 4px);
   }
 
   // portfolio

@@ -37,9 +37,11 @@ plugins:
   - jekyll-sitemap
 
 collections:
-  - timelines
-  - testimonials
-  - portfolios
+  timelines:
+  testimonials:
+  portfolios:
+    output: true
+    permalink: /:collection/:name
 
 # Exclude from processing.
 # The following items will not be processed, by default.

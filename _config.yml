@@ -39,6 +39,7 @@ plugins:
 collections:
   - timelines
   - testimonials
+  - portfolios
 
 # Exclude from processing.
 # The following items will not be processed, by default.

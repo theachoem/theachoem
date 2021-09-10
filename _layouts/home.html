@@ -5,6 +5,7 @@ layout: default
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 {%- assign timelines = site.timelines | reverse -%}
 {%- assign testimonials = site.testimonials -%}
+{%- assign portfolios = site.portfolios -%}
 
 <div class="home">
   <div class="main-section">
@@ -19,8 +20,56 @@ layout: default
 
   {{ content }}
 
+  {% include dot.md %}
+  <h2 class="post-list-heading">Portfolios</h2>
+  <div class="portfolios-wrapper">
+    {% for portfolio in portfolios %}
+    <div class="portfolio p{{ forloop.index }}" style="background-color: #{{ portfolio.bg-color }}2E">
+      <div class="img-wrapper">
+        <img class="ss1" src="{{ site.url }}/{{portfolio.ss1}}" alt="{{portfolio.ss1}}">
+        <img class="ss2" src="{{ site.url }}/{{portfolio.ss2}}" alt="{{portfolio.ss2}}">
+        {%- if portfolio.ss3 -%}
+        <img class="ss3" src="{{ site.url }}/{{portfolio.ss3}}" alt="{{portfolio.ss3}}">
+        {%- endif -%}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <br>
+  {% include dot.md %}
+  <h2 class="post-list-heading">Testimonials</h2>
+  <div class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for testimonial in testimonials %}
+        <li class="splide__slide">
+          <div class="testimonial-sign"></div>
+          <div class="testimonial-head mb">
+            <p class="testimonial-tags">{{ forloop.index }}/{{ testimonials.size }}</p>
+            <p class="testimonial-tags">{{testimonial.rating}} ★</p>
+            {%- if testimonial.tag -%}
+            <p class="testimonial-tags">{{ testimonial.tags }}</p>
+            {%- endif -%}
+            <p>• {{ testimonial.created_at | date: date_format }}</p>
+          </div>
+          <span class="splide-message">{{ testimonial.content | markdownify }}</span>
+          <div class="testimonial-author">
+            <img src={{ testimonial.profile }} alt="{{ timeline.profile }}" />
+            <b>{{ testimonial.name }}</b>
+            <a href="{{ testimonial.source_url }}" class="{{ testimonial.source }}" target="_blank"
+              rel="noopener noreferrer">{{ testimonial.source }}</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
   <!-- Timelines -->
-  <!-- <div class="timeline-divider"></div> -->
+  <br>
+  {% include dot.md %}
+  <h2 class="post-list-heading">Developer Story</h2>
   <ul class="timelines-wrapper">
     {% for timeline in timelines %}
     <li class="timeline-container {{ timeline.type }}">
@@ -68,37 +117,8 @@ layout: default
     {% endfor %}
   </ul>
 
-  {% include dot.md %}
-
-  <h2 class="post-list-heading">Testimonials</h2>
-  <div class="splide">
-    <div class="splide__track">
-      <ul class="splide__list">
-        {% for testimonial in testimonials %}
-        <li class="splide__slide">
-          <div class="testimonial-sign"></div>
-          <div class="testimonial-head mb">
-            <p class="testimonial-tags">{{ forloop.index }}/{{ testimonials.size }}</p>
-            <p class="testimonial-tags">{{testimonial.rating}} ★</p>
-            {%- if testimonial.tag -%}
-            <p class="testimonial-tags">{{ testimonial.tags }}</p>
-            {%- endif -%}
-            <p>• {{ testimonial.created_at | date: date_format }}</p>
-          </div>
-          <span class="splide-message">{{ testimonial.content | markdownify }}</span>
-          <div class="testimonial-author">
-            <img src={{ testimonial.profile }} alt="{{ timeline.profile }}" />
-            <b>{{ testimonial.name }}</b>
-            <a href="{{ testimonial.source_url }}" class="{{ testimonial.source }}" target="_blank"
-              rel="noopener noreferrer">{{ testimonial.source }}</a>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-
   <br>
+  {% include dot.md %}
   {% include blogs.html %}
 
 </div>

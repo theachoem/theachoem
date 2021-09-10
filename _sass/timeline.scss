@@ -6,13 +6,13 @@
     to right,
     transparent 0%,
     transparent calc(50% - 0.5px),
-    $grey-color-light calc(50% - 0.5px),
-    $grey-color-light calc(50% + 0.5px),
+    var(--grey-color-light) calc(50% - 0.5px),
+    var(--grey-color-light) calc(50% + 0.5px),
     transparent calc(50% + 0.5px),
     transparent 100%
   );
   @media screen and (max-width: $on-laptop) {
-    border-left: solid 1px $grey-color-light;
+    border-left: solid 1px var(--grey-color-light);
     margin-left: 13px;
     background: none;
   }
@@ -26,11 +26,11 @@
   @include vertical-divider();
 
   .timeline-container {
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--grey-color-light);
     padding: 24px;
     margin-bottom: 16px;
     border-radius: $radius;
+    background-color: var(--background-color);
 
     // dot
     &::before {
@@ -43,7 +43,7 @@
       width: 24px;
       height: 24px;
       z-index: 1;
-      background-color: $background-color;
+      background-color: var(--background-color);
       background-repeat: no-repeat;
       background-image: url(https://cdn.sstatic.net/Img/developer-story/timeline.svg?v=d0477cf4f5f4), none;
     }

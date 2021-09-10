@@ -26,8 +26,8 @@ figure {
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -37,6 +37,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  transition: background-color 0.25s ease;
 }
 
 /**
@@ -124,7 +125,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: underline;
   }
 
@@ -142,7 +143,7 @@ a {
  */
 blockquote {
   display: block;
-  background: $background-color;
+  background: var(--background-color);
   padding: 16px 24px;
   margin: 0 0 20px;
   position: relative;
@@ -171,7 +172,7 @@ blockquote {
 
   a {
     text-decoration: none;
-    background: $background-color;
+    background: var(--background-color);
     cursor: pointer;
     padding: 0 3px;
     color: $quote-color !important;
@@ -190,7 +191,7 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   border-radius: $radius;
   background-color: #eef;
 }
@@ -263,9 +264,10 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  // TODO: 
+  // color: lighten($text-color, 18%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   tr {
     &:nth-child(even) {
       background-color: lighten($grey-color-light, 6%);
@@ -281,6 +283,6 @@ table {
     border-bottom-color: darken($grey-color-light, 12%);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--grey-color-light);
   }
 }

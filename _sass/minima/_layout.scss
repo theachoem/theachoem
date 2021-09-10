@@ -36,7 +36,7 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: var(--text-color);
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
@@ -49,7 +49,7 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
+    background-color: var(--background-color);
     border: 1px solid $grey-color-light;
     border-radius: $radius;
     text-align: right;
@@ -105,7 +105,6 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
-  background-color: $background-color;
 }
 
 .footer-heading {
@@ -249,7 +248,7 @@
   p {
     a {
       text-decoration: underline;
-      color: $text-color;
+      color: var(--text-color);
     }
 
     img {

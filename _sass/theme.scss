@@ -9,8 +9,14 @@ $spacing-unit: 30px !default;
 
 $radius: 4px;
 
-$text-color: #111 !default;
-$background-color: #fdfdfd !default;
+:root {
+  --text-color: #111;
+  --background-color: #fdfdfd;
+  --brand-color: #2a7ae2;
+  --brand-color-variant: #004faf;
+  --grey-color-light: #e8e8e8;
+}
+
 $brand-color: #2a7ae2 !default;
 $brand-color-variant: #004faf !default;
 
@@ -35,10 +41,10 @@ $quote-color: #c76c0c !default;
 $quote-text-color: $black-500 !default;
 
 $grey-color: #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-light: #e8e8e8; // lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
 
-$box-shadow: $grey-color-light 0px 1px 3px 0px, $grey-color-light 0px 0px 0px 1px;
+$box-shadow: var(--grey-color-light) 0px 1px 3px 0px, var(--grey-color-light) 0px 0px 0px 1px;
 
 $table-text-align: left !default;
 

@@ -70,7 +70,7 @@ layout: default
 
   {% include dot.md %}
 
-  <h2 class="post-list-heading">Testimonials</h2>
+  <h2 class="post-list-heading" id="testimonials">Testimonials</h2>
   <div class="splide">
     <div class="splide__track">
       <ul class="splide__list">
@@ -115,4 +115,106 @@ layout: default
   document.addEventListener('DOMContentLoaded', function () {
     primarySlider.mount();
   });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/fcmam5/nightly.js@v1.0/dist/nightly.min.js"></script> -->
+<script>
+  function getLerpColor(a, b, amount) {
+    var ah = parseInt(a.replace(/#/g, ''), 16),
+      ar = ah >> 16, ag = ah >> 8 & 0xff, ab = ah & 0xff,
+      bh = parseInt(b.replace(/#/g, ''), 16),
+      br = bh >> 16, bg = bh >> 8 & 0xff, bb = bh & 0xff,
+      rr = ar + amount * (br - ar),
+      rg = ag + amount * (bg - ag),
+      rb = ab + amount * (bb - ab);
+
+    return '#' + ((1 << 24) + (rr << 16) + (rg << 8) + rb | 0).toString(16).slice(1);
+  }
+
+  function getScrollMax() {
+    if ('scrollMaxX' in window) {
+      return window.scrollMaxY;
+    } else {
+      return document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    }
+  }
+
+  function getContrastYIQ(hexcolor) {
+    hexcolor = hexcolor.replace("#", "");
+    var r = parseInt(hexcolor.substr(0, 2), 16);
+    var g = parseInt(hexcolor.substr(2, 2), 16);
+    var b = parseInt(hexcolor.substr(4, 2), 16);
+    var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+    return (yiq >= 128) ? 'black' : 'white';
+  }
+
+  function getInvertColor(hex) {
+    if (hex.indexOf('#') === 0) {
+      hex = hex.slice(1);
+    }
+    // convert 3-digit hex to 6-digits.
+    if (hex.length === 3) {
+      hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+    }
+    if (hex.length !== 6) {
+      throw new Error('Invalid HEX color.');
+    }
+    // invert color components
+    var r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
+      g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16),
+      b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
+    // pad each with zeros and return
+    return '#' + padZero(r) + padZero(g) + padZero(b);
+  }
+
+
+  function padZero(str, len) {
+    len = len || 2;
+    var zeros = new Array(len).join('0');
+    return (zeros + str).slice(-len);
+  }
+
+  // const body = document.querySelector('body')
+  // const foregrounds = document.querySelectorAll('.post-list-heading, body')
+  // const test = document.querySelectorAll('.splide');
+
+
+  window.addEventListener("scroll", function () {
+    try {
+      const targetOffset = document.getElementById("testimonials").offsetTop;
+
+      const scrollMax = getScrollMax();
+      const lerpValue = scrollY / scrollMax;
+
+      // const lerpColor = getLerpColor("#ffffff", "#0F2B3C", lerpValue);
+      // const invertColor = getInvertColor(lerpColor);
+      // const lineColor = getLerpColor("#E8E8E8", "#171717", lerpValue);
+
+      if (scrollY > targetOffset) {
+        document.documentElement.style.setProperty("--text-color", "#ffffff");
+        document.documentElement.style.setProperty("--background-color", "#0F2B3C");
+        document.documentElement.style.setProperty("--grey-color-light", "#E9E9E9");
+      } else {
+        document.documentElement.style.setProperty("--text-color", "#000000");
+        document.documentElement.style.setProperty("--background-color", "#ffffff");
+        document.documentElement.style.setProperty("--grey-color-light", "#E8E8E8");
+      }
+
+
+
+      // root.style.setProperty("--text-color", invertColor);
+      // root.style.setProperty("--background-color", lerpColor);
+      // body.style.backgroundColor = lerpColor;
+      // foregrounds.forEach(function (item) {
+      //   item.style.color = invertColor;
+      // });
+
+
+    } catch (error) {
+
+    }
+  })
+
 </script>

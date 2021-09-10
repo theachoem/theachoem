@@ -1,7 +1,7 @@
 @import "theme";
 
 .primary-button {
-  color: $background-color !important;
+  color: var(--background-color) !important;
   background-color: $brand-color !important;
   padding: 8px 16px;
   box-shadow: inset 0 1px 0 0 hsla(0, 0%, 100%, 0.4);
@@ -76,13 +76,13 @@
 hr {
   border: 0;
   height: 1px;
-  background: $grey-color-light;
+  background: var(--grey-color-light);
   margin: 16px 0 16px 0 !important;
   padding: 0 !important;
 }
 
 #markdown-toc {
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   border-radius: $radius;
   padding: 16px 32px;
   margin: 0 0 16px 0;
@@ -134,14 +134,14 @@ hr {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: $background-color;
+    background-color: var(--background-color);
     min-width: 160px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--grey-color-light);
     border-radius: $radius;
     z-index: 1;
     overflow: hidden;
     a {
-      color: $text-color !important;
+      color: var(--text-color) !important;
       padding: 12px 16px;
       text-decoration: none;
       display: block;

@@ -1,7 +1,7 @@
 @import "theme";
 
 .splide {
-  border: 1px $grey-color-light solid;
+  border: 1px var(--grey-color-light) solid;
   border-radius: $radius;
   text-align: center;
   margin: 0 auto;
@@ -20,7 +20,7 @@
         width: 48px !important;
         border-radius: 48px;
         margin-bottom: 8px;
-        border: 1px $grey-color-light solid;
+        border: 1px var(--grey-color-light) solid;
       }
       b,
       p {
@@ -43,7 +43,7 @@
       }
 
       .testimonial-tags {
-        border: 1px solid $grey-color-light;
+        border: 1px solid var(--grey-color-light);
         border-radius: 24px;
         padding: 2px 8px;
         font-size: 11px;

@@ -131,6 +131,16 @@ hr {
 .dropdown {
   position: relative;
   display: inline-block;
+
+  .dropdown-label {
+    color: $brand-color;
+    margin: 0px;
+    &:hover {
+      color: $text-color;
+      text-decoration: underline;
+    }
+  }
+
   .dropdown-content {
     display: none;
     position: absolute;

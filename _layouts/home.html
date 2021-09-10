@@ -86,7 +86,7 @@ layout: default
           </span>
           <h3 class="timeline-title">{{ timeline.title }}</h3>
           <div class="dropdown timeline-name mb">
-            <a href="#" class="dropdown-label">{{ timeline.name }}</a>
+            <p class="dropdown-label">{{ timeline.name }}</p>
             <div class="dropdown-content">
               {%- if timeline.play_store -%}
               <a href="{{ timeline.play_store  | absolute_url }}" target="_blank">Play Store</a>

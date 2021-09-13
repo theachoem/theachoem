@@ -2,7 +2,6 @@
 layout: post
 title: Quote App
 permalink: /portfolios/quote-app/
-date: 2020-12-27
 categories: portfolio
 author: Thea Choem
 comments: true

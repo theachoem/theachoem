@@ -2,7 +2,6 @@
 layout: post
 title: StoryPad
 permalink: /portfolios/storypad/
-date: 2020-12-27
 categories: portfolio
 author: Thea Choem
 comments: true

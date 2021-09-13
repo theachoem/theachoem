@@ -2,7 +2,6 @@
 layout: post
 title: Erobot Todo
 permalink: /portfolios/erobot-todo/
-date: 2020-12-27
 categories: portfolio
 author: Thea Choem
 comments: true

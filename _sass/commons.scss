@@ -70,6 +70,11 @@
 .topic {
   img {
     margin: 2px 0;
+    border-radius: $radius;
+    transition: transform 0.1s ease;
+    &:hover {
+      transform: translate(0, -1px);
+    }
   }
 }
 
@@ -179,14 +184,6 @@ iframe {
   font-size: 11px;
   margin-right: 1px;
   margin-left: 1px;
-
-  @media screen and (max-width: $on-laptop) {
-    & {
-      display: inline-block !important;
-      margin-bottom: 4px;
-      margin-top: 0px;
-    }
-  }
 }
 
 .inline-flex {

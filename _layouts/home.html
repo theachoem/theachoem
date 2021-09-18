@@ -33,14 +33,14 @@ layout: default
         {%- endif -%}
       </div>
       <div class="overlay">
-        <a class="primary-button mt2"  href="{{ portfolio.permalink | relative_url }}">{{portfolio.title}}</a>
+        <a class="primary-button mt2" href="{{ portfolio.permalink | relative_url }}">{{portfolio.title}}</a>
       </div>
     </div>
     {% endfor %}
   </div>
 
   <br>
-  {% include dot.md %}
+  {% include section-break.md %}
   <h2 class="post-list-heading">Testimonials</h2>
   <div class="splide">
     <div class="splide__track">
@@ -71,7 +71,7 @@ layout: default
 
   <!-- Timelines -->
   <br>
-  {% include dot.md %}
+  {% include section-break.md %}
   <h2 class="post-list-heading">Developer Story</h2>
   <ul class="timelines-wrapper">
     {% for timeline in timelines %}

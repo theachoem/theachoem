@@ -17,6 +17,11 @@ tags:
 - Firebase
 - http
 ---
-Discover places & geography around Cambodia with us 📝. For Project 1 Subject at Cambodia Academy of Digital Technology.
+<iframe class="mb2" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FrENtVilaZAqW6wLOfuPZH9%2FCambodia-Geography" allowfullscreen></iframe>
 
-<a class="primary-button" href="https://docs.google.com/presentation/d/14D1JF3Embyap-Zht2S6r91IJgiCJ9iFLtCHauIPyd0o/edit?usp=sharing">Our presentation</a>
+Discover places & geography around Cambodia with us 📝. Project 1 subject at [Cambodia Academy of Digital Technology](https://www.cadt.edu.kh) (CADT)
+
+Role: Leader, Mobile Developer & UI Designer.
+
+<a class="primary-button" href="https://github.com/CSG6Project1/cambodia_geography_mobile">GitHub</a>
+<a class="primary-button" href="https://www.figma.com/file/rENtVilaZAqW6wLOfuPZH9/Cambodia-Geography">Figma</a>

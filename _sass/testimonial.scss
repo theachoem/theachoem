@@ -36,19 +36,9 @@
       justify-content: center;
       align-items: center;
 
-
       p {
         display: inline;
         margin-left: 4px;
-      }
-
-      .testimonial-tags {
-        border: 1px solid $grey-color-light;
-        border-radius: 24px;
-        padding: 2px 8px;
-        font-size: 11px;
-        margin-right: 1px;
-        margin-left: 1px;
       }
 
       @media screen and (max-width: $on-laptop) {
@@ -56,11 +46,6 @@
         p {
           margin-top: 8px;
           display: block !important;
-        }
-        .testimonial-tags {
-          display: inline-block !important;
-          margin-bottom: 4px;
-          margin-top: 0px;
         }
       }
     }

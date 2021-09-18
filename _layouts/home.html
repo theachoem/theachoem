@@ -49,10 +49,10 @@ layout: default
         <li class="splide__slide">
           <div class="testimonial-sign"></div>
           <div class="testimonial-head mb">
-            <p class="testimonial-tags">{{ forloop.index }}/{{ testimonials.size }}</p>
-            <p class="testimonial-tags">{{testimonial.rating}} ★</p>
+            <p class="post-tag">{{ forloop.index }}/{{ testimonials.size }}</p>
+            <p class="post-tag">{{testimonial.rating}} ★</p>
             {%- if testimonial.tag -%}
-            <p class="testimonial-tags">{{ testimonial.tags }}</p>
+            <p class="post-tag">{{ testimonial.tags }}</p>
             {%- endif -%}
             <p>• {{ testimonial.created_at | date: date_format }}</p>
           </div>

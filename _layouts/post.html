@@ -4,23 +4,29 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+        {%- if page.date -%}
+        {{ page.date| date: date_format }} 
+        {% else %}
+        {{ page.start_date| date: date_format }} 
+        {%- endif -%}
       </time>
+      <span> </span>
       {%- if page.author -%}
       • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
           itemprop="name">{{ page.author }} </span></span>
       {%- endif -%}
 
       <!-- minute read counter -->
-      • {% capture words %}
+      {% capture words %}
       {{ page.content | number_of_words | minus: 180 }}
       {% endcapture %}
       {% unless words contains "-" %}
       {% assign minutes = words | plus: 180 | divided_by: 180 %}
-      {{ minutes }}
+      • {{ minutes }}
       {% if minutes == 1 %}
       {{ " minute to read" }}
       {% else %}
@@ -29,6 +35,15 @@ layout: default
       {% endunless %}
 
     </p>
+
+    {% if page.tags -%}
+    <ul class="post-tags-wrapper mt2">
+      {% for tag in page.tags %}
+      <li class="post-tag">{{tag}}</li>
+      {% endfor %}
+    </ul>
+    {%- endif -%}
+
     {% include share-buttons.html %}
   </header>
 
@@ -36,7 +51,7 @@ layout: default
   {%- if page.cover -%}
   <img src="{{ page.cover }}" alt="image-cover" class="image-cover">
   {%- endif -%}
-  
+
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>

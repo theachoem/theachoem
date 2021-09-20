@@ -6,6 +6,7 @@ categories: blogs
 author: Thea Choem
 comments: true
 cover: https://user-images.githubusercontent.com/29684683/132103194-12e58fd3-30c9-4042-87b6-e7751a7a5dce.png
+permalink: /blogs/developer-story/
 ---
 {% include dot.md %}
 

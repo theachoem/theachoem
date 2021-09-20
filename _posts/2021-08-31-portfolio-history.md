@@ -5,7 +5,7 @@ date: 2021-08-31
 categories: blogs
 author: Thea Choem
 comments: true
-permalink: /portfolio-history/
+permalink: /blogs/portfolio-history/
 ---
 
 {% include dot.md %}

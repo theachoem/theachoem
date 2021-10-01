@@ -4,7 +4,7 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <!-- <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+    <a class="site-title" id="header-title" rel="author" href="{{ '/' | relative_url }}">
       <span>T</span><span class="header-should-hide">hea</span> <span id="header-text-c">C</span><span
         class="header-should-hide">hoem</span><span id="header-dot" class="invisible">.</span>
     </a>
@@ -22,12 +22,10 @@
       </label>
 
       <div class="trigger">
-        {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title -%}
-        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-        {%- endif -%}
-        {%- endfor -%}
+        <a class="page-link" href="#portfolio-section">Portfolios</a>
+        <a class="page-link" href="#testimonials-section">Testimonials</a>
+        <a class="page-link" href="#developer-story-section">Story</a>
+        <a class="page-link" href="#blogs-section">Blogs</a>
       </div>
     </nav>
     {%- endif -%}
@@ -35,25 +33,110 @@
 </header>
 
 <script>
-  var headerShouldHide = document.getElementsByClassName("header-should-hide");
-  var headerDot = document.getElementById("header-dot");
-  var headerTextC = document.getElementById("header-text-c");
+  const sections = document.getElementsByClassName("post-list-heading");
 
-  window.addEventListener("scroll", function () {
-    if (scrollY > 200) {
-      headerDot.classList.add("transfromed")
-      headerDot.classList.remove("invisible")
-      headerTextC.classList.add("transfromedC")
-      for (var i = 0; i < headerShouldHide.length; i++) {
-        headerShouldHide[i].classList.add("invisible");
-      }
+  function getPortfolioSection() {
+    return document.getElementById('portfolio-section');
+  }
+
+  function getScrollMax() {
+    if ('scrollMaxX' in window) {
+      return window.scrollMaxY;
     } else {
-      headerDot.classList.remove("transfromed")
-      headerDot.classList.add("invisible")
-      headerTextC.classList.remove("transfromedC")
-      for (var i = 0; i < headerShouldHide.length; i++) {
-        headerShouldHide[i].classList.remove("invisible");
+      return document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    }
+  }
+
+  function getOffsetTop() {
+    var offsetTop = 200;
+
+    if (getPortfolioSection()) {
+      offsetTop = getPortfolioSection().offsetTop;
+    }
+
+    return offsetTop;
+  }
+
+  function dynamicHeader() {
+    var triggers = [
+      'portfolio-section',
+      'testimonials-section',
+      'developer-story-section',
+      'blogs-section',
+    ]
+
+    const items = document.getElementsByClassName('page-link');
+    for (var i = 0; i < triggers.length; i++) {
+      const id = triggers[i];
+      if (!document.getElementById(id)) {
+        items[i].setAttribute('href', '{{ "/" | relative_url }}' + '#' + id);
       }
     }
-  })
+
+    var current = null;
+    var lastScrollTop = 0;
+
+    window.addEventListener("scroll", function () {
+      // 1: add active to header
+      var scrollMaxY = getScrollMax()
+
+      if (scrollY >= scrollMaxY - 200) {
+        current = Array.from(sections).pop().getAttribute("id")
+      } else {
+        for (let i = 0; i < sections.length; i++) {
+          const section = sections[i];
+          const sectionTop = section.offsetTop;
+          if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        }
+      }
+
+      for (let i = 0; i < items.length; i++) {
+        const element = items[i];
+        element.classList.remove('active')
+        if (element.getAttribute('href').includes(current)) {
+          element.classList.add('active')
+        }
+      }
+      // 1: END
+
+      // floating header
+      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+      if (st > lastScrollTop && scrollY > getOffsetTop()) {
+        var startOffset = (scrollY - getOffsetTop()) / 3;
+        document.getElementsByClassName('site-header')[0].setAttribute('style', 'transform: translate(0px,' + '-' + (startOffset > 64 ? 64 : startOffset) + 'px);')
+      } else {
+        document.getElementsByClassName('site-header')[0].setAttribute('style', 'transform: translate(0px, 0px)')
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    })
+  }
+
+  function animatedLogo() {
+    var headerShouldHide = document.getElementsByClassName("header-should-hide");
+    var headerDot = document.getElementById("header-dot");
+    var headerTextC = document.getElementById("header-text-c");
+
+    window.addEventListener("scroll", function () {
+      if (scrollY > getOffsetTop() - 56) {
+        headerDot.classList.add("transfromed")
+        headerDot.classList.remove("invisible")
+        headerTextC.classList.add("transfromedC")
+        for (var i = 0; i < headerShouldHide.length; i++) {
+          headerShouldHide[i].classList.add("invisible");
+        }
+      } else {
+        headerDot.classList.remove("transfromed")
+        headerDot.classList.add("invisible")
+        headerTextC.classList.remove("transfromedC")
+        for (var i = 0; i < headerShouldHide.length; i++) {
+          headerShouldHide[i].classList.remove("invisible");
+        }
+      }
+    })
+  }
+
+  dynamicHeader();
+  animatedLogo();
 </script>

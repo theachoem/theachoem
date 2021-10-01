@@ -11,6 +11,8 @@
   background-color: $background-color;
   z-index: 1000000000;
 
+  transition: all 0.5s ease;
+
   a {
     span {
       transition: transform 0.25s ease;
@@ -54,6 +56,19 @@
       }
     }
   }
+
+  // &.active {
+  //   transform: translate(0px, -64px);
+  // }
+}
+
+// https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+.post-list-heading::before {
+  content: "";
+  display: block;
+  height: 75px;
+  margin-top: -75px;
+  visibility: hidden;
 }
 
 .site-title {
@@ -90,6 +105,10 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
+  }
+
+  .active {
+    color: $brand-color;
   }
 
   @include media-query($on-palm) {

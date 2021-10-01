@@ -1,7 +1,7 @@
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
 {%- if site.posts.size > 0 -%}
-<h2 class="post-list-heading">{{ page.list_title | default: "Blogs" }}</h2>
+<h2 id="blogs-section" class="post-list-heading">{{ page.list_title | default: "Blogs" }}</h2>
 <ul class="post-list">
   {%- for post in site.posts -%}
   <li>

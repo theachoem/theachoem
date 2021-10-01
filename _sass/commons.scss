@@ -20,10 +20,26 @@
   text-decoration: none !important;
   cursor: pointer;
   user-select: none;
+  transition: all 0.25s ease;
+
+  &::after {
+    content: "\00bb";
+    color: $background-color;
+    opacity: 0;
+    display: inline-block;
+    transform: translate(0px, 0);
+    margin-left: -8px;
+    transition: all 0.25s ease;
+  }
 
   &:hover {
     background-color: $brand-color-variant !important;
     text-decoration: none;
+    &::after {
+      opacity: 1;
+      margin-left: 0px;
+      transform: translate(4px, 0);
+    }
   }
 }
 

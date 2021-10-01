@@ -25,7 +25,7 @@ layout: default
   <div class="portfolios-wrapper">
     {% for portfolio in portfolios %}
     <div class="portfolio p{{ forloop.index }}" style="background-color: #{{ portfolio.bg-color }}2E">
-      <div class="img-wrapper">
+      <div class="img-wrapper" id="img-wrapper{{ forloop.index }}">
         <img class="ss1" src="{{ site.url }}/{{portfolio.ss1}}" alt="{{portfolio.ss1}}">
         <img class="ss2" src="{{ site.url }}/{{portfolio.ss2}}" alt="{{portfolio.ss2}}">
         {%- if portfolio.ss3 -%}

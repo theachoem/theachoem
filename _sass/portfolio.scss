@@ -37,12 +37,14 @@ $gap: 8px;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: $gap;
       grid-auto-flow: row;
+      transition: 0.5s ease transform;
     }
 
     .overlay {
       position: absolute;
       opacity: 0;
       transition: 0.5s ease;
+      transform: translate(0px, -8px);
     }
 
     img {
@@ -63,7 +65,15 @@ $gap: 8px;
 
   .portfolio:hover .overlay {
     opacity: 1;
-    transform: translate(0px, 4px);
+    transform: translate(0px, 0px);
+  }
+
+  .portfolio:hover .img-wrapper {
+    transform: scale(1.05) translate(0px, 16px);
+  }
+
+  .portfolio:hover #img-wrapper1 {
+    transform: rotate(16deg) scale(1.15) translate(-8px, 32px) !important;
   }
 
   // portfolio

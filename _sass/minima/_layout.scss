@@ -6,7 +6,54 @@
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: $background-color;
+  z-index: 1000000000;
+
+  a {
+    span {
+      transition: transform 0.25s ease;
+      opacity: 1;
+      transform: translate(0px);
+      display: inline-block;
+    }
+
+    #header-text-c {
+      background-color: $background-color;
+    }
+
+    .header-should-hide {
+      transition: opacity 0.2s ease;
+    }
+
+    .invisible {
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .transfromed {
+      transform: translate(-100px, 0px);
+    }
+
+    .transfromedC {
+      transform: translate(-42px, 0px);
+      z-index: 1;
+    }
+
+    &:hover {
+      text-decoration: none;
+      .invisible {
+        opacity: 1;
+      }
+      .transfromed {
+        transform: translate(0px, 0px);
+      }
+      .transfromedC {
+        transform: translate(0px, 0px);
+      }
+    }
+  }
 }
 
 .site-title {
@@ -174,6 +221,8 @@
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
+  margin-top: -webkit-calc(#{$spacing-unit} * 3);
+  margin-top: calc(#{$spacing-unit} * 3);
 }
 
 .page-heading {

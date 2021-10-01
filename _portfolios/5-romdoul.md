@@ -14,7 +14,6 @@ tags:
 - Flutter
 - Firebase
 - Google Map
-- Figma
 ---
 Romduol is an agent application that provides services, such as booking hotel, hostel, dormitory, bungalow, bike, especially eco travel packages to travelers who like to travel with sustainability, enjoy the feeling of nature, and experience healthy traveling with ecotourism. Users can also make the best first experience by accessing information of places they want to visit, view rating, make booking and payment in one platform.
 

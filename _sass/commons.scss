@@ -128,7 +128,8 @@ hr {
   aspect-ratio: 595 / 910;
 }
 
-.image-cover, video {
+.image-cover,
+video {
   margin-bottom: 16px;
   border-radius: $radius;
   width: 100%;
@@ -184,6 +185,10 @@ iframe {
   font-size: 11px;
   margin-right: 1px;
   margin-left: 1px;
+  @media screen and (max-width: $on-laptop) {
+    margin-bottom: 4px;
+    margin-top: 0px;
+  }
 }
 
 .inline-flex {

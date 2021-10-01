@@ -15,7 +15,8 @@ tags:
 - Google Map
 - Open Weather API
 - Firebase
-- http
+- HTTP
+- Backend with NodeJS
 ---
 <iframe class="mb2" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FrENtVilaZAqW6wLOfuPZH9%2FCambodia-Geography" allowfullscreen></iframe>
 
@@ -23,5 +24,6 @@ Discover places & geography around Cambodia with us 📝. Project 1 subject at [
 
 Role: Leader, Mobile Developer & UI Designer.
 
+<a class="primary-button" href="https://play.google.com/store/apps/details?id=com.juniorise.camgeo">Download on Play Store</a>
 <a class="primary-button" href="https://github.com/CSG6Project1/cambodia_geography_mobile">GitHub</a>
 <a class="primary-button" href="https://www.figma.com/file/rENtVilaZAqW6wLOfuPZH9/Cambodia-Geography">Figma</a>

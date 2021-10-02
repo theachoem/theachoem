@@ -26,19 +26,18 @@
     content: "\00bb";
     color: $background-color;
     opacity: 0;
-    display: inline-block;
-    transform: translate(0px, 0);
-    margin-left: -8px;
+    position: absolute;
     transition: all 0.25s ease;
+    transform: translate(-2px, 0);
   }
 
   &:hover {
     background-color: $brand-color-variant !important;
     text-decoration: none;
+    padding-right: 24px;
     &::after {
       opacity: 1;
-      margin-left: 0px;
-      transform: translate(4px, 0);
+      transform: translate(6px, 0);
     }
   }
 }

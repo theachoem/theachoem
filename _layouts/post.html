@@ -9,9 +9,9 @@ layout: default
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {%- if page.date -%}
-        {{ page.date| date: date_format }} 
+        {{ page.date| date: date_format }}
         {% else %}
-        {{ page.start_date| date: date_format }} 
+        {{ page.start_date| date: date_format }}
         {%- endif -%}
       </time>
       <span> </span>
@@ -50,6 +50,18 @@ layout: default
 
   {%- if page.cover -%}
   <img src="{{ page.cover }}" alt="image-cover" class="image-cover">
+  {%- endif -%}
+
+  {%- if page.video -%}
+  <video muted autoplay controls>
+    <source src="{{ page.video }}" type="video/mp4">
+  </video>
+  {%- endif -%}
+
+  {%- if page.figma -%}
+  <iframe class="mb2" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="{{ page.figma }}"
+    allowfullscreen>
+  </iframe>
   {%- endif -%}
 
   <div class="post-content e-content" itemprop="articleBody">

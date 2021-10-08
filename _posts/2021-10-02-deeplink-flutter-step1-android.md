@@ -6,11 +6,12 @@ categories: blogs
 author: Thea Choem
 comments: true
 cover: https://user-images.githubusercontent.com/29684683/135708693-75db1ce7-9691-4e6c-99e1-c579d2a812f4.jpeg
-permalink: /blogs/deeplink-flutter-android-step1/
+permalink: /blogs/deeplink-flutter-step1-android/
+main_tag: flutter-deeplink
+tags:
+- flutter-deeplink
 ---
 {% include dot.md %}
-Deep links are a type of link that sends users directly to an app instead of a website or a store. They are used to send users straight to specific in-app locations, saving users the time and energy locating a particular page themselves – significantly improving the user experience.
-
 There are 2 types of Android Deeplink: _Deep Links_ & ​​_App Links_.<br>
 **Deep Links** can have any custom scheme and do not require a host, nor a hosted file while **App Links** only work with HTTPS scheme and require a specified host, plus a hosted file - `assetlinks.json`
 

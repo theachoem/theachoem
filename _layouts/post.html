@@ -75,6 +75,64 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
+<!-- RELATED POST -->
+{%- if page.main_tag -%}
+{%- if site.posts.size > 0 -%}
+<h2 id="blogs-section" class="post-list-heading">{{ page.list_title | default: "Relate Articles" }}</h2>
+<ul class="post-list">
+  {%- for post in site.posts -%}
+  {% if post.tags contains post.main_tag and post.permalink != page.permalink %}
+  <li>
+    <h3>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+    </h3>
+
+    {%- if post.description -%}
+    <p class="post-meta">
+      {{ post.description }}
+    </p>
+    {%- endif -%}
+
+    <span class="post-meta">
+      <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- if post.date -%}
+        {{ post.date| date: date_format }}
+        {% else %}
+        {{ post.start_date| date: date_format }}
+        {%- endif -%}
+      </time>
+      <span> </span>
+
+      <!-- minute read counter -->
+      {% capture words %}
+      {{ post.content | number_of_words | minus: 180 }}
+      {% endcapture %}
+      {% unless words contains "-" %}
+      {% assign minutes = words | plus: 180 | divided_by: 180 %}
+      • {{ minutes }}
+      {% if minutes == 1 %}
+      {{ " minute to read" }}
+      {% else %}
+      {{ " minutes to read" }}
+      {% endif %}
+      {% endunless %}
+    </span>
+    {%- if site.show_excerpts -%}
+    {{ post.excerpt }}
+    {%- endif -%}
+  </li>
+  {%- endif -%}
+  {%- endfor -%}
+</ul>
+{%- endif -%}
+{%- endif -%}
+<!-- RELATED POST -->
+
 {% if page.comments == true %}
 <script src="https://utteranc.es/client.js" repo="theachoem/theachoem" issue-term="title" theme="github-light"
   crossorigin="anonymous" async>

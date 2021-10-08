@@ -114,7 +114,9 @@ To implement this type **App Links**, we need to host the verification file `{HO
 ```
 
 ## 3. Host the Verification file Android
-Firstly, create a file called `assetlinks.json` and replace **package_name**, **sha256_cert_fingerprints** with your own.
+Firstly, create a file called `assetlinks.json`, then host them to `www.example.com/.well-known/assetlinks.json`. 
+
+Make sure to replace **package_name**, **sha256_cert_fingerprints** with your own.
 ```
 [
   {

@@ -4,4 +4,3 @@ _site
 .jekyll-metadata
 Gemfile.lock
 .ruby-version
-.DS_Store

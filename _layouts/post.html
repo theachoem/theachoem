@@ -85,7 +85,7 @@ layout: default
 <h2 id="blogs-section" class="post-list-heading">{{ page.list_title | default: "Relate Articles" }}</h2>
 <ul class="post-list">
   {%- for post in site.posts -%}
-  {% if post.tags contains post.main_tag and post.permalink != page.permalink %}
+  {% if page.tags contains post.main_tag and post.permalink != page.permalink %}
   <li>
     <h3>
       <a class="post-link" href="{{ post.url | relative_url }}">

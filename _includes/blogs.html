@@ -4,6 +4,7 @@
 <h2 id="blogs-section" class="post-list-heading">{{ page.list_title | default: "Blogs" }}</h2>
 <ul class="post-list">
   {%- for post in site.posts -%}
+  {% unless post.excerpt == "true" %}
   <li>
     <h3>
       <a class="post-link" href="{{ post.url | relative_url }}">
@@ -46,6 +47,7 @@
     {{ post.excerpt }}
     {%- endif -%}
   </li>
+  {%- endunless -%}
   {%- endfor -%}
 </ul>
 {%- endif -%}

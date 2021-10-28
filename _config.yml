@@ -54,7 +54,9 @@ collections:
 exclude:
   - about.md
   - blogs.md
-  - docs/README.md
+  - _posts/2021-10-02-deeplink-flutter-step1-android.md
+  - _posts/2021-10-08-deeplink-flutter-step2-ios.md
+  - _posts/2021-10-08-deeplink-flutter-step3-handing-incoming-url.md
   # - blogs.md
 #   - .sass-cache/
 #   - .jekyll-cache/

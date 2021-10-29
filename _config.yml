@@ -18,7 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Thea Choem
+title: Portfolio
+author: Thea Choem
 timezone: Asia/Phnom_Penh
 email: theacheng.g6@gmail.com
 description: Designer + Developer Based in Phnom Penh
@@ -26,6 +27,7 @@ location: Phnom Penh, Cambodia📍
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.theachoem.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  theachoem
+linkedin_username: theachoem
 facebook_username: theacheng.g6
 markdown: kramdown
 

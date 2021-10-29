@@ -42,6 +42,39 @@
   }
 }
 
+.secondary-button {
+  color: $brand-color !important;
+  position: relative;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: $radius;
+  background-color: transparent;
+  outline: none;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease;
+
+  &::after {
+    content: "\00bb";
+    color: $brand-color;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.25s ease;
+    transform: translate(-2px, 0);
+  }
+
+  &:hover {
+    text-decoration: none;
+    padding-right: 24px;
+    &::after {
+      opacity: 1;
+      transform: translate(6px, 0);
+    }
+  }
+}
+
 .mt0 {
   margin-top: 0px;
 }

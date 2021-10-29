@@ -54,7 +54,7 @@ collections:
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - about.md
+  # - about.md
   - blogs.md
   - _posts/2021-10-02-deeplink-flutter-step1-android.md
   - _posts/2021-10-08-deeplink-flutter-step2-ios.md

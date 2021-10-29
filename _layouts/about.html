@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="post-list-heading"></div>
+<div class="about">
+  <div class="summary-section">
+    <div class="tc-left-side">
+      <img src="{{ page.profile }}" alt="{{ page.profile }}">
+    </div>
+    <div class="tc-right-side">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include dot.md %}
+  <a class="github-state-section" href="https://github.com/{{ site.github_username }}">
+    <iframe
+      src="https://github-readme-stats.vercel.app/api?username={{ site.github_username }}&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true"
+      frameborder="0"></iframe>
+    <iframe
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username={{ site.github_username }}&layout=compact&theme=buefy&hide_border=true"
+      frameborder="0"></iframe>
+  </a>
+  <img width="100%" src="https://ghchart.rshah.org/{{ site.github_username }}" alt="{{ site.github_username }}'s Github chart" />
+  <br>
+  <br>
+  {% include dot.md %}
+  {% include blogs.html %}
+</div>

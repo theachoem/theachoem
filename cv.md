@@ -2,6 +2,7 @@
 layout: page
 title: CV
 permalink: /cv/
+excerpt: true
 # pdf: assets/pdf/curriculum-vitae.pdf
 ---
 <button class="primary-button" onClick='window.location.reload();'>Reload</button>

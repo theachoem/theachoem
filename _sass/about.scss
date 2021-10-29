@@ -1,0 +1,26 @@
+@import "theme";
+
+.about {
+  .summary-section,
+  .github-state-section {
+    margin: $spacing-unit 0;
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-unit;
+
+    @media screen and (max-width: $on-palm) {
+      flex-direction: column;
+    }
+  }
+
+  .github-state-section {
+    gap: 1px;
+    * {
+      outline: 1px solid $grey-color-light;
+    }
+
+    iframe {
+      pointer-events: none;
+    }
+  }
+}

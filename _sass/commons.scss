@@ -243,3 +243,31 @@ iframe {
 .inline-flex {
   display: inline-flex;
 }
+
+.video-gallery {
+  border-radius: $radius;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "a1 a2"
+    "a3 a3";
+
+  * {
+    margin: 0px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .a1 {
+    grid-area: a1;
+  }
+  .a2 {
+    grid-area: a2;
+  }
+  .a3 {
+    grid-area: a3;
+    transform: scale(1.01);
+  }
+}

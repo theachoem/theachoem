@@ -8,7 +8,7 @@ layout: default
       <img src="{{ page.profile }}" alt="{{ page.profile }}">
     </div>
     <div class="tc-right-side">
-      {{ content }}
+      {{ page.summary }}
       {% if page.skills -%}
       <ul class="post-tags-wrapper mt2">
         {% for skill in page.skills %}
@@ -33,6 +33,7 @@ layout: default
   <img width="100%" class="mb2" src="https://ghchart.rshah.org/{{ site.github_username }}"
     alt="{{ site.github_username }}'s Github chart" />
   <br>
+  {{ content }}
   {% include dot.md %}
   {% include blogs.html %}
 </div>

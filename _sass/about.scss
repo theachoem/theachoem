@@ -30,3 +30,12 @@
     }
   }
 }
+
+.video-gallery {
+  aspect-ratio: 16/9;
+  border-radius: $radius;
+  overflow: hidden;
+  .scale-up {
+    transform: scale(1.0075);
+  }
+}

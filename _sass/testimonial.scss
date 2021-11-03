@@ -1,12 +1,16 @@
 @import "theme";
 
+.no-padding {
+  padding: 0px !important
+}
+
 .splide {
   border: 1px $grey-color-light solid;
   border-radius: $radius;
   text-align: center;
   margin: 0 auto;
   li {
-    padding: 24px 32px 24px 32px;
+    padding: 24px 48px 24px 48px;
     .testimonial-sign {
       width: 32px;
       height: 32px;
@@ -55,7 +59,7 @@
       }
     }
   }
-  .splide__arrows {
-    display: none !important;
+  .splide__arrow {
+    background: $background-color !important;
   }
 }

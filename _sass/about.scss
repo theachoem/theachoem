@@ -38,4 +38,9 @@
   .scale-up {
     transform: scale(1.0075);
   }
+
+  .splide__track {
+    border-radius: $radius;
+    overflow: hidden;
+  }
 }

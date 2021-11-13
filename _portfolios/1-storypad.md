@@ -26,4 +26,5 @@ I unpublished it since I don't have time for it at this moment. It is not public
 There is one developer & one designer and It is me :D
 
 <a class="primary-button" href="https://play.google.com/store/apps/details?id=com.tc.writestory">Download on Play Store</a>
+<a class="primary-button" href="https://m.apkpure.com/storypad-write-story-note-diary/com.tc.writestory">Apkpure</a>
 <a class="primary-button" href="https://github.com/juniorise/storypad">GitHub</a>

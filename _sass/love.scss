@@ -1,0 +1,24 @@
+// @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+// $cursive: 'Great Vibes', cursive;
+
+.love-section {
+  // font-family: $cursive;
+  font-size: 32px;
+  position: relative;
+  color: $background-color;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    margin-top: 8px;
+    text-align: left;
+    text-shadow: 0.5px 0.5px $text-color
+  }
+
+  img {
+    border-radius: $radius;
+  }
+}

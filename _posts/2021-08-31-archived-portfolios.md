@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Portfolio History"
+title: "Archived Portfolios"
 date: 2021-08-31
 categories: blogs
 author: Thea Choem
 comments: true
-permalink: /blogs/portfolio-history/
+permalink: /blogs/archived-portfolios/
 ---
 
 {% include dot.md %}
@@ -25,6 +25,7 @@ This is the best website I have ever made for myself. Anyways, back then, since 
   <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku"/>
 </div>
 <a href="http://v1.theachoem.com" target="_blank" class="primary-button mt">Demo</a>
+<a href="https://github.com/theachoem/portfolio-jekyll/commits/1.0.0" target="_blank" class="primary-button mt">GitHub</a>
 
 {% include dot.md %}
 
@@ -54,3 +55,4 @@ Jekyll with minima theme is my best choice so far. It is fast & additionally, It
   <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown"/>
 </div>
 <a href="https://v3.theachoem.com" target="_blank" class="primary-button mt">Demo</a>
+<a href="https://github.com/theachoem/portfolio-jekyll" target="_blank" class="primary-button mt">GitHub</a>

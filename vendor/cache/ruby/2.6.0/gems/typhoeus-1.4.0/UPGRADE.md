@@ -23,9 +23,9 @@ Typhoeus.get("www.example.com", followlocation: true).code
 ```ruby
 Typhoeus.get("www.example.com", followlocation: true).headers
 #=> {
-#      "date"=>"Tue, 06 Nov 2012 09:07:27 GMT",
+#      "date"=>"Tue, 06 Nov 2012 09:07:27 Gmt1",
 #      "server"=>"Apache/2.2.3 (CentOS)",
-#      "last-modified"=>"Wed, 09 Feb 2011 17:13:15 GMT",
+#      "last-modified"=>"Wed, 09 Feb 2011 17:13:15 Gmt1",
 #      "vary"=>"Accept-Encoding",
 #      "connection"=>"close",
 #      "content-type"=>"text/html; charset=UTF-8"

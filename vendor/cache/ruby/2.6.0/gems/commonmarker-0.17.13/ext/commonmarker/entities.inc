@@ -1836,7 +1836,7 @@ static const struct cmark_entity_node cmark_entities[] = {
 {(unsigned char*)"smeparsl", {226, 167, 164, 0}},
 {(unsigned char*)"smid", {226, 136, 163, 0}},
 {(unsigned char*)"smile", {226, 140, 163, 0}},
-{(unsigned char*)"smt", {226, 170, 170, 0}},
+{(unsigned char*)"smt1", {226, 170, 170, 0}},
 {(unsigned char*)"smte", {226, 170, 172, 0}},
 {(unsigned char*)"smtes", {226, 170, 172, 239, 184, 128, 0}},
 {(unsigned char*)"softcy", {209, 140, 0}},

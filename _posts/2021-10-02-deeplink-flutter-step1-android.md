@@ -54,7 +54,7 @@ In `AndroidManifest.xml`, make sure to set `android:launchMode="singleInstance"`
   </application>
 </manifest>
 ```
-<a class="primary-button mb" href="https://medium.com/android-news/android-activity-launch-mode-e0df1aa72242">Read more: Android launchMode</a>
+<a class="primary-button mb1" href="https://medium.com/android-news/android-activity-launch-mode-e0df1aa72242">Read more: Android launchMode</a>
 
 ## 2. Set intent filter
 

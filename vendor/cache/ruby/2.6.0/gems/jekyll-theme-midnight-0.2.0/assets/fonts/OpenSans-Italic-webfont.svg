@@ -2395,24 +2395,24 @@ d="M459 0h-498l19 92l172 37l256 1204l-156 35l18 94h498l-18 -94l-175 -35l-256 -12
 d="M459 0h-498l19 92l172 37l256 1204l-156 35l18 94h498l-18 -94l-175 -35l-256 -1204l158 -37zM809 1854q0 -82 -55 -129t-154 -70l-27 -111h-106l20 185q94 15 141 41.5t47 72.5q0 42 -32 55t-84 13q-39 0 -95 -8v100q50 12 115 12q111 0 170.5 -42t59.5 -119z" />
     <glyph glyph-name="uni1ECA.alt" horiz-adv-x="651" 
 d="M459 0h-498l19 92l172 37l256 1204l-156 35l18 94h498l-18 -94l-175 -35l-256 -1204l158 -37zM76 -258q0 52 32 89.5t83 37.5q46 0 67 -26t21 -64q0 -55 -33.5 -93t-77.5 -38q-38 0 -65 24.5t-27 69.5z" />
-    <glyph glyph-name="circumflexacutecomb" horiz-adv-x="0" 
+    <glyph glyph-name="circumflexacutecomb1" horiz-adv-x="0" 
 d="M-524 1526h174q16 -53 59 -127.5t90 -134.5l-6 -23h-57q-97 57 -191 166q-144 -108 -264 -166h-74l9 27q75 64 150.5 139t109.5 119zM-246 1460l46 47q94 94 137 156h169v-25q-43 -43 -115 -101.5t-141 -100.5h-96v24z" />
-    <glyph glyph-name="circumflexgravecomb" horiz-adv-x="0" 
+    <glyph glyph-name="circumflexgravecomb1" horiz-adv-x="0" 
 d="M-524 1526h174q16 -53 59 -127.5t90 -134.5l-6 -23h-57q-97 57 -191 166q-144 -108 -264 -166h-74l9 27q75 64 150.5 139t109.5 119zM-762 1436q-67 61 -174 204l-2 23h137q56 -112 121 -205v-22h-82z" />
-    <glyph glyph-name="circumflexhookcomb" horiz-adv-x="0" 
+    <glyph glyph-name="circumflexhookcomb1" horiz-adv-x="0" 
 d="M-524 1526h174q16 -53 59 -127.5t90 -134.5l-6 -23h-57q-97 57 -191 166q-144 -108 -264 -166h-74l9 27q75 64 150.5 139t109.5 119zM-221 1450l8 94q69 11 103 31t34 55q0 31 -23 41t-63 10q-42 0 -71 -8v78q22 6 88 6q86 0 130 -30t44 -87q0 -65 -42 -99.5t-114 -51.5
 l-14 -39h-80z" />
-    <glyph glyph-name="circumflextildecomb" horiz-adv-x="0" 
+    <glyph glyph-name="circumflextildecomb1" horiz-adv-x="0" 
 d="M-264 1589q-39 0 -76 15t-71 33.5t-65.5 33.5t-60.5 15q-43 0 -69.5 -23t-50.5 -76h-101q58 219 232 219q42 0 80 -15t72 -33t64 -33t56 -15q38 0 63.5 19.5t57.5 78.5h100q-64 -219 -231 -219zM-522 1528h174q15 -51 58.5 -128.5t90.5 -135.5l-8 -23h-57
 q-91 55 -189 168q-133 -105 -264 -168h-74l7 27q185 159 262 260z" />
-    <glyph glyph-name="breveacutecomb" horiz-adv-x="0" 
+    <glyph glyph-name="breveacutecomb1" horiz-adv-x="0" 
 d="M-487 1241q-120 0 -193.5 69t-77.5 187h107q14 -65 57.5 -92t120.5 -27q148 0 201 119h112q-34 -125 -118 -190.5t-209 -65.5zM-508 1524q105 95 178 205h172v-23q-44 -44 -124.5 -105t-149.5 -100h-76v23z" />
-    <glyph glyph-name="brevegravecomb" horiz-adv-x="0" 
+    <glyph glyph-name="brevegravecomb1" horiz-adv-x="0" 
 d="M-473 1501q-114 109 -186 205l6 23h139q49 -98 121 -201l-8 -27h-72zM-487 1241q-120 0 -193.5 69t-77.5 187h107q14 -65 57.5 -92t120.5 -27q148 0 201 119h112q-34 -125 -118 -190.5t-209 -65.5z" />
-    <glyph glyph-name="brevehookcomb" horiz-adv-x="0" 
+    <glyph glyph-name="brevehookcomb1" horiz-adv-x="0" 
 d="M-524 1483l6 96q69 11 104 30.5t35 59.5q0 29 -23 39t-63 10q-37 0 -72 -8v80q30 8 88 8q87 0 133 -30.5t46 -90.5q0 -65 -43 -100.5t-115 -52.5l-16 -41h-80zM-487 1241q-120 0 -193.5 69t-77.5 187h107q14 -65 57.5 -92t120.5 -27q148 0 201 119h112
 q-34 -125 -118 -190.5t-209 -65.5z" />
-    <glyph glyph-name="brevetildecomb" horiz-adv-x="0" 
+    <glyph glyph-name="brevetildecomb1" horiz-adv-x="0" 
 d="M-285 1587q-39 0 -75.5 15t-70.5 33t-65.5 33t-60.5 15q-43 0 -69.5 -22.5t-51.5 -75.5h-100q57 221 233 221q42 0 79.5 -15t71 -33t63.5 -33t57 -15q37 0 61.5 18t58.5 80h101q-65 -221 -232 -221zM-487 1241q-120 0 -193.5 69t-77.5 187h107q14 -65 57.5 -92t120.5 -27
 q148 0 201 119h112q-34 -125 -118 -190.5t-209 -65.5z" />
     <glyph glyph-name="cyrillichookleft" horiz-adv-x="420" 

@@ -1206,8 +1206,8 @@ const struct message responses[] =
   ,.headers=
     { { "Location", "http://www.google.com/" }
     , { "Content-Type", "text/html; charset=UTF-8" }
-    , { "Date", "Sun, 26 Apr 2009 11:11:49 GMT" }
-    , { "Expires", "Tue, 26 May 2009 11:11:49 GMT" }
+    , { "Date", "Sun, 26 Apr 2009 11:11:49 Gmt1" }
+    , { "Expires", "Tue, 26 May 2009 11:11:49 Gmt1" }
     , { "X-$PrototypeBI-Version", "1.6.0.3" }
     , { "Cache-Control", "public, max-age=2592000" }
     , { "Server", "gws" }
@@ -1253,7 +1253,7 @@ const struct message responses[] =
   ,.response_status= "OK"
   ,.num_headers= 5
   ,.headers=
-    { { "Date", "Tue, 04 Aug 2009 07:59:32 GMT" }
+    { { "Date", "Tue, 04 Aug 2009 07:59:32 Gmt1" }
     , { "Server", "Apache" }
     , { "X-Powered-By", "Servlet/2.5 JSP/2.1" }
     , { "Content-Type", "text/xml; charset=utf-8" }
@@ -1434,7 +1434,7 @@ const struct message responses[] =
   ,.response_status= "Moved Permanently"
   ,.num_headers= 9
   ,.headers=
-    { { "Date", "Thu, 03 Jun 2010 09:56:32 GMT" }
+    { { "Date", "Thu, 03 Jun 2010 09:56:32 Gmt1" }
     , { "Server", "Apache/2.2.3 (Red Hat)" }
     , { "Cache-Control", "public" }
     , { "Pragma", "" }
@@ -1473,10 +1473,10 @@ const struct message responses[] =
   ,.response_status= "OK"
   ,.num_headers= 11
   ,.headers=
-    { { "Date", "Tue, 28 Sep 2010 01:14:13 GMT" }
+    { { "Date", "Tue, 28 Sep 2010 01:14:13 Gmt1" }
     , { "Server", "Apache" }
     , { "Cache-Control", "no-cache, must-revalidate" }
-    , { "Expires", "Mon, 26 Jul 1997 05:00:00 GMT" }
+    , { "Expires", "Mon, 26 Jul 1997 05:00:00 Gmt1" }
     , { ".et-Cookie", "PlaxoCS=1274804622353690521; path=/; domain=.plaxo.com" }
     , { "Vary", "Accept-Encoding" }
     , { "_eep-Alive", "timeout=45" }
@@ -1701,7 +1701,7 @@ const struct message responses[] =
     , { "en-US Content-Type", "text/xml" }
     , { "Content-Type", "text/xml" }
     , { "Content-Length", "16" }
-    , { "Date", "Fri, 23 Jul 2010 18:45:38 GMT" }
+    , { "Date", "Fri, 23 Jul 2010 18:45:38 Gmt1" }
     , { "Connection", "keep-alive" }
     }
   ,.body= "<xml>hello</xml>"
@@ -1733,7 +1733,7 @@ const struct message responses[] =
   ,.status_code= 301
   ,.response_status= "MovedPermanently"
   ,.num_headers= 9
-  ,.headers= { { "Date", "Wed, 15 May 2013 17:06:33 GMT" }
+  ,.headers= { { "Date", "Wed, 15 May 2013 17:06:33 Gmt1" }
              , { "Server", "Server" }
              , { "x-amz-id-1", "0GPHKXSJQ826RK7GZEB2" }
              , { "p3p", "policyref=\"http://www.amazon.com/w3c/p3p.xml\",CP=\"CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC \"" }

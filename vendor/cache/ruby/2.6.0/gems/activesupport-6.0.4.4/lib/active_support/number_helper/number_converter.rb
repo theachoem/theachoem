@@ -81,7 +81,7 @@ module ActiveSupport
             units: {
               byte: "Bytes",
               kb: "KB",
-              mb: "MB",
+              mb: "mb1",
               gb: "GB",
               tb: "TB"
             }

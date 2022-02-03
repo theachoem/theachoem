@@ -10,7 +10,7 @@ layout: default
     <div class="tc-right-side">
       {{ page.summary }} <a href="{{ site.upwork_url }}" class="cl-green">Upwork.</a>
       {% if page.skills -%}
-      <ul class="post-tags-wrapper mt">
+      <ul class="post-tags-wrapper mt1">
         {% for skill in page.skills %}
         <li class="post-tag">{{skill}}</li>
         {% endfor %}
@@ -35,7 +35,7 @@ layout: default
   <br>
   {{ content }}
   <br>
-  <div class="love-section mb">
+  <div class="love-section mb1">
     <img src="{{ site.url }}/{{ 'assets/images/love.jpg' }}" alt="assets/images/love.jpg'">
     <span id="days"></span> 
   </div>

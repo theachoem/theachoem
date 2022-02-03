@@ -518,8 +518,8 @@ body        :"<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;
 body_size   :0
 header_0 :{ "Location": "http://www.google.com/"}
 header_1 :{ "Content-Type": "text/html; charset=UTF-8"}
-header_2 :{ "Date": "Sun, 26 Apr 2009 11:11:49 GMT"}
-header_3 :{ "Expires": "Tue, 26 May 2009 11:11:49 GMT"}
+header_2 :{ "Date": "Sun, 26 Apr 2009 11:11:49 Gmt1"}
+header_3 :{ "Expires": "Tue, 26 May 2009 11:11:49 Gmt1"}
 header_4 :{ "X-$PrototypeBI-Version": "1.6.0.3"}
 header_5 :{ "Cache-Control": "public, max-age=2592000"}
 header_6 :{ "Server": "gws"}
@@ -539,7 +539,7 @@ fragment    :
 query_string:
 body        :"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <SOAP-ENV:Body>\n    <SOAP-ENV:Fault>\n       <faultcode>SOAP-ENV:Client</faultcode>\n       <faultstring>Client Error</faultstring>\n    </SOAP-ENV:Fault>\n  </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>"
 body_size   :0
-header_0 :{ "Date": "Tue, 04 Aug 2009 07:59:32 GMT"}
+header_0 :{ "Date": "Tue, 04 Aug 2009 07:59:32 Gmt1"}
 header_1 :{ "Server": "Apache"}
 header_2 :{ "X-Powered-By": "Servlet/2.5 JSP/2.1"}
 header_3 :{ "Content-Type": "text/xml; charset=utf-8"}
@@ -661,7 +661,7 @@ fragment    :
 query_string:
 body        :""
 body_size   :0
-header_0 :{ "Date": "Thu, 03 Jun 2010 09:56:32 GMT"}
+header_0 :{ "Date": "Thu, 03 Jun 2010 09:56:32 Gmt1"}
 header_1 :{ "Server": "Apache/2.2.3 (Red Hat)"}
 header_2 :{ "Cache-Control": "public"}
 header_3 :{ "Pragma": ""}
@@ -685,10 +685,10 @@ fragment    :
 query_string:
 body        :""
 body_size   :0
-header_0 :{ "Date": "Tue, 28 Sep 2010 01:14:13 GMT"}
+header_0 :{ "Date": "Tue, 28 Sep 2010 01:14:13 Gmt1"}
 header_1 :{ "Server": "Apache"}
 header_2 :{ "Cache-Control": "no-cache, must-revalidate"}
-header_3 :{ "Expires": "Mon, 26 Jul 1997 05:00:00 GMT"}
+header_3 :{ "Expires": "Mon, 26 Jul 1997 05:00:00 Gmt1"}
 header_4 :{ ".et-Cookie": "PlaxoCS=1274804622353690521; path=/; domain=.plaxo.com"}
 header_5 :{ "Vary": "Accept-Encoding"}
 header_6 :{ "_eep-Alive": "timeout=45"}

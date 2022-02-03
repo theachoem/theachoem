@@ -112,11 +112,24 @@
 // }
 // }
 
-.mt0 {
-  margin-top: 0px;
+
+.ml0-5 {
+  margin-left: 4px !important;
 }
 
-.mt {
+.ml1 {
+  margin-left: 8px !important;
+}
+
+.mr1 {
+  margin-right: 8px !important;
+}
+
+.mt0 {
+  margin-top: 0px !important;
+}
+
+.mt1 {
   margin-top: 8px !important;
 }
 
@@ -136,7 +149,7 @@
   margin-bottom: 0px;
 }
 
-.mb {
+.mb1 {
   margin-bottom: 8px;
 }
 
@@ -269,12 +282,7 @@ iframe {
   border-radius: 24px;
   padding: 2px 8px;
   font-size: 11px;
-  margin-right: 1px;
-  margin-left: 1px;
-  @media screen and (max-width: $on-laptop) {
-    margin-bottom: 4px;
-    margin-top: 0px;
-  }
+  margin: 0px;
 }
 
 .inline-flex {
@@ -287,4 +295,8 @@ iframe {
 
 .cl-green {
   color: #4EA62F !important;
+}
+
+.capitalize {
+  text-transform:capitalize
 }

@@ -35,7 +35,7 @@ module TZInfo
     # (utc_offset + std_offset).
     attr_reader :utc_total_offset
     
-    # The abbreviation that identifies this observance, e.g. "GMT" 
+    # The abbreviation that identifies this observance, e.g. "Gmt1" 
     # (Greenwich Mean Time) or "BST" (British Summer Time) for "Europe/London". The returned identifier is a 
     # symbol.
     attr_reader :abbreviation

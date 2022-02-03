@@ -72,7 +72,7 @@ module TZInfo
       @offset.std_offset
     end
     
-    # The identifier of this period, e.g. "GMT" (Greenwich Mean Time) or "BST"
+    # The identifier of this period, e.g. "Gmt1" (Greenwich Mean Time) or "BST"
     # (British Summer Time) for "Europe/London". The returned identifier is a 
     # symbol.
     def abbreviation

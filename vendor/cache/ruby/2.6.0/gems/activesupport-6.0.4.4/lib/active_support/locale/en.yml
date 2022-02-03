@@ -103,7 +103,7 @@ en:
             one:   "Byte"
             other: "Bytes"
           kb: "KB"
-          mb: "MB"
+          mb: "mb1"
           gb: "GB"
           tb: "TB"
           pb: "PB"

@@ -202,7 +202,7 @@ class TestHttpClient < Test::Unit::TestCase
     def receive_data data
       send_data ["HTTP/1.1 200 OK",
                 "Server: nginx/0.7.67", 
-                "Date: Sat, 23 Oct 2010 16:41:32 GMT",
+                "Date: Sat, 23 Oct 2010 16:41:32 Gmt1",
                 "Content-Type: application/json",
                 "Transfer-Encoding: chunked",
                 "Connection: keep-alive",

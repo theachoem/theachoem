@@ -50,8 +50,7 @@ layout: default
         {% for testimonial in testimonials %}
         <li class="splide__slide">
           <div class="testimonial-sign"></div>
-          <div class="testimonial-head mb">
-            <p class="post-tag">{{ forloop.index }}/{{ testimonials.size }}</p>
+          <div class="testimonial-head mb3">
             <p class="post-tag">{{testimonial.rating}} ★</p>
             {%- if testimonial.tag -%}
             <p class="post-tag">{{ testimonial.tags }}</p>
@@ -72,6 +71,7 @@ layout: default
   </div>
 
   <!-- Timelines -->
+  <!-- work, education, app, volunteer -->
   <br>
   {% include section-break.md %}
   <h2 id="developer-story-section" class="post-list-heading">Developer Story</h2>
@@ -86,9 +86,12 @@ layout: default
             {{ timeline.start | date: date_format }} - {{ timeline.end | date:
             date_format}}
           </span>
-          <h3 class="timeline-title">{{ timeline.title }}</h3>
-          <div class="dropdown timeline-name mb">
-            <p class="dropdown-label">{{ timeline.name }}</p>
+          <div class="timeline-title-type mt1">
+            <h3 class="timeline-title">{{ timeline.title }}</h3>
+            <p class="post-tag ml0-5">{{ timeline.type }}</p>
+          </div>
+          <div class="dropdown timeline-name mb1">
+            <p class="dropdown-label">{{ timeline.name }}</p> 
             <div class="dropdown-content">
               {%- if timeline.play_store -%}
               <a href="{{ timeline.play_store  | absolute_url }}" target="_blank">Play Store</a>

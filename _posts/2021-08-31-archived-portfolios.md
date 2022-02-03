@@ -24,8 +24,8 @@ This is the best website I have ever made for myself. Anyways, back then, since 
   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass"/>
   <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku"/>
 </div>
-<a href="http://v1.theachoem.com" target="_blank" class="primary-button mt">Demo</a>
-<a href="https://github.com/theachoem/portfolio-jekyll/commits/1.0.0" target="_blank" class="primary-button mt">GitHub</a>
+<a href="http://v1.theachoem.com" target="_blank" class="primary-button mt1">Demo</a>
+<a href="https://github.com/theachoem/portfolio-jekyll/commits/1.0.0" target="_blank" class="primary-button mt1">GitHub</a>
 
 {% include dot.md %}
 
@@ -40,7 +40,7 @@ After a year of the v1 site, I planned to build a new portfolio website to showc
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/> +
   <img height="36px" src="https://www.epidemic-marketing.com/wp-content/uploads/2020/03/google-sites-1024x322.jpg" alt="GoogleSite"/>
 </div>
-<a href="https://v2.theachoem.com" target="_blank" class="primary-button mt">Demo</a>
+<a href="https://v2.theachoem.com" target="_blank" class="primary-button mt1">Demo</a>
 
 {% include dot.md %}
 
@@ -54,5 +54,5 @@ Jekyll with minima theme is my best choice so far. It is fast & additionally, It
   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass"/>
   <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown"/>
 </div>
-<a href="https://v3.theachoem.com" target="_blank" class="primary-button mt">Demo</a>
-<a href="https://github.com/theachoem/portfolio-jekyll" target="_blank" class="primary-button mt">GitHub</a>
+<a href="https://v3.theachoem.com" target="_blank" class="primary-button mt1">Demo</a>
+<a href="https://github.com/theachoem/portfolio-jekyll" target="_blank" class="primary-button mt1">GitHub</a>

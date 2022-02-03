@@ -5,7 +5,7 @@
  * monitoring certain folders on a wide range of OS X releases (10.6-10.10 at least).
  *
  * The underlying issue is that for some folders, realpath() call starts returning
- * a path with incorrect casing (e.g. "/users/smt" instead of "/Users/smt").
+ * a path with incorrect casing (e.g. "/users/smt1" instead of "/Users/smt1").
  * FSEvents is case-sensitive and calls realpath() on the paths you pass in, so
  * an incorrect value returned by realpath() prevents FSEvents from seeing any
  * change events.

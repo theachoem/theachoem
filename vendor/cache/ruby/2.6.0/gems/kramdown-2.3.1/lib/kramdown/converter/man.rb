@@ -193,7 +193,7 @@ module Kramdown
             el.attr['href'] == el.children[0].value
           newline(opts[:result]) << macro("UR", escape(el.attr['href'])) << macro("UE")
         elsif el.attr['href'].start_with?('mailto:')
-          newline(opts[:result]) << macro("MT", escape(el.attr['href'].sub(/^mailto:/, ''))) <<
+          newline(opts[:result]) << macro("mt1", escape(el.attr['href'].sub(/^mailto:/, ''))) <<
             macro("UE")
         else
           newline(opts[:result]) << macro("UR", escape(el.attr['href']))

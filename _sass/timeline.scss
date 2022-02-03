@@ -60,6 +60,10 @@
       background-position: 4.4px 7px;
     }
 
+    &.volunteer::before {
+      background-position: -17px -76px;
+    }
+
     .timeline-row {
       display: flex;
       .timeline-profile {
@@ -77,11 +81,15 @@
           color: $grey-color;
         }
 
-        // eg. Computer Science
-        .timeline-title {
-          font-size: 15px;
-          font-weight: bold;
-          margin: 8px 0 0 0;
+        .timeline-title-type {
+          display: flex;
+          
+          // eg. Computer Science
+          .timeline-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0px;
+          }
         }
 
         // eg. at BookMeBus

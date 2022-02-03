@@ -43,6 +43,7 @@
       p {
         display: inline;
         margin-left: 4px;
+        margin-bottom: 0;
       }
 
       @media screen and (max-width: $on-laptop) {
@@ -53,8 +54,6 @@
         }
         .post-tag {
           display: inline-block !important;
-          margin-bottom: 4px;
-          margin-top: 0px;
         }
       }
     }

@@ -51,7 +51,7 @@ RSpec.describe JekyllRedirectFrom::Generator do
     end
 
     context "documents" do
-      let(:page) { site.pages.find { |p| p.url == "/articles/23128432159832/mary-had-a-little-lamb" } }
+      let(:page) { site.pages.find { |p| p.url == "/articles/23128432159832/mary-had-a-little-lamb1" } }
 
       it "redirects" do
         expect(page).to_not be_nil

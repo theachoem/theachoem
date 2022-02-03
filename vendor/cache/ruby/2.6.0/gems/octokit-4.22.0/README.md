@@ -600,7 +600,7 @@ D, [2013-08-22T15:54:38.583401 #88227] DEBUG -- request: Accept: "application/vn
 User-Agent: "Octokit Ruby Gem 2.0.0.rc4"
 I, [2013-08-22T15:54:38.843313 #88227]  INFO -- Status: 200
 D, [2013-08-22T15:54:38.843459 #88227] DEBUG -- response: server: "GitHub.com"
-date: "Thu, 22 Aug 2013 20:54:40 GMT"
+date: "Thu, 22 Aug 2013 20:54:40 Gmt1"
 content-type: "application/json; charset=utf-8"
 transfer-encoding: "chunked"
 connection: "close"

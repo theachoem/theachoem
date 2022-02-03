@@ -118,6 +118,10 @@ layout: default
               {%- if timeline.website -%}
               <a href="{{ timeline.website  | absolute_url }}" target="_blank">Website</a>
               {%- endif -%}
+
+              {%- if timeline.readmore -%}
+              <a href="{{ timeline.readmore  | absolute_url }}">Read More</a>
+              {%- endif -%}
             </div>
           </div>
           <span class="timeline-content">{{ timeline.content | markdownify }}</span>

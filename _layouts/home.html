@@ -51,7 +51,9 @@ layout: default
         <li class="splide__slide">
           <div class="testimonial-sign"></div>
           <div class="testimonial-head mb3">
+            {%- if testimonial.rating -%}
             <p class="post-tag">{{testimonial.rating}} ★</p>
+            {%- endif -%}
             {%- if testimonial.tag -%}
             <p class="post-tag">{{ testimonial.tags }}</p>
             {%- endif -%}
@@ -60,7 +62,7 @@ layout: default
           <span class="splide-message">{{ testimonial.content | markdownify }}</span>
           <div class="testimonial-author">
             <img src={{ testimonial.profile }} alt="{{ timeline.profile }}" />
-            <b>{{ testimonial.name }}</b>
+            <b class="capitalize">{{ testimonial.name }}</b>
             <a href="{{ testimonial.source_url }}" class="{{ testimonial.source }}" target="_blank"
               rel="noopener noreferrer">{{ testimonial.source }}</a>
           </div>
@@ -91,7 +93,7 @@ layout: default
             <p class="post-tag ml0-5">{{ timeline.type }}</p>
           </div>
           <div class="dropdown timeline-name mb1">
-            <p class="dropdown-label">{{ timeline.name }}</p> 
+            <p class="dropdown-label">{{ timeline.name }}</p>
             <div class="dropdown-content">
               {%- if timeline.play_store -%}
               <a href="{{ timeline.play_store  | absolute_url }}" target="_blank">Play Store</a>

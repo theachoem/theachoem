@@ -54,5 +54,5 @@ Jekyll with minima theme is my best choice so far. It is fast & additionally, It
   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass"/>
   <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown"/>
 </div>
-<a href="https://v3.theachoem.com" target="_blank" class="primary-button mt1">Demo</a>
+<a href="https://thea.juniorise.com" target="_blank" class="primary-button mt1">Demo</a>
 <a href="https://github.com/theachoem/portfolio-jekyll" target="_blank" class="primary-button mt1">GitHub</a>

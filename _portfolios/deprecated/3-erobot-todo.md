@@ -10,6 +10,7 @@ ss1: assets/portfolios/erobot-todo/home.png
 ss2: assets/portfolios/erobot-todo/taskdetail.png
 bg-color: 191B20
 start_date: 2021-03-11
+excerpt: true
 tags:
 - Flutter
 - SQLite

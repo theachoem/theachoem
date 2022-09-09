@@ -26,6 +26,7 @@ layout: default
   <h2 id="portfolio-section" class="post-list-heading">Portfolios</h2>
   <div class="portfolios-wrapper">
     {% for portfolio in portfolios %}
+    {% unless portfolio.excerpt == "true" %}
     <div class="portfolio p{{ forloop.index }}" style="background-color: #{{ portfolio.bg-color }}2E">
       <div class="img-wrapper" id="img-wrapper{{ forloop.index }}">
         <img class="ss1" src="{{ site.url }}/{{portfolio.ss1}}" alt="{{portfolio.ss1}}">
@@ -38,6 +39,7 @@ layout: default
         <a class="primary-button mt2" href="{{ portfolio.permalink | relative_url }}">{{portfolio.title}}</a>
       </div>
     </div>
+    {%- endunless -%}
     {% endfor %}
   </div>
 

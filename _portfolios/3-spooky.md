@@ -10,10 +10,12 @@ ss1: assets/portfolios/spooky/detail.jpg
 ss2: assets/portfolios/spooky/home.jpg
 bg-color: 6945B9
 start_date: 2022-01-03
+main_tag: Spooky
 tags:
 - Flutter
 - Material 3
 - ObjectBox
+- Spooky
 ---
 
 First journal with Material 3 design! Spooky is a minimalist design application to write stories, journals, notes, diaries, todo, etc. We offer a variety of features that you can expect for your daily usage.

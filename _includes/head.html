@@ -14,10 +14,19 @@
   <link rel="mask-icon" href="{{ site.url }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#2d89ef">
   <meta name="theme-color" content="#ffffff">
-  <meta property="og:image" content="https://opengraph.githubassets.com/370a1f8ffeae8c32321e621b565a1b2e2e2c5564044fd9d60aa834851c673215/theachoem/portfolio-jekyll">
+
+  {% if page.cover %}
+  <meta property="og:image" content="{{page.cover}}">
+  {% else %}
+  <meta property="og:image"
+    content="https://opengraph.githubassets.com/370a1f8ffeae8c32321e621b565a1b2e2e2c5564044fd9d60aa834851c673215/theachoem/portfolio-jekyll">
+  {%- endif -%}
+
   <meta name="google-site-verification" content="9YFVSaLpnfLXDOHuDHevTBuOnm2nyalKP8m3FG2Bltw" />
 
-  <description>{% if post.cover %}&lt;p&gt;&lt;img src="{{ post.cover | prepend: site.baseurl | prepend: site.url }}" alt="{{ post.title }}" class="webfeedsFeaturedVisual"&gt;&lt;/p&gt;{% endif %}{{ post.content | xml_escape }}</description>
+  <description>{% if post.cover %}&lt;p&gt;&lt;img src="{{ post.cover | prepend: site.baseurl | prepend: site.url }}"
+    alt="{{ post.title }}" class="webfeedsFeaturedVisual"&gt;&lt;/p&gt;{% endif %}{{ post.content | xml_escape }}
+  </description>
 
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}

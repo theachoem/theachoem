@@ -1,6 +1,6 @@
 ---
 layout: post
-title: StoryPad
+title: StoryPad - Write Story & Diary
 permalink: /portfolios/storypad/
 categories: portfolio
 author: Thea Choem

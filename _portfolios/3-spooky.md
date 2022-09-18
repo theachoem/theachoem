@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spooky
+title: Spooky - Write Story & Diary
 permalink: /portfolios/spooky/
 categories: portfolio
 author: Thea Choem

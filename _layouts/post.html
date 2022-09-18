@@ -80,11 +80,13 @@ layout: default
 {% include dot.md %}
 
 <!-- RELATED POST -->
+{%- assign postsfolios = site.portfolios | concatArray: site.posts -%}
+
 {%- if page.main_tag -%}
-{%- if site.posts.size > 0 -%}
+{%- if postsfolios.size > 0 -%}
 <h2 id="blogs-section" class="post-list-heading">{{ page.list_title | default: "Relate Articles" }}</h2>
 <ul class="post-list">
-  {%- for post in site.posts -%}
+  {%- for post in postsfolios -%}
   {% if page.tags contains post.main_tag and post.permalink != page.permalink %}
   <li>
     <h3>

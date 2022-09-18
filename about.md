@@ -8,7 +8,7 @@ skills:
 - UI Designer
 - Guitar Lover
 quote: The only way to learn a new programming language is by writing programs in it - Dennis Ritchie
-summary: I am a Software Developer specializing in Flutter. I am experienced in building Mobile applications, RestAPI, and work with Deeklink & Facebook Applink using Flutter, NodeJs. Besides development, I also design user interface for mobile & web applications using Figma.
+summary: A passionate developer that enjoys learning and experimenting new things. With 2 years+ of experience working with Flutter & interface design, it gives me a capable foundation in solving problems, launching a new programming language, and turning ideas into scalable applications.
 ---
 {% include dot.md %}
 <h2 class="post-list-heading">Listen to your music 🎸</h2>

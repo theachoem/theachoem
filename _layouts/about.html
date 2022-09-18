@@ -8,7 +8,8 @@ layout: default
       <img src="{{ page.profile }}" alt="{{ page.profile }}">
     </div>
     <div class="tc-right-side">
-      {{ page.summary }} <a href="{{ site.upwork_url }}" class="cl-green">Upwork.</a>
+      {{ page.summary }}
+      <!-- <a href="{{ site.upwork_url }}" class="cl-green">Upwork.</a> -->
       {% if page.skills -%}
       <ul class="post-tags-wrapper mt1">
         {% for skill in page.skills %}
@@ -37,7 +38,7 @@ layout: default
   <br>
   <div class="love-section mb1">
     <img src="{{ site.url }}/{{ 'assets/images/love.jpg' }}" alt="assets/images/love.jpg'">
-    <span id="days"></span> 
+    <span id="days"></span>
   </div>
   {% include dot.md %}
   {% include blogs.html %}

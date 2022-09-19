@@ -5,7 +5,7 @@ permalink: /portfolios/camgeo/
 categories: portfolio
 author: Thea Choem
 comments: true
-cover: https://user-images.githubusercontent.com/29684683/127860708-a0047a41-5add-469c-a6c3-853dbd22e8e8.png
+cover: https://opengraph.githubassets.com/855b0fe8fbfdceb8c28ea1c09217a43a1fd71efc9cd5ade82ef46d804f2577de/CSG6Project1/cambodia_geography_mobile
 ss1: assets/portfolios/camgeo/home.png
 ss2: assets/portfolios/camgeo/provincedetail.png
 bg-color: CE2B30

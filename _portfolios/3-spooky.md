@@ -5,7 +5,7 @@ permalink: /portfolios/spooky/
 categories: portfolio
 author: Thea Choem
 comments: true
-cover: https://repository-images.githubusercontent.com/444136870/ac7b82ed-81a0-4b34-ae80-378d87e02acc
+cover: https://repository-images.githubusercontent.com/444136870/43a054a0-50ad-47d7-a680-4a12507a77d2
 ss1: assets/portfolios/spooky/detail.jpg
 ss2: assets/portfolios/spooky/home.jpg
 bg-color: 6945B9

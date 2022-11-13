@@ -5,7 +5,7 @@ date: 2020-12-27
 categories: achievement
 author: Thea Choem
 comments: true
-cover: https://media-exp1.licdn.com/dms/image/C5622AQH6X9NOf2RcfQ/feedshare-shrink_2048_1536/0/1662293482147?e=1665619200&v=beta&t=oIPvNTJi58mj-Mptk_GuhXdRoie9b26bDn9JtsKBTmo
+cover: https://lh6.googleusercontent.com/74AkpbEDy-LxDv2nSlM-lyQs6oJxBaaBh7LnHAjqRH3tf3e57hB_WOLZpK7VBGNDMhR232tQENi_taEIGyPqha4=w16383
 permalink: /achievement/turing-hackathon-tsc/
 ---
 {% include dot.md %}

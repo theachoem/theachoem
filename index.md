@@ -4,5 +4,5 @@
 
 layout: home
 role: Designer + Developer
-summary: 2 year of experience in designing and developing cross-platform mobile applications. Based in Phnom Penh, Cambodia📍
+summary: 2 year of experience in designing and developing cross-platform mobile applications. Phnom Penh, Cambodia📍
 ---

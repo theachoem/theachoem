@@ -63,10 +63,18 @@ layout: default
           </div>
           <span class="splide-message">{{ testimonial.content | markdownify }}</span>
           <div class="testimonial-author">
+            {%- if testimonial.profile -%}
             <img src={{ testimonial.profile }} alt="{{ timeline.profile }}" />
+            {%- endif -%}
+
             <b class="capitalize">{{ testimonial.name }}</b>
+
+            {%- if testimonial.source_url -%}
             <a href="{{ testimonial.source_url }}" class="{{ testimonial.source }}" target="_blank"
-              rel="noopener noreferrer">{{ testimonial.source }}</a>
+              rel="noopener noreferrer">Source: {{ testimonial.source }}</a>
+            {% else %}
+            <p class="{{ testimonial.source }}">{{ testimonial.role }}</a>
+              {%- endif -%}
           </div>
         </li>
         {% endfor %}

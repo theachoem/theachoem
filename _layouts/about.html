@@ -36,24 +36,24 @@ layout: default
   <br>
   {{ content }}
   <br>
-  <div class="love-section mb1">
+  <!-- <div class="love-section mb1">
     <img src="{{ site.url }}/{{ 'assets/images/love.jpg' }}" alt="assets/images/love.jpg'">
     <span id="days"></span>
-  </div>
+  </div> -->
   {% include dot.md %}
   {% include blogs.html %}
 </div>
 
 <script>
-  function countDays() {
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
-    let date_ini = new Date(Date.parse("May 18, 2019"))
-    let date_end = new Date(Date.now());
-    let diff = date_end.getTime() - date_ini.getTime();
-    document.getElementById('days').innerText = Math.floor(diff / day) + " Days with Seavleng ♥";
-  }
-  countDays()
+  // function countDays() {
+  //   const second = 1000;
+  //   const minute = second * 60;
+  //   const hour = minute * 60;
+  //   const day = hour * 24;
+  //   let date_ini = new Date(Date.parse("May 18, 2019"))
+  //   let date_end = new Date(Date.now());
+  //   let diff = date_end.getTime() - date_ini.getTime();
+  //   document.getElementById('days').innerText = Math.floor(diff / day) + " Days with Seavleng ♥";
+  // }
+  // countDays()
 </script>

@@ -45,7 +45,7 @@ After a year of the v1 site, I planned to build a new portfolio website to showc
 {% include dot.md %}
 
 ### Minima + Jekyll version
-<p class="post-meta">Aug 30, 2020 • Initialized v3</p>
+<p class="post-meta">Aug 30, 2021 • Initialized v3</p>
 Jekyll with minima theme is my best choice so far. It is fast & additionally, It also gives me advantages to custom my own CSS style such as timeline, button with Markdown support by default.
 <br>
 <div class="mt mb topic">

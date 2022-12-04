@@ -1,5 +1,6 @@
 ---
 layout: post
+starred: true
 title: Khmer Fingerspelling
 permalink: /portfolios/khmer-fingerspelling/
 categories: research

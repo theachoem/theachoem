@@ -1,5 +1,6 @@
 ---
 layout: post
+starred: true
 title: Spooky - Write Story & Diary
 permalink: /portfolios/spooky/
 categories: portfolio

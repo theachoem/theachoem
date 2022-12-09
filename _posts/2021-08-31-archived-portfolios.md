@@ -12,7 +12,7 @@ permalink: /blogs/archived-portfolios/
 ### Pure Style version
 <p class="post-meta">Aug 12, 2020 • Initialized v1</p>
 <a href="https://theachoem.herokuapp.com/" target="_blank">
-  <img src="https://user-images.githubusercontent.com/29684683/132114417-71510344-fb47-4e0d-9b49-c35bd22e0155.png" alt="https://theachoem.herokuapp.com/" />
+  <img src="/assets/images/portfolio-v1.jpeg" alt="https://theachoem.herokuapp.com/" />
 </a>
 This is the best website I have ever made for myself. Anyways, back then, since I have no experience in programming skills, it is very difficult for me to continue to maintain this project. This website took me around two month+ to display its complete form. It may be a bit long since I have to learn things from scratch include design & development.
 <br>

@@ -21,7 +21,5 @@ I completed a series from <a href="https://www.youtube.com/playlist?list=PL4cUxe
 
 The app tought me a lot about learning and building cross platform mobile applications, and by non stop working with Flutter, It took me 1 month to just develop the UI of the app with my zero to one Flutter skill. Currently the app is in improving and testing.
 
-Finally, I can't thank enough to my busy seniors, Bong <a href="https://facebook.com/kosal.suy.8" target="_blank">Kosal</a>, Bong <a href="https://facebook.com/kosal.suy.8" target="_blank">Seyha</a>, and especially Bong <a href="https://facebook.com/kosal.suy.8" target="_blank">Leang Siv</a> which was mentoring me in the process and gave lots of feedback to help me bring my idea into my first Flutter Application for Erobot team and lastly, thank you again for reading my story and have a great day. 😉
-
-
+Finally, I can't thank enough to my busy seniors, Bong <a href="https://facebook.com/kosal.suy.8" target="_blank">Kosal</a>, Bong <a href="https://facebook.com/runseyha.seyha" target="_blank">Seyha</a>, and especially Bong <a href="https://facebook.com/leangsiv23" target="_blank">Leang Siv</a> which was mentoring me in the process and gave lots of feedback to help me bring my idea into my first Flutter Application for Erobot team and lastly, thank you again for reading my story and have a great day. 😉
 

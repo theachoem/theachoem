@@ -31,8 +31,11 @@ layout: default
       src="https://github-readme-stats.vercel.app/api/top-langs/?username={{ site.github_username }}&layout=compact&theme=buefy&hide_border=true"
       frameborder="0"></iframe>
   </a>
-  <img width="100%" class="mb2" src="https://ghchart.rshah.org/{{ site.github_username }}"
-    alt="{{ site.github_username }}'s Github chart" />
+  <a href="https://github.com/{{ site.github_username }}" target="_blank">
+    <img class="mb3" width="100%" src="https://ghchart.rshah.org/{{ site.github_username }}"
+      alt="{{ site.github_username }}'s Github chart" />
+  </a>
+  <script src="https://gist.github.com//{{ site.github_username }}/53597e7d66cb513049c016faf096439c.js"></script>
   <br>
   {{ content }}
   <br>

@@ -27,10 +27,7 @@ Additionally, by Krousar Thmey, an NGO, there are only 5 schools of 2 provinces 
 
 ## Team
 
-| - |
-| - |
-| Dr. Ye Kyaw Thu |
-| Our mentor. He's also visiting Professor of Language & Semantic Technology Research Team (LST), Artificial Intelligence Research Unit (AINRU), National Electronic & Computer Technology Center (NECTEC), Thailand, Affiliate Professor at Cambodia Academy of Digital Technology (CADT), Cambodia and Head of NLP Research Lab <br><a class="mt2 secondary-button" href="https://sites.google.com/site/yekyawthunlp/home">More info</a> |
+> Our mentor: [Dr. Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/home)
 
 | Name | Role |
 | - | - |

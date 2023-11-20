@@ -28,7 +28,7 @@ skills:
 - MVC
 - Express.js
 quote: The only way to learn a new programming language is by writing programs in it - Dennis Ritchie
-summary: As a passionate developer who enjoys learning and experimenting with new technologies, I bring over 3 years of experience in software development and interface design. This experience has equipped me with a strong foundation for problem-solving, adapting to new programming languages, and transforming ideas into scalable applications
+summary: As a passionate developer who enjoys learning and experimenting with new technologies, I bring over 3 years of experience in software development and interface design. This experience has equipped me with a strong foundation for problem-solving, adapting to new programming languages, and transforming ideas into scalable applications.
 ---
 {% include dot.md %}
 <h2 class="post-list-heading">Listen to your music 🎸</h2>

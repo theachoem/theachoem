@@ -6,9 +6,11 @@ profile: https://avatars.githubusercontent.com/u/29684683?v=4
 skills:
 - Leadership
 - E-Commerce
+- Figma
 - Flutter
 - Ruby on Rails
-- Figma
+- NodeJS
+- Express.js
 - AWS Services
 - PostgreSQL, MongoDB
 - SQLite, ObjectBox

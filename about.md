@@ -16,7 +16,7 @@ skills:
 - SCSS
 - PostgreSQL
 quote: The only way to learn a new programming language is by writing programs in it - Dennis Ritchie
-summary: A passionate developer that enjoys learning and experimenting new things. With 2 years+ of experience working with Flutter & interface design, it gives me a capable foundation in solving problems, learning a new programming language, and turning ideas into scalable applications.
+summary: A passionate developer that enjoys learning and experimenting new things. With 3 years+ of experience working with software development & interface design, it gives me a capable foundation in solving problems, learning a new programming language, and turning ideas into scalable applications.
 ---
 {% include dot.md %}
 <h2 class="post-list-heading">Listen to your music 🎸</h2>

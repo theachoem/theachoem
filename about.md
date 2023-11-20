@@ -3,6 +3,7 @@ layout: about
 title: About
 permalink: /about/
 profile: https://avatars.githubusercontent.com/u/29684683?v=4
+comments: true
 skills:
 - Leadership
 - E-Commerce

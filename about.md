@@ -4,17 +4,15 @@ title: About
 permalink: /about/
 profile: https://avatars.githubusercontent.com/u/29684683?v=4
 skills:
+- Leadership
+- E-Commerce
 - Flutter
-- Figma
 - Ruby on Rails
-- Node JS
-- Typescript
-- Javascript
-- Python
-- Jekyll
-- HTML
-- SCSS
-- PostgreSQL
+- Figma
+- AWS Services
+- PostgreSQL, MongoDB
+- SQLite, ObjectBox
+- MVVM, MVC
 quote: The only way to learn a new programming language is by writing programs in it - Dennis Ritchie
 summary: As a passionate developer who enjoys learning and experimenting with new technologies, I bring over 3 years of experience in software development and interface design. This experience has equipped me with a strong foundation for problem-solving, adapting to new programming languages, and transforming ideas into scalable applications
 ---

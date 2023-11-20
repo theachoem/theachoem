@@ -50,7 +50,7 @@ summary: As a passionate developer who enjoys learning and experimenting with ne
           allowFullScreen="true"></iframe>
       </li>
       <li class="splide__slide no-padding scale-up">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/rmIQ5BegN8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe width="560" src="https://www.youtube.com/embed/rmIQ5BegN8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </li>
     </ul>
   </div>

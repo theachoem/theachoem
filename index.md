@@ -4,5 +4,5 @@
 
 layout: home
 role: Software Developer
-summary: Over 4 years+ of experience in designing and developing cross-platform mobile applications in Phnom Penh, Cambodia 📍.
+summary: Over 5 years+ of experience in designing and developing cross-platform mobile applications in Phnom Penh, Cambodia 📍.
 ---

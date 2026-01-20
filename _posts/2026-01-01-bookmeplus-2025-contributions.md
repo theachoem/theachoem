@@ -25,14 +25,14 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 - **Goal:** Redesign inventory system to handle millions of records
 - **Component:** `spree_cm_commissioner`
 - **Key Changes:**
-  - Migrated availability checker to Redis (#2563)
+  - Migrated availability checker to Redis ([#2563](https://github.com/channainfo/commissioner/pull/2563))
   - Added `inventory_item` model with Redis tracking
-  - Pre-generate inventory items for permanent stock variants (#2551)
-  - Added `product_type` to variant and line_item (#2603)
-  - Created `saved_guest` model for faster checkout (#2945)
-  - Migrated to not store checkout date (#2641)
-  - Improved `number_of_guests` in line item (#2948)
-  - Enabled Redis in RSpec tests (#2597)
+  - Pre-generate inventory items for permanent stock variants ([#2551](https://github.com/channainfo/commissioner/pull/2551))
+  - Added `product_type` to variant and line_item ([#2603](https://github.com/channainfo/commissioner/pull/2603))
+  - Created `saved_guest` model for faster checkout ([#2945](https://github.com/channainfo/commissioner/pull/2945))
+  - Migrated to not store checkout date ([#2641](https://github.com/channainfo/commissioner/pull/2641))
+  - Improved `number_of_guests` in line item ([#2948](https://github.com/channainfo/commissioner/pull/2948))
+  - Enabled Redis in RSpec tests ([#2597](https://github.com/channainfo/commissioner/pull/2597))
 - **Impact:** System now ready for high-traffic events with millions of inventory records
 
 #### 2. **Payment Flow Overhaul** (Mar-Dec)
@@ -40,14 +40,14 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 - **Goal:** Simplify and improve payment reliability
 - **Components:** `spree_vpago`, `cm-market-client`, `cm-market-app`
 - **Key Changes:**
-  - Simplified payment logic with WebView (#2168, Mar)
-  - Improved processing payment UI (#2121, #2125, Jan; #2219, Mar)
-  - Added recheck mechanism when payment processing (#2140, Jan)
-  - Refactored payment UI for new status flow (#1298, Dec)
-  - Enhanced payment processing flow (#309, Dec)
-  - Improved payment log entries (#313, Dec)
-  - Allow failed payments to re-process/capture (#315, Dec)
-  - Moved capture payment to background job (#270, May)
+  - Simplified payment logic with WebView ([#2168](https://github.com/bookmebus/cm-market-app/pull/2168), Mar)
+  - Improved processing payment UI ([#2121](https://github.com/bookmebus/cm-market-app/pull/2121), [#2125](https://github.com/bookmebus/cm-market-app/pull/2125), Jan; [#2219](https://github.com/bookmebus/cm-market-app/pull/2219), Mar)
+  - Added recheck mechanism when payment processing ([#2140](https://github.com/bookmebus/cm-market-app/pull/2140), Jan)
+  - Refactored payment UI for new status flow ([#1298](https://github.com/bookmebus/cm-market-server/pull/1298), Dec)
+  - Enhanced payment processing flow ([#309](https://github.com/bookmebus/spree_vpago/pull/309), Dec)
+  - Improved payment log entries ([#313](https://github.com/bookmebus/spree_vpago/pull/313), Dec)
+  - Allow failed payments to re-process/capture ([#315](https://github.com/bookmebus/spree_vpago/pull/315), Dec)
+  - Moved capture payment to background job ([#270](https://github.com/bookmebus/spree_vpago/pull/270), May)
 - **Impact:** Reduced payment failures, better user experience during checkout
 
 #### 3. **Transit New Portal** (Jul-Sep)
@@ -55,13 +55,13 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 - **Goal:** Complete rewrite of transit dashboard
 - **Component:** `cm-market-server`
 - **Key Changes:**
-  - Setup new transit setup flow (#860)
-  - Setup seat renderer (#834)
-  - Add seat layout builder (#934, Aug)
-  - Add transit dashboard checkout flow (#986, Aug)
-  - Remove transit legacy (#956, Aug; #1318, Dec)
-  - Refactor transit tables (#2870, Jul)
-  - Add seat layout model (#2802, Jul)
+  - Setup new transit setup flow ([#860](https://github.com/bookmebus/cm-market-server/pull/860))
+  - Setup seat renderer ([#834](https://github.com/bookmebus/cm-market-server/pull/834))
+  - Add seat layout builder ([#934](https://github.com/bookmebus/cm-market-server/pull/934), Aug)
+  - Add transit dashboard checkout flow ([#986](https://github.com/bookmebus/cm-market-server/pull/986), Aug)
+  - Remove transit legacy ([#956](https://github.com/bookmebus/cm-market-server/pull/956), Aug; [#1318](https://github.com/bookmebus/cm-market-server/pull/1318), Dec)
+  - Refactor transit tables ([#2870](https://github.com/channainfo/commissioner/pull/2870), Jul)
+  - Add seat layout model ([#2802](https://github.com/channainfo/commissioner/pull/2802), Jul)
 - **Impact:** Modern, maintainable transit management system
 
 #### 4. **Event Seat Layout System** (Jul-Oct)
@@ -69,18 +69,18 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 - **Goal:** Flexible seat selection for events with multiple layouts
 - **Components:** `cm-market-server`, `spree_cm_commissioner`, `cm-market-app`
 - **Key Changes:**
-  - Add seat layout model (#2802, Jul)
-  - Improve seat layout tables (#2850, Jul)
-  - Allow bulk seat layout with JSON (#1095, Sep)
-  - Allow multiple drag & select (#1088, Sep)
-  - Allow grouping blocks into sections (#1120, Sep)
-  - Allow assigning variants to block/section (#1109, Sep)
-  - Drop `variant_blocks`, add seat layout to event (#3052, Sep)
-  - Add seat validation for checkout (#3069, Sep)
-  - Add seat holding timer (#3151, Oct)
-  - Allow multiple seat layouts & standing blocks (#3154, Oct)
-  - Support multiple Redis pools (#3111, Oct)
-  - Add reserved blocks tracking (#3088, Oct)
+  - Add seat layout model ([#2802](https://github.com/channainfo/commissioner/pull/2802), Jul)
+  - Improve seat layout tables ([#2850](https://github.com/channainfo/commissioner/pull/2850), Jul)
+  - Allow bulk seat layout with JSON ([#1095](https://github.com/bookmebus/cm-market-server/pull/1095), Sep)
+  - Allow multiple drag & select ([#1088](https://github.com/bookmebus/cm-market-server/pull/1088), Sep)
+  - Allow grouping blocks into sections ([#1120](https://github.com/bookmebus/cm-market-server/pull/1120), Sep)
+  - Allow assigning variants to block/section ([#1109](https://github.com/bookmebus/cm-market-server/pull/1109), Sep)
+  - Drop `variant_blocks`, add seat layout to event ([#3052](https://github.com/channainfo/commissioner/pull/3052), Sep)
+  - Add seat validation for checkout ([#3069](https://github.com/channainfo/commissioner/pull/3069), Sep)
+  - Add seat holding timer ([#3151](https://github.com/channainfo/commissioner/pull/3151), Oct)
+  - Allow multiple seat layouts & standing blocks ([#3154](https://github.com/channainfo/commissioner/pull/3154), Oct)
+  - Support multiple Redis pools ([#3111](https://github.com/channainfo/commissioner/pull/3111), Oct)
+  - Add reserved blocks tracking ([#3088](https://github.com/channainfo/commissioner/pull/3088), Oct)
 - **Impact:** Flexible seat selection supporting multiple configurations per event
 
 #### 5. **Multi-Cart Support** (Apr)
@@ -88,9 +88,9 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 - **Goal:** Allow users to checkout multiple orders simultaneously
 - **Components:** `cm-market-app`, `spree_cm_commissioner`
 - **Key Changes:**
-  - Support multi-cart/checkout (#2250)
-  - Improve API for multi-cart (#2523)
-  - Fix multi-cart bugs (#2266)
+  - Support multi-cart/checkout ([#2250](https://github.com/bookmebus/cm-market-app/pull/2250))
+  - Improve API for multi-cart ([#2523](https://github.com/channainfo/commissioner/pull/2523))
+  - Fix multi-cart bugs ([#2266](https://github.com/bookmebus/cm-market-app/pull/2266))
 - **Impact:** Better UX for users purchasing from multiple vendors
 
 #### 6. **External Integration System (StadiumX)** (Oct-Dec)
@@ -98,13 +98,13 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 - **Goal:** Sync BookMe+ with external ticketing systems
 - **Component:** `spree_cm_commissioner`
 - **Key Changes:**
-  - Setup StadiumX data syncing core (#3119, Nov)
-  - Revise StadiumX implementation (#3237, Dec)
-  - Add event matches API (#3262, Dec)
-  - Add zone match data to product match (#3265, Dec)
-  - Create tickets to external system (#3270, Dec)
-  - Fix StadiumX sync issues (#3260, Dec)
-  - Fix StadiumX guest QR data (#3284, Dec)
+  - Setup StadiumX data syncing core ([#3119](https://github.com/channainfo/commissioner/pull/3119), Nov)
+  - Revise StadiumX implementation ([#3237](https://github.com/channainfo/commissioner/pull/3237), Dec)
+  - Add event matches API ([#3262](https://github.com/channainfo/commissioner/pull/3262), Dec)
+  - Add zone match data to product match ([#3265](https://github.com/channainfo/commissioner/pull/3265), Dec)
+  - Create tickets to external system ([#3270](https://github.com/channainfo/commissioner/pull/3270), Dec)
+  - Fix StadiumX sync issues ([#3260](https://github.com/channainfo/commissioner/pull/3260), Dec)
+  - Fix StadiumX guest QR data ([#3284](https://github.com/channainfo/commissioner/pull/3284), Dec)
 - **Impact:** BookMe+ can now integrate with external stadium systems
 
 #### 7. **Order Auto-Archive System** (Nov)
@@ -112,8 +112,8 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 - **Goal:** Clean up inactive orders automatically
 - **Components:** `cm-market-server`, `spree_cm_commissioner`
 - **Key Changes:**
-  - Add schedule job to clean inactive orders (#1226)
-  - Auto-archive orders after 14 days inactivity (#3200)
+  - Add schedule job to clean inactive orders ([#1226](https://github.com/bookmebus/cm-market-server/pull/1226))
+  - Auto-archive orders after 14 days inactivity ([#3200](https://github.com/channainfo/commissioner/pull/3200))
 - **Impact:** Reduced database bloat, improved performance
 
 ---
@@ -126,20 +126,20 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **App (9 PRs):**
 
-- Auto refresh line item queue (#2151)
-- Remove app store update cache (#2143)
-- Recheck processing payment (#2140)
-- Move karaoke toggle to top right (#2137)
-- Reuse payment only when same amount (#2135)
-- Load active state instantly (#2133)
-- Remove Poppins font locally (#2127)
-- Improve payment processing view (#2125, #2121)
+- Auto refresh line item queue ([#2151](https://github.com/bookmebus/cm-market-app/pull/2151))
+- Remove app store update cache ([#2143](https://github.com/bookmebus/cm-market-app/pull/2143))
+- Recheck processing payment ([#2140](https://github.com/bookmebus/cm-market-app/pull/2140))
+- Move karaoke toggle to top right ([#2137](https://github.com/bookmebus/cm-market-app/pull/2137))
+- Reuse payment only when same amount ([#2135](https://github.com/bookmebus/cm-market-app/pull/2135))
+- Load active state instantly ([#2133](https://github.com/bookmebus/cm-market-app/pull/2133))
+- Remove Poppins font locally ([#2127](https://github.com/bookmebus/cm-market-app/pull/2127))
+- Improve payment processing view ([#2125](https://github.com/bookmebus/cm-market-app/pull/2125), [#2121](https://github.com/bookmebus/cm-market-app/pull/2121))
 
 **Commissioner (3 PRs):**
 
-- Only create vendor commission when not exist (#2276)
-- Pre-create bib prefix on guest creation (#2274)
-- Allow calling generate vendor_commissions multiple times (#2272)
+- Only create vendor commission when not exist ([#2276](https://github.com/channainfo/commissioner/pull/2276))
+- Pre-create bib prefix on guest creation ([#2274](https://github.com/channainfo/commissioner/pull/2274))
+- Allow calling generate vendor_commissions multiple times ([#2272](https://github.com/channainfo/commissioner/pull/2272))
 
 ### February 2025
 
@@ -147,11 +147,11 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (1 PR):**
 
-- Setup frontend for new organizer dashboard (#413)
+- Setup frontend for new organizer dashboard ([#413](https://github.com/bookmebus/cm-market-server/pull/413))
 
 **App (1 PR):**
 
-- Migrate to asdf for tool management (#2180)
+- Migrate to asdf for tool management ([#2180](https://github.com/bookmebus/cm-market-app/pull/2180))
 
 ### March 2025
 
@@ -159,46 +159,46 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (7 PRs):**
 
-- Upgrade spree_cm_commissioner to 1.8.4 (#539)
-- Add more details to processing payment (#533)
-- Upgrade spree_vpago to 2.0.1 (#508)
-- Add vpago 2.0.0 migrations (#507)
-- Upgrade spree_cm_commissioner to 1.8.0 (#497)
-- Migrate commissioner/vpago to no-force state machine (#418)
-- Temporary disable css_compressor (#426)
+- Upgrade spree_cm_commissioner to 1.8.4 ([#539](https://github.com/bookmebus/cm-market-server/pull/539))
+- Add more details to processing payment ([#533](https://github.com/bookmebus/cm-market-server/pull/533))
+- Upgrade spree_vpago to 2.0.1 ([#508](https://github.com/bookmebus/cm-market-server/pull/508))
+- Add vpago 2.0.0 migrations ([#507](https://github.com/bookmebus/cm-market-server/pull/507))
+- Upgrade spree_cm_commissioner to 1.8.0 ([#497](https://github.com/bookmebus/cm-market-server/pull/497))
+- Migrate commissioner/vpago to no-force state machine ([#418](https://github.com/bookmebus/cm-market-server/pull/418))
+- Temporary disable css_compressor ([#426](https://github.com/bookmebus/cm-market-server/pull/426))
 
 **Client (11 PRs):**
 
-- Allow manually input invalidate path (#412)
-- Add checkout payment gateway routes (#382)
-- Add file hash to flutter_bootstrap.js (#389)
-- Hotfix undefined flutter_bootstrap_dist_url (#391)
-- Render event page while lazy loading Flutter (#395)
-- Move relative import to importmap (#397)
-- Only close loading when Flutter fully rendered (#399)
-- Fix unclickable landing page (#401)
-- Add main to rake test build_app (#403)
+- Allow manually input invalidate path ([#412](https://github.com/bookmebus/cm-market-client/pull/412))
+- Add checkout payment gateway routes ([#382](https://github.com/bookmebus/cm-market-client/pull/382))
+- Add file hash to flutter_bootstrap.js ([#389](https://github.com/bookmebus/cm-market-client/pull/389))
+- Hotfix undefined flutter_bootstrap_dist_url ([#391](https://github.com/bookmebus/cm-market-client/pull/391))
+- Render event page while lazy loading Flutter ([#395](https://github.com/bookmebus/cm-market-client/pull/395))
+- Move relative import to importmap ([#397](https://github.com/bookmebus/cm-market-client/pull/397))
+- Only close loading when Flutter fully rendered ([#399](https://github.com/bookmebus/cm-market-client/pull/399))
+- Fix unclickable landing page ([#401](https://github.com/bookmebus/cm-market-client/pull/401))
+- Add main to rake test build_app ([#403](https://github.com/bookmebus/cm-market-client/pull/403))
 - Multiple build and version bumps
 
 **App (11 PRs):**
 
-- Simplify payment logic with WebView (#2168)
-- Migrate auto_route (#2214)
-- Improve processing payment (#2219)
-- Refactor Flutter & bootstrap JS (#2212)
-- Click outside close download modal (#2210)
-- Support advance remaining checkout payments (#2225)
+- Simplify payment logic with WebView ([#2168](https://github.com/bookmebus/cm-market-app/pull/2168))
+- Migrate auto_route ([#2214](https://github.com/bookmebus/cm-market-app/pull/2214))
+- Improve processing payment ([#2219](https://github.com/bookmebus/cm-market-app/pull/2219))
+- Refactor Flutter & bootstrap JS ([#2212](https://github.com/bookmebus/cm-market-app/pull/2212))
+- Click outside close download modal ([#2210](https://github.com/bookmebus/cm-market-app/pull/2210))
+- Support advance remaining checkout payments ([#2225](https://github.com/bookmebus/cm-market-app/pull/2225))
 
 **Commissioner (1 PR):**
 
-- Follow order state machine (#2213)
+- Follow order state machine ([#2213](https://github.com/channainfo/commissioner/pull/2213))
 
 **Vpago (4 PRs):**
 
-- Add more details message & log (#251)
-- Fix return request from ABA (#248)
-- Use order created_at for segment data (#244)
-- Follow order state machine for payway_v2 (#239)
+- Add more details message & log ([#251](https://github.com/bookmebus/spree_vpago/pull/251))
+- Fix return request from ABA ([#248](https://github.com/bookmebus/spree_vpago/pull/248))
+- Use order created_at for segment data ([#244](https://github.com/bookmebus/spree_vpago/pull/244))
+- Follow order state machine for payway_v2 ([#239](https://github.com/bookmebus/spree_vpago/pull/239))
 
 ### April 2025
 
@@ -206,19 +206,19 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (1 PR):**
 
-- Upgrade spree_cm_commissioner to 1.8.10 (#571)
+- Upgrade spree_cm_commissioner to 1.8.10 ([#571](https://github.com/bookmebus/cm-market-server/pull/571))
 
 **App (2 PRs):**
 
-- Fix multi-cart bugs (#2266)
-- Support multi-cart/checkout (#2250)
+- Fix multi-cart bugs ([#2266](https://github.com/bookmebus/cm-market-app/pull/2266))
+- Support multi-cart/checkout ([#2250](https://github.com/bookmebus/cm-market-app/pull/2250))
 
 **Commissioner (3 PRs):**
 
-- Migrate availability checker to Redis (#2563) ⭐
-- Sync inventory_item on update stock item (#2553)
-- Add jobs to pre-generate inventory_items (#2551)
-- Improve API for multi-cart (#2523)
+- Migrate availability checker to Redis ([#2563](https://github.com/channainfo/commissioner/pull/2563)) ⭐
+- Sync inventory_item on update stock item ([#2553](https://github.com/channainfo/commissioner/pull/2553))
+- Add jobs to pre-generate inventory_items ([#2551](https://github.com/channainfo/commissioner/pull/2551))
+- Improve API for multi-cart ([#2523](https://github.com/channainfo/commissioner/pull/2523))
 
 ### May 2025
 
@@ -226,47 +226,47 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (5 PRs):**
 
-- Upgrade spree_cm_commissioner to 1.14.0 (#706)
-- Upgrade spree_cm_commissioner to 1.13.0 (#691)
-- Upgrade commissioner to 1.12.0 (#662)
-- Add GitHub action to check migrations (#661)
-- Upgrade spree_vpago to 2.0.2 (#647)
+- Upgrade spree_cm_commissioner to 1.14.0 ([#706](https://github.com/bookmebus/cm-market-server/pull/706))
+- Upgrade spree_cm_commissioner to 1.13.0 ([#691](https://github.com/bookmebus/cm-market-server/pull/691))
+- Upgrade commissioner to 1.12.0 ([#662](https://github.com/bookmebus/cm-market-server/pull/662))
+- Add GitHub action to check migrations ([#661](https://github.com/bookmebus/cm-market-server/pull/661))
+- Upgrade spree_vpago to 2.0.2 ([#647](https://github.com/bookmebus/cm-market-server/pull/647))
 
 **Client (2 PRs):**
 
-- Upgrade to Flutter 3.32 (#456)
-- Build v1.14.3+225 (#441)
+- Upgrade to Flutter 3.32 ([#456](https://github.com/bookmebus/cm-market-client/pull/456))
+- Build v1.14.3+225 ([#441](https://github.com/bookmebus/cm-market-client/pull/441))
 
 **App (3 PRs):**
 
-- Add more test for in-app update (#2291)
-- Open external browser for unknown routes (#2290)
-- Upgrade to Flutter 3.32 (#2283)
+- Add more test for in-app update ([#2291](https://github.com/bookmebus/cm-market-app/pull/2291))
+- Open external browser for unknown routes ([#2290](https://github.com/bookmebus/cm-market-app/pull/2290))
+- Upgrade to Flutter 3.32 ([#2283](https://github.com/bookmebus/cm-market-app/pull/2283))
 
 **Commissioner (13 PRs):**
 
-- Fix wrong method call in invite guest controller (#2716)
-- Only return visible products in API (#2708)
-- Prepare for release v1.12.0 (#2690)
-- Fix read-only Blazer (#2680)
-- Fix waiting room no method error (#2678)
-- Sync updated event date to old line items (#2673)
-- Add event_id to product & line_items (#2666)
-- Fix min price nil (#2659)
-- Fix wrong sender_name for SMS (#2644)
-- Migrate to not store checkout date (#2641) ⭐
-- Allow reset each inventory item (#2637)
-- Fix accommodation params mismatch (#2629)
-- Display Redis inventory to UI (#2615)
-- Fix not to deduct stock when not tracking (#2614)
-- Add product_type to variant, line item (#2603) ⭐
-- Run Redis in spec (#2597)
-- Clean up scalable design milestone (#2592)
+- Fix wrong method call in invite guest controller ([#2716](https://github.com/channainfo/commissioner/pull/2716))
+- Only return visible products in API ([#2708](https://github.com/channainfo/commissioner/pull/2708))
+- Prepare for release v1.12.0 ([#2690](https://github.com/channainfo/commissioner/pull/2690))
+- Fix read-only Blazer ([#2680](https://github.com/channainfo/commissioner/pull/2680))
+- Fix waiting room no method error ([#2678](https://github.com/channainfo/commissioner/pull/2678))
+- Sync updated event date to old line items ([#2673](https://github.com/channainfo/commissioner/pull/2673))
+- Add event_id to product & line_items ([#2666](https://github.com/channainfo/commissioner/pull/2666))
+- Fix min price nil ([#2659](https://github.com/channainfo/commissioner/pull/2659))
+- Fix wrong sender_name for SMS ([#2644](https://github.com/channainfo/commissioner/pull/2644))
+- Migrate to not store checkout date ([#2641](https://github.com/channainfo/commissioner/pull/2641)) ⭐
+- Allow reset each inventory item ([#2637](https://github.com/channainfo/commissioner/pull/2637))
+- Fix accommodation params mismatch ([#2629](https://github.com/channainfo/commissioner/pull/2629))
+- Display Redis inventory to UI ([#2615](https://github.com/channainfo/commissioner/pull/2615))
+- Fix not to deduct stock when not tracking ([#2614](https://github.com/channainfo/commissioner/pull/2614))
+- Add product_type to variant, line item ([#2603](https://github.com/channainfo/commissioner/pull/2603)) ⭐
+- Run Redis in spec ([#2597](https://github.com/channainfo/commissioner/pull/2597))
+- Clean up scalable design milestone ([#2592](https://github.com/channainfo/commissioner/pull/2592))
 
 **Vpago (2 PRs):**
 
-- Move capture payment to job (#270)
-- Make email/phone optional for ABA (#264)
+- Move capture payment to job ([#270](https://github.com/bookmebus/spree_vpago/pull/270))
+- Make email/phone optional for ABA ([#264](https://github.com/bookmebus/spree_vpago/pull/264))
 
 ### June 2025
 
@@ -274,24 +274,24 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (3 PRs):**
 
-- Refactor to adapt new routes (#752)
-- Move organizer shared routes to shared_console (#748)
-- Upgrade commissioner to v1.15.0 (#721)
+- Refactor to adapt new routes ([#752](https://github.com/bookmebus/cm-market-server/pull/752))
+- Move organizer shared routes to shared_console ([#748](https://github.com/bookmebus/cm-market-server/pull/748))
+- Upgrade commissioner to v1.15.0 ([#721](https://github.com/bookmebus/cm-market-server/pull/721))
 
 **App (6 PRs):**
 
-- Fix to run operator on iOS (#2330)
-- Extract operator app from BookMe+ (#2321) ⭐
-- Revert checkout date change (#2311)
-- Make checkout date 1 day after (#2307)
-- Fix main navigation bar break on iOS (#2297)
-- Allow operator check-in when resumed (#2296)
+- Fix to run operator on iOS ([#2330](https://github.com/bookmebus/cm-market-app/pull/2330))
+- Extract operator app from BookMe+ ([#2321](https://github.com/bookmebus/cm-market-app/pull/2321)) ⭐
+- Revert checkout date change ([#2311](https://github.com/bookmebus/cm-market-app/pull/2311))
+- Make checkout date 1 day after ([#2307](https://github.com/bookmebus/cm-market-app/pull/2307))
+- Fix main navigation bar break on iOS ([#2297](https://github.com/bookmebus/cm-market-app/pull/2297))
+- Allow operator check-in when resumed ([#2296](https://github.com/bookmebus/cm-market-app/pull/2296))
 
 **Commissioner (3 PRs):**
 
-- Clean up transit code (#2812)
-- Allow guest API search via QR data (#2772)
-- Make price based on date (#2735)
+- Clean up transit code ([#2812](https://github.com/channainfo/commissioner/pull/2812))
+- Allow guest API search via QR data ([#2772](https://github.com/channainfo/commissioner/pull/2772))
+- Make price based on date ([#2735](https://github.com/channainfo/commissioner/pull/2735))
 
 ### July 2025
 
@@ -299,31 +299,31 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (7 PRs):**
 
-- Bump version to 1.21.0 (#896)
-- Bump vpago to 2.0.9, commissioner to 1.20.0 (#893)
-- Fix undefined record in vpago_payments (#888)
-- Setup new transit setup flow (#860)
-- Setup seat renderer (#834) ⭐
-- Upgrade spree_cm_commissioner to 1.18.1 (#826)
-- Setup Redis pool (#619)
+- Bump version to 1.21.0 ([#896](https://github.com/bookmebus/cm-market-server/pull/896))
+- Bump vpago to 2.0.9, commissioner to 1.20.0 ([#893](https://github.com/bookmebus/cm-market-server/pull/893))
+- Fix undefined record in vpago_payments ([#888](https://github.com/bookmebus/cm-market-server/pull/888))
+- Setup new transit setup flow ([#860](https://github.com/bookmebus/cm-market-server/pull/860))
+- Setup seat renderer ([#834](https://github.com/bookmebus/cm-market-server/pull/834)) ⭐
+- Upgrade spree_cm_commissioner to 1.18.1 ([#826](https://github.com/bookmebus/cm-market-server/pull/826))
+- Setup Redis pool ([#619](https://github.com/bookmebus/cm-market-server/pull/619))
 
 **App (3 PRs):**
 
-- Allow date input for service products (#2376)
-- Call complete API after payment (#2362)
-- Allow manual group search for all tickets (#2350)
+- Allow date input for service products ([#2376](https://github.com/bookmebus/cm-market-app/pull/2376))
+- Call complete API after payment ([#2362](https://github.com/bookmebus/cm-market-app/pull/2362))
+- Allow manual group search for all tickets ([#2350](https://github.com/bookmebus/cm-market-app/pull/2350))
 
 **Commissioner (4 PRs):**
 
-- Refactor transit tables for new dashboard (#2870)
-- Improve seat layout tables (#2850)
-- Add seat layout model (#2802) ⭐
-- Allow calling complete API when already complete (#2797)
+- Refactor transit tables for new dashboard ([#2870](https://github.com/channainfo/commissioner/pull/2870))
+- Improve seat layout tables ([#2850](https://github.com/channainfo/commissioner/pull/2850))
+- Add seat layout model ([#2802](https://github.com/channainfo/commissioner/pull/2802)) ⭐
+- Allow calling complete API when already complete ([#2797](https://github.com/channainfo/commissioner/pull/2797))
 
 **Vpago (3 PRs):**
 
-- Only display payment methods supporting payout (#285)
-- Only pass 2 digits to ABA (#283, #281)
+- Only display payment methods supporting payout ([#285](https://github.com/bookmebus/spree_vpago/pull/285))
+- Only pass 2 digits to ABA ([#283](https://github.com/bookmebus/spree_vpago/pull/283), [#281](https://github.com/bookmebus/spree_vpago/pull/281))
 
 ### August 2025
 
@@ -331,43 +331,43 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (8 PRs):**
 
-- Upgrade spree_cm_commissioner to v2.1.1 (#1046)
-- Setup default Redis pool env values (#1044)
-- Setup custom Redis URL for inventory (#1042)
-- Add transit dashboard checkout flow (#986) ⭐
-- Remove transit legacy (#956)
-- Copy latest migrations (#954)
-- Add seat layout builder (#934) ⭐
-- Add scalable design milestone (#854)
+- Upgrade spree_cm_commissioner to v2.1.1 ([#1046](https://github.com/bookmebus/cm-market-server/pull/1046))
+- Setup default Redis pool env values ([#1044](https://github.com/bookmebus/cm-market-server/pull/1044))
+- Setup custom Redis URL for inventory ([#1042](https://github.com/bookmebus/cm-market-server/pull/1042))
+- Add transit dashboard checkout flow ([#986](https://github.com/bookmebus/cm-market-server/pull/986)) ⭐
+- Remove transit legacy ([#956](https://github.com/bookmebus/cm-market-server/pull/956))
+- Copy latest migrations ([#954](https://github.com/bookmebus/cm-market-server/pull/954))
+- Add seat layout builder ([#934](https://github.com/bookmebus/cm-market-server/pull/934)) ⭐
+- Add scalable design milestone ([#854](https://github.com/bookmebus/cm-market-server/pull/854))
 
 **App (7 PRs):**
 
-- Revert code magic auto publish (#2425)
-- Setup code magic auto publish CI (#2422)
-- Prepare to release operator app (#2418)
-- Fix UI break on checkout bus flow (#2416)
-- Add transit seat selection (#2406) ⭐
-- Setup transit basic checkout flow (#2404)
-- Make checkout date 1 day after (#2391)
+- Revert code magic auto publish ([#2425](https://github.com/bookmebus/cm-market-app/pull/2425))
+- Setup code magic auto publish CI ([#2422](https://github.com/bookmebus/cm-market-app/pull/2422))
+- Prepare to release operator app ([#2418](https://github.com/bookmebus/cm-market-app/pull/2418))
+- Fix UI break on checkout bus flow ([#2416](https://github.com/bookmebus/cm-market-app/pull/2416))
+- Add transit seat selection ([#2406](https://github.com/bookmebus/cm-market-app/pull/2406)) ⭐
+- Setup transit basic checkout flow ([#2404](https://github.com/bookmebus/cm-market-app/pull/2404))
+- Make checkout date 1 day after ([#2391](https://github.com/bookmebus/cm-market-app/pull/2391))
 
 **Commissioner (11 PRs):**
 
-- Allow accommodation show API fetch without hotel (#3019)
-- Add transit checkout flow APIs (#3000) ⭐
-- Add to_h to leg/seat selection (#2979)
-- Auto-assign phone to address, pre-create saved guest (#2973)
-- Add transit draft order creator (#2953) ⭐
-- Add missing validations for transit (#2951)
-- Improve number_of_guests in line item (#2948)
-- Add saved guest model (#2945) ⭐
-- Remove unnecessary address validations for transit (#2943)
-- Calculate transit line item price (#2938)
-- Add block type to cm blocks (#2914)
-- Add scalable design milestone (#2619)
+- Allow accommodation show API fetch without hotel ([#3019](https://github.com/channainfo/commissioner/pull/3019))
+- Add transit checkout flow APIs ([#3000](https://github.com/channainfo/commissioner/pull/3000)) ⭐
+- Add to_h to leg/seat selection ([#2979](https://github.com/channainfo/commissioner/pull/2979))
+- Auto-assign phone to address, pre-create saved guest ([#2973](https://github.com/channainfo/commissioner/pull/2973))
+- Add transit draft order creator ([#2953](https://github.com/channainfo/commissioner/pull/2953)) ⭐
+- Add missing validations for transit ([#2951](https://github.com/channainfo/commissioner/pull/2951))
+- Improve number_of_guests in line item ([#2948](https://github.com/channainfo/commissioner/pull/2948))
+- Add saved guest model ([#2945](https://github.com/channainfo/commissioner/pull/2945)) ⭐
+- Remove unnecessary address validations for transit ([#2943](https://github.com/channainfo/commissioner/pull/2943))
+- Calculate transit line item price ([#2938](https://github.com/channainfo/commissioner/pull/2938))
+- Add block type to cm blocks ([#2914](https://github.com/channainfo/commissioner/pull/2914))
+- Add scalable design milestone ([#2619](https://github.com/channainfo/commissioner/pull/2619))
 
 **Vpago (1 PR):**
 
-- Pass payout params to complete pre-auth API (#291)
+- Pass payout params to complete pre-auth API ([#291](https://github.com/bookmebus/spree_vpago/pull/291))
 
 ### September 2025
 
@@ -375,33 +375,33 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (10 PRs):**
 
-- Upgrade commissioner to 2.1.6 (#1137)
-- Fix wrong block x/y after group/save (#1126)
-- Allow grouping blocks into sections (#1120)
-- Add UI to assign variant to block after remove (#1112)
-- Allow assign variant to block/section (#1109)
-- Allow add block seat layout (#1106)
-- Allow multiple drag select (#1096)
-- Allow bulk seat layout with JSON (#1095)
-- Allow multiple drag & select (#1088)
-- Setup event layout UI (#1070)
+- Upgrade commissioner to 2.1.6 ([#1137](https://github.com/bookmebus/cm-market-server/pull/1137))
+- Fix wrong block x/y after group/save ([#1126](https://github.com/bookmebus/cm-market-server/pull/1126))
+- Allow grouping blocks into sections ([#1120](https://github.com/bookmebus/cm-market-server/pull/1120))
+- Add UI to assign variant to block after remove ([#1112](https://github.com/bookmebus/cm-market-server/pull/1112))
+- Allow assign variant to block/section ([#1109](https://github.com/bookmebus/cm-market-server/pull/1109))
+- Allow add block seat layout ([#1106](https://github.com/bookmebus/cm-market-server/pull/1106))
+- Allow multiple drag select ([#1096](https://github.com/bookmebus/cm-market-server/pull/1096))
+- Allow bulk seat layout with JSON ([#1095](https://github.com/bookmebus/cm-market-server/pull/1095))
+- Allow multiple drag & select ([#1088](https://github.com/bookmebus/cm-market-server/pull/1088))
+- Setup event layout UI ([#1070](https://github.com/bookmebus/cm-market-server/pull/1070))
 
 **App (7 PRs):**
 
-- Improve seat layout performance (#2456)
-- Fix service product can't purchase (#2454)
-- Avoid sending wrong duplicate variant ID (#2452)
-- Setup API for event seat layout (#2446)
-- Drop variant block (#2441)
-- Fix code magic provision profile issue (#2429)
-- Restructure project build with code-magic (#2427)
+- Improve seat layout performance ([#2456](https://github.com/bookmebus/cm-market-app/pull/2456))
+- Fix service product can't purchase ([#2454](https://github.com/bookmebus/cm-market-app/pull/2454))
+- Avoid sending wrong duplicate variant ID ([#2452](https://github.com/bookmebus/cm-market-app/pull/2452))
+- Setup API for event seat layout ([#2446](https://github.com/bookmebus/cm-market-app/pull/2446))
+- Drop variant block ([#2441](https://github.com/bookmebus/cm-market-app/pull/2441))
+- Fix code magic provision profile issue ([#2429](https://github.com/bookmebus/cm-market-app/pull/2429))
+- Restructure project build with code-magic ([#2427](https://github.com/bookmebus/cm-market-app/pull/2427))
 
 **Commissioner (4 PRs):**
 
-- Remove seat number validation from guest (#3080)
-- Add seat validation for checkout (#3069)
-- Add API fetch event seat layout (#3058)
-- Drop variant_blocks, add seat layout to event (#3052)
+- Remove seat number validation from guest ([#3080](https://github.com/channainfo/commissioner/pull/3080))
+- Add seat validation for checkout ([#3069](https://github.com/channainfo/commissioner/pull/3069))
+- Add API fetch event seat layout ([#3058](https://github.com/channainfo/commissioner/pull/3058))
+- Drop variant_blocks, add seat layout to event ([#3052](https://github.com/channainfo/commissioner/pull/3052))
 
 ### October 2025
 
@@ -409,40 +409,40 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (7 PRs):**
 
-- Upgrade commissioner to 2.3.0-pre12 (#1204)
-- Fix no seat layout var & private_metadata (#1196)
-- Add schedule job to cancel expired reserves (#1194)
-- Allow event to have multiple seat layouts (#1192)
-- Fix wrong reserve count (#1190)
-- Support multiple Redis pools (#1174)
-- Add actual reserved seat count (#1152)
+- Upgrade commissioner to 2.3.0-pre12 ([#1204](https://github.com/bookmebus/cm-market-server/pull/1204))
+- Fix no seat layout var & private_metadata ([#1196](https://github.com/bookmebus/cm-market-server/pull/1196))
+- Add schedule job to cancel expired reserves ([#1194](https://github.com/bookmebus/cm-market-server/pull/1194))
+- Allow event to have multiple seat layouts ([#1192](https://github.com/bookmebus/cm-market-server/pull/1192))
+- Fix wrong reserve count ([#1190](https://github.com/bookmebus/cm-market-server/pull/1190))
+- Support multiple Redis pools ([#1174](https://github.com/bookmebus/cm-market-server/pull/1174))
+- Add actual reserved seat count ([#1152](https://github.com/bookmebus/cm-market-server/pull/1152))
 
 **App (9 PRs):**
 
-- Add completion steps for social link (#2491)
-- Migrate to multiple seat layouts (#2489)
-- Add holding seat timer to checkout (#2487)
-- Fix iOS build dart-define xconfig (#2471)
-- Move setup.md into README.md (#2467)
-- Add close seat selection confirmation (#2465)
-- Enhance seat layout from feedback (#2463)
-- Allow manual search for operator (#2461)
-- Optimize seat layout painting (#2458)
+- Add completion steps for social link ([#2491](https://github.com/bookmebus/cm-market-app/pull/2491))
+- Migrate to multiple seat layouts ([#2489](https://github.com/bookmebus/cm-market-app/pull/2489))
+- Add holding seat timer to checkout ([#2487](https://github.com/bookmebus/cm-market-app/pull/2487))
+- Fix iOS build dart-define xconfig ([#2471](https://github.com/bookmebus/cm-market-app/pull/2471))
+- Move setup.md into README.md ([#2467](https://github.com/bookmebus/cm-market-app/pull/2467))
+- Add close seat selection confirmation ([#2465](https://github.com/bookmebus/cm-market-app/pull/2465))
+- Enhance seat layout from feedback ([#2463](https://github.com/bookmebus/cm-market-app/pull/2463))
+- Allow manual search for operator ([#2461](https://github.com/bookmebus/cm-market-app/pull/2461))
+- Optimize seat layout painting ([#2458](https://github.com/bookmebus/cm-market-app/pull/2458))
 
 **Commissioner (11 PRs):**
 
-- Improve seat layout flow from feedback (#3167)
-- Improve product completion step flows (#3158)
-- Add job to release blocks (#3156)
-- Allow multiple seat layouts & standing block (#3154)
-- Add seat holding timer (#3151)
-- PSK seat layout preparation scope (#3150)
-- Improve hold/reserved seat checkout error (#3147)
-- Fix wrong hold seat calculation (#3145)
-- Fix inventory inconsistency issues (#3141)
-- Support multiple Redis pools (#3111)
-- Add store metadata for extra functionality (#3099)
-- Add reserved_blocks to seat layout (#3088)
+- Improve seat layout flow from feedback ([#3167](https://github.com/channainfo/commissioner/pull/3167))
+- Improve product completion step flows ([#3158](https://github.com/channainfo/commissioner/pull/3158))
+- Add job to release blocks ([#3156](https://github.com/channainfo/commissioner/pull/3156))
+- Allow multiple seat layouts & standing block ([#3154](https://github.com/channainfo/commissioner/pull/3154))
+- Add seat holding timer ([#3151](https://github.com/channainfo/commissioner/pull/3151))
+- PSK seat layout preparation scope ([#3150](https://github.com/channainfo/commissioner/pull/3150))
+- Improve hold/reserved seat checkout error ([#3147](https://github.com/channainfo/commissioner/pull/3147))
+- Fix wrong hold seat calculation ([#3145](https://github.com/channainfo/commissioner/pull/3145))
+- Fix inventory inconsistency issues ([#3141](https://github.com/channainfo/commissioner/pull/3141))
+- Support multiple Redis pools ([#3111](https://github.com/channainfo/commissioner/pull/3111))
+- Add store metadata for extra functionality ([#3099](https://github.com/channainfo/commissioner/pull/3099))
+- Add reserved_blocks to seat layout ([#3088](https://github.com/channainfo/commissioner/pull/3088))
 
 ### November 2025
 
@@ -450,51 +450,51 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (10 PRs):**
 
-- Upgrade Node.js to v23 (#1272)
-- Revert yarn lock (#1269)
-- Upgrade spree_cm_commissioner to v2.3.2 (#1265)
-- Move lit component models outside (#1259)
-- Improve seat layout builder from feedback (#1250)
-- Fix variant form rendering (#1227)
-- Add schedule job to clean inactive orders (#1226)
-- Allow dynamic variant option input (#1221)
-- Bump spree_vpago to v2.1.3 (#1213)
-- Add waiting room retry job spec (#1212)
+- Upgrade Node.js to v23 ([#1272](https://github.com/bookmebus/cm-market-server/pull/1272))
+- Revert yarn lock ([#1269](https://github.com/bookmebus/cm-market-server/pull/1269))
+- Upgrade spree_cm_commissioner to v2.3.2 ([#1265](https://github.com/bookmebus/cm-market-server/pull/1265))
+- Move lit component models outside ([#1259](https://github.com/bookmebus/cm-market-server/pull/1259))
+- Improve seat layout builder from feedback ([#1250](https://github.com/bookmebus/cm-market-server/pull/1250))
+- Fix variant form rendering ([#1227](https://github.com/bookmebus/cm-market-server/pull/1227))
+- Add schedule job to clean inactive orders ([#1226](https://github.com/bookmebus/cm-market-server/pull/1226))
+- Allow dynamic variant option input ([#1221](https://github.com/bookmebus/cm-market-server/pull/1221))
+- Bump spree_vpago to v2.1.3 ([#1213](https://github.com/bookmebus/cm-market-server/pull/1213))
+- Add waiting room retry job spec ([#1212](https://github.com/bookmebus/cm-market-server/pull/1212))
 
 **Client (2 PRs):**
 
-- Upload as public, allow delete assets (#526)
-- Upgrade to Flutter 3.38.1 & hash main.dart.js (#518)
+- Upload as public, allow delete assets ([#526](https://github.com/bookmebus/cm-market-client/pull/526))
+- Upgrade to Flutter 3.38.1 & hash main.dart.js ([#518](https://github.com/bookmebus/cm-market-client/pull/518))
 
 **App (13 PRs):**
 
-- Bump version to v1.17.1+319 (#2529)
-- Don't allow pop on critical checkout (#2528)
-- Show completion step banner URL (#2526)
-- Upgrade Google sign in (#2522)
-- Upgrade to Flutter 3.38 (#2520)
-- Auto scroll to first available block (#2518)
-- Add in-app update to operator (#2516)
-- Improve payment process view (#2512)
-- Fix app doesn't open login with seat layout (#2506)
-- Use color from variant as seat color (#2503)
-- Fix app doesn't open login with seat layout (#2501)
-- Automatically remove selected blocks (#2497)
-- Fix banner unable to open custom redirect (#2495)
+- Bump version to v1.17.1+319 ([#2529](https://github.com/bookmebus/cm-market-app/pull/2529))
+- Don't allow pop on critical checkout ([#2528](https://github.com/bookmebus/cm-market-app/pull/2528))
+- Show completion step banner URL ([#2526](https://github.com/bookmebus/cm-market-app/pull/2526))
+- Upgrade Google sign in ([#2522](https://github.com/bookmebus/cm-market-app/pull/2522))
+- Upgrade to Flutter 3.38 ([#2520](https://github.com/bookmebus/cm-market-app/pull/2520))
+- Auto scroll to first available block ([#2518](https://github.com/bookmebus/cm-market-app/pull/2518))
+- Add in-app update to operator ([#2516](https://github.com/bookmebus/cm-market-app/pull/2516))
+- Improve payment process view ([#2512](https://github.com/bookmebus/cm-market-app/pull/2512))
+- Fix app doesn't open login with seat layout ([#2506](https://github.com/bookmebus/cm-market-app/pull/2506))
+- Use color from variant as seat color ([#2503](https://github.com/bookmebus/cm-market-app/pull/2503))
+- Fix app doesn't open login with seat layout ([#2501](https://github.com/bookmebus/cm-market-app/pull/2501))
+- Automatically remove selected blocks ([#2497](https://github.com/bookmebus/cm-market-app/pull/2497))
+- Fix banner unable to open custom redirect ([#2495](https://github.com/bookmebus/cm-market-app/pull/2495))
 
 **Commissioner (7 PRs):**
 
-- Add banner & more fields to completion step (#3211)
-- Auto-archive order after 14 days inactivity (#3200)
-- Improve variant options performance (#3195)
-- Multiple accounts with link (#3193)
-- Use unique job & retry for waiting room (#3175)
-- Capture errors inside state machine (#3173)
-- Setup StadiumX data syncing core (#3119)
+- Add banner & more fields to completion step ([#3211](https://github.com/channainfo/commissioner/pull/3211))
+- Auto-archive order after 14 days inactivity ([#3200](https://github.com/channainfo/commissioner/pull/3200))
+- Improve variant options performance ([#3195](https://github.com/channainfo/commissioner/pull/3195))
+- Multiple accounts with link ([#3193](https://github.com/channainfo/commissioner/pull/3193))
+- Use unique job & retry for waiting room ([#3175](https://github.com/channainfo/commissioner/pull/3175))
+- Capture errors inside state machine ([#3173](https://github.com/channainfo/commissioner/pull/3173))
+- Setup StadiumX data syncing core ([#3119](https://github.com/channainfo/commissioner/pull/3119))
 
 **Vpago (1 PR):**
 
-- Add app scheme to payway v2 (#303)
+- Add app scheme to payway v2 ([#303](https://github.com/bookmebus/spree_vpago/pull/303))
 
 ### December 2025
 
@@ -502,35 +502,35 @@ This document summarizes all contributions made to the BookMe+ monorepo througho
 
 **Server (4 PRs):**
 
-- Remove transit legacy (#1319)
-- Install external integration to server (#1310)
-- Add rack attack to prevent spam (#1301)
-- Refactor payment UI for new status (#1298)
+- Remove transit legacy ([#1319](https://github.com/bookmebus/cm-market-server/pull/1319))
+- Install external integration to server ([#1310](https://github.com/bookmebus/cm-market-server/pull/1310))
+- Add rack attack to prevent spam ([#1301](https://github.com/bookmebus/cm-market-server/pull/1301))
+- Refactor payment UI for new status ([#1298](https://github.com/bookmebus/cm-market-server/pull/1298))
 
 **App (1 PR):**
 
-- Fix payment process view not pop on success/failed (#2537)
+- Fix payment process view not pop on success/failed ([#2537](https://github.com/bookmebus/cm-market-app/pull/2537))
 
 **Commissioner (10 PRs):**
 
-- Migrate vehicles to vehicle types (#3302)
-- Improve GitHub CI test speed (#3288)
-- Fix stadium guest QR data (#3284)
-- Fix system stack level too deep (#3282)
-- Refactor to make job args consistent (#3278)
-- Create ticket to external system (#3270)
-- Add more zone match data to product match (#3265)
-- Add event matches API (#3262)
-- Fix StadiumX sync issues (#3260)
-- Revise StadiumX (#3237)
-- Display shipping address to Telegram alert (#3234)
-- External integration milestone (#3226)
+- Migrate vehicles to vehicle types ([#3302](https://github.com/channainfo/commissioner/pull/3302))
+- Improve GitHub CI test speed ([#3288](https://github.com/channainfo/commissioner/pull/3288))
+- Fix stadium guest QR data ([#3284](https://github.com/channainfo/commissioner/pull/3284))
+- Fix system stack level too deep ([#3282](https://github.com/channainfo/commissioner/pull/3282))
+- Refactor to make job args consistent ([#3278](https://github.com/channainfo/commissioner/pull/3278))
+- Create ticket to external system ([#3270](https://github.com/channainfo/commissioner/pull/3270))
+- Add more zone match data to product match ([#3265](https://github.com/channainfo/commissioner/pull/3265))
+- Add event matches API ([#3262](https://github.com/channainfo/commissioner/pull/3262))
+- Fix StadiumX sync issues ([#3260](https://github.com/channainfo/commissioner/pull/3260))
+- Revise StadiumX ([#3237](https://github.com/channainfo/commissioner/pull/3237))
+- Display shipping address to Telegram alert ([#3234](https://github.com/channainfo/commissioner/pull/3234))
+- External integration milestone ([#3226](https://github.com/channainfo/commissioner/pull/3226))
 
 **Vpago (3 PRs):**
 
-- Allow failed payment to re-process/capture (#315)
-- Improve payment log entry (#313)
-- Improve payment processing flow (#309)
+- Allow failed payment to re-process/capture ([#315](https://github.com/bookmebus/spree_vpago/pull/315))
+- Improve payment log entry ([#313](https://github.com/bookmebus/spree_vpago/pull/313))
+- Improve payment processing flow ([#309](https://github.com/bookmebus/spree_vpago/pull/309))
 
 ---
 

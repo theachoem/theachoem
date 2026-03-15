@@ -15,4 +15,4 @@ Google Slide:\
 [https://docs.google.com/presentation/d/1oDYO99QjbLbtSf6PXSVfIwB10Cnc_Qz6dUjSC_eN4VM/edit?usp=sharing](https://docs.google.com/presentation/d/1oDYO99QjbLbtSf6PXSVfIwB10Cnc_Qz6dUjSC_eN4VM/edit?usp=sharing)
 
 Facebook Post:\
-https://web.facebook.com/IDT.Academy/posts/pfbid0YMyMx93xBLgdNmduPKEui65YBWSUeKAYcUCWuRR6rTdMrTNuTBhUCpDh7yJS21zMl
+[https://web.facebook.com/IDT.Academy/posts/pfbid0YMyMx93xBLgdNmduPKEui65YBWSUeKAYcUCWuRR6rTdMrTNuTBhUCpDh7yJS21zMl](https://web.facebook.com/IDT.Academy/posts/pfbid0YMyMx93xBLgdNmduPKEui65YBWSUeKAYcUCWuRR6rTdMrTNuTBhUCpDh7yJS21zMl)

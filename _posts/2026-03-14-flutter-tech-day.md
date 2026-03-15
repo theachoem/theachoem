@@ -10,11 +10,11 @@ permalink: /blogs/2026-flutter-tech-day/
 ---
 {% include dot.md %}
 
-My GitHub Profile:
-https://github.com/theachoem/
+My GitHub Profile:\
+[https://github.com/theachoem/](https://github.com/theachoem/)
 
-StoryPad GitHub Repo:
-https://github.com/theachoem/storypad
+StoryPad GitHub Repo:\
+[https://github.com/theachoem/storypad](https://github.com/theachoem/storypad)
 
-Last year's presentation:
-https://docs.google.com/presentation/d/1oDYO99QjbLbtSf6PXSVfIwB10Cnc_Qz6dUjSC_eN4VM/edit
+Last year's presentation:\
+[https://docs.google.com/presentation/d/1oDYO99QjbLbtSf6PXSVfIwB10Cnc_Qz6dUjSC_eN4VM/edit?usp=sharing](https://docs.google.com/presentation/d/1oDYO99QjbLbtSf6PXSVfIwB10Cnc_Qz6dUjSC_eN4VM/edit?usp=sharing)

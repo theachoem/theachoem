@@ -7,6 +7,7 @@ author: Thea Choem
 comments: true
 cover: https://github.com/user-attachments/assets/2be9d72c-d7bb-47cd-9fa5-446e0f4e1d19
 permalink: /blogs/2025-flutter-tech-day/
+excerpt: true
 ---
 
 {% include dot.md %}
